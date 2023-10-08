@@ -51,61 +51,53 @@
         
         </p>
         </div>
-
         <div class="row m-5">
-    <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 mb-md-0">
         <div class="card h-100">
             <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage1">
                 <img class="card-img-top rounded" src="img\alex.jpg" alt="Alex">
             </a>
             <div class="card-body">
-                <h5 class="card-title">Alex</h5>
+                <h5 class="card-title">Duban Alexander Gómez</h5>
                 <p class="card-text precio">DOCUMENTADOR<span></span></p>
-                
             </div>
         </div>
     </div>
-
-    <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 mb-md-0">
         <div class="card h-100">
             <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage2">
                 <img class="card-img-top rounded" src="img\andy.jpg" alt="Andy">
             </a>
             <div class="card-body">
-                <h5 class="card-title">Andy</h5>
+                <h5 class="card-title">Andrés Felipe Suaza</h5>
                 <p class="card-text precio">PROGRAMADOR<span></span></p>
-                
             </div>
         </div>
     </div>
-
-    <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 mb-md-0">
         <div class="card h-100">
             <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage3">
                 <img class="card-img-top rounded" src="img\orozco.jpeg" alt="Orozco">
             </a>
             <div class="card-body">
-                <h5 class="card-title">Orozco</h5>
+                <h5 class="card-title">Juan José Orozco</h5>
                 <p class="card-text precio">DESARROLLADOR<span></span></p>
                 <button class="btn btn-primary">CIO</button>
             </div>
         </div>
     </div>
-
-    <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 mb-md-0">
         <div class="card h-100">
             <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage4">
                 <img class="card-img-top rounded" src="img\evelyn.jpeg" alt="Evelyn">
             </a>
             <div class="card-body">
-                <h5 class="card-title">Evelyn</h5>
+                <h5 class="card-title">Evelyn Meneses</h5>
                 <p class="card-text precio">TESTER<span></span></p>
-                
             </div>
         </div>
     </div>
 </div>
-
 
 
           
@@ -176,17 +168,7 @@
 
         </div>
     
-        <div class="row justify-content-md-center">
-            <!-- en este pedaso se pone texto relacionado al tema de turismo -->
-            
-            <div class="col-12 text-center">
-            <h2 class="text-danger text-uppercase">popayán</h2>
-            <h3 class="text-capitalize">un lugar donde encontraras lugares unicos </h3>
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis nesciunt in tempore voluptate, ab cumque qui delectus nisi assumenda a error eveniet beatae pariatur ut dolorem nihil explicabo fugit.
-            
-            </p>
-            </div>
-        </div>
+        
 
 
 
