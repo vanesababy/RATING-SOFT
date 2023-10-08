@@ -51,11 +51,11 @@
             <div class="col-md-6 col-lg-4  mb-3 mb-md-0">
 
                 <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage1">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\alex.jpg" alt="">
+                    <img class="w-100 mb-4 rounded modal-galeria" src="img\alex.jpg" alt="" width="" height=""  >
 
                 </a>
                 <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage2">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\andy.jpeg" alt=""></a>
+                    <img class="w-100 mb-4 rounded modal-galeria" src="img\andy.jpg" alt="" width="" height="></a>
 
             </div>
             <div class="col-md-6 col-lg-4  mb-3 mb-md-0">
@@ -93,7 +93,7 @@
 
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                    <img src="img\andy.jpeg" alt="">
+                    <img src="img\andy.jpg" alt="">
 
                 </div>
 
