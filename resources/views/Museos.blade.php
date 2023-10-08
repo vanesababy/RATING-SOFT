@@ -17,10 +17,10 @@
   <div class="col-10 col-lg-6 text-black">
   <!-- title -->
   <h1 class="text-capitalize ">
-    <span class="text-black h4">EQUIPO</span><br/>RATINGSOFT</h1>
+    <span class="text-info h4">EQUIPO</span><br/>RATINGSOFT</h1>
   
   <!-- descripcion -->
-  <p class="d-none d-md-block"style="color: black; font-size: 24px">"Nuestro equipo es un grupo de personas apasionadas por la educación y la tecnología. Somos programadores, diseñadores, trabajamos juntos para crear soluciones que hagan la vida más fácil a docentes, estudiantes y padres. Nuestra motivación es mejorar la forma en que se gestionan las calificaciones y, en última instancia, mejorar la calidad de la educación. Somos un equipo comprometido y apasionado que está listo para hacer una diferencia en la educación."
+  <p class="d-none d-md-block"style="color:black; font-size: 24px">"Nuestro equipo es un grupo de personas apasionadas por la educación y la tecnología. Somos programadores, diseñadores, trabajamos juntos para crear soluciones que hagan la vida más fácil a docentes, estudiantes y padres. Nuestra motivación es mejorar la forma en que se gestionan las calificaciones y, en última instancia, mejorar la calidad de la educación. Somos un equipo comprometido y apasionado que está listo para hacer una diferencia en la educación."
 
 
 
@@ -144,9 +144,9 @@
             <!-- en este pedaso se pone texto relacionado al tema de turismo -->
             
             <div class="col-12 text-center">
-            <h2 class="text-danger text-uppercase">popayán</h2>
-            <h3 class="text-capitalize">un lugar donde encontraras lugares unicos </h3>
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis nesciunt in tempore voluptate, ab cumque qui delectus nisi assumenda a error eveniet beatae pariatur ut dolorem nihil explicabo fugit.
+            <h2 class="text-danger text-black">RATINGSOFT</h2>
+            <h3 class="text-capitalize">Software de calificaciones</h3>
+            <p class="text-muted">"Transformando la educación con tecnología"
             
             </p>
             </div>

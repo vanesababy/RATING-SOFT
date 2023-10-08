@@ -14,7 +14,7 @@
                 <div class="col-12 text-center">
                     <h2 class="text-info text-uppercase">RATINGSOFT</h2>
                     <h3 class="text-capitalize">"Transformando la educación con tecnología"</h3>
-                    <p class="text-muted">
+                    <p class="text-muted" style="font-size: 20px;">
                     "En la era digital actual, la tecnología se ha convertido en una herramienta esencial para mejorar la eficiencia en todas las áreas, incluida la educación. Nuestro sistema de calificaciones móvil y web está diseñado para transformar la gestión académica. Con acceso fácil y seguro desde cualquier dispositivo, docentes, estudiantes y padres pueden mantenerse actualizados sobre el desempeño académico, fomentando una colaboración transparente y una educación de calidad. Descubre cómo la tecnología está cambiando la forma en que percibimos la gestión de calificaciones y la educación en general."
                     </p>
                 </div>
