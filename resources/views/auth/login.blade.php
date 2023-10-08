@@ -7,9 +7,10 @@
   .gradient-custom {
     background: #6a11cb;
 /* fallback for old browsers */
-background-image:url("img/capula.png");
+background-image:url("img/login.jpg");
 background-repeat: no-repeat;
 background-size: cover;
+
 
 }
 
@@ -90,7 +91,7 @@ color: #fdfffe;
                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                 <label class="form-check-label" for="remember">
-                                    {{ __('Remember Me') }}
+                                    {{ __('Recordar contraseña') }}
                                 </label>
                             </div>
                         </div>
