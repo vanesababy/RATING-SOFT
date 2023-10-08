@@ -39,15 +39,15 @@
                     <!-- title -->
                     <h1 class="text-capitalize">
                      
-                      <span class="text-info h5">RATING</span><br/>SOFT</h1>
+                      <span class="text-info h4">RATING</span><br/>SOFT</h1>
                      
                     <!-- descripcion -->
-                    <p class="d-none d-md-block" style="color: black;">Contribuir en el proceso del manejo de calificaciones de una institución educativa,
+                    <p class="d-none d-md-block" style="color: white;">Contribuir en el proceso del manejo de calificaciones de una institución educativa,
 mediante un sistema de información que permite el manejo y almacenamiento de calificaciones
 de los estudiantes de una forma digital; tanto el estudiante como acudiente puede visualizar el
 rendimiento académico.</p>
                     <!--boton -->
-                    <a href="/resources/views/auth/register.blade.php" class="text-reset btn btn-info">Acceder</a>
+                    <a href="/resources/views/auth/register.blade.php" class="text-reset btn btn-info">Saber mas!</a>
                     </div>
                     
                     
@@ -132,13 +132,16 @@ y directivos información detallada sobre el desempeño académico de los alumno
                     <blockquote class="col-12  text-white text-center">
                     
                      <!-- img de la persona  -->
-                    <img src="./img/john-doe.jpeg" alt="nombre de la persona juan " class="commets__img">
+                     <img src="./img/Logo.png" alt="" class="commets__img" style="width: 200px; height: auto;">
+
                       <!-- comentiario de la persona -->
-                    <p class="d-none d-md-block">“SOFTWARE DE CALIFICACIONES”</p>
+                      <p class="d-none d-md-block">
+                    <span style="color: white; font-size: 24px;">“SOFTWARE DE CALIFICACIONES”</span> </p>
+
                        <!-- name  -->
-                    <footer class="blockquote-footer  text-white">
+                    <footer class="blockquote-footer  text-black">
                     
-                    <cite>RATINGSOFT</cite>
+                    <cite style="color: black; font-size: 24px;">RATINGSOFT</cite>
                     </footer>
                     </blockquote>
                       </div>
