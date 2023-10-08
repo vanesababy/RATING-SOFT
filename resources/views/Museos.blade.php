@@ -20,7 +20,7 @@
     <span class="text-black h4">EQUIPO</span><br/>RATINGSOFT</h1>
   
   <!-- descripcion -->
-  <p class="d-none d-md-block"style="color: black;">"Nuestro equipo es un grupo de personas apasionadas por la educación y la tecnología. Somos programadores, diseñadores, trabajamos juntos para crear soluciones que hagan la vida más fácil a docentes, estudiantes y padres. Nuestra motivación es mejorar la forma en que se gestionan las calificaciones y, en última instancia, mejorar la calidad de la educación. Somos un equipo comprometido y apasionado que está listo para hacer una diferencia en la educación."
+  <p class="d-none d-md-block"style="color: black; font-size: 24px">"Nuestro equipo es un grupo de personas apasionadas por la educación y la tecnología. Somos programadores, diseñadores, trabajamos juntos para crear soluciones que hagan la vida más fácil a docentes, estudiantes y padres. Nuestra motivación es mejorar la forma en que se gestionan las calificaciones y, en última instancia, mejorar la calidad de la educación. Somos un equipo comprometido y apasionado que está listo para hacer una diferencia en la educación."
 
 
 
@@ -47,7 +47,7 @@
         <div class="col-12 text-center">
         <h2 class="text-danger text-uppercase">RATINGSOFT</h2>
         <h3 class="text-capitalize">Equipo de trabajo</h3>
-        <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis nesciunt in tempore voluptate, ab cumque qui delectus nisi assumenda a error eveniet beatae pariatur ut dolorem nihil explicabo fugit.
+        <p class="text-muted" style="font-size: 22px;">"Nuestro equipo es un grupo de personas apasionadas por la educación y la tecnología. Somos programadores, diseñadores, trabajamos juntos para crear soluciones que hagan la vida más fácil a docentes, estudiantes y padres.
         
         </p>
         </div>
@@ -69,7 +69,7 @@
 
 
                 <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage4">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\imagen4.jpg " alt=""></a>
+                    <img class="w-100 mb-4 rounded modal-galeria" src="img\evelyn.jpeg" alt=""></a>
 
             </div>
           
@@ -124,7 +124,7 @@
 
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                    <img src="img\imagen4.jpg" alt="">
+                    <img src="img\evelyn.jpeg" alt="">
 
                 </div>
 
