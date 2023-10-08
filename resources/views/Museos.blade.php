@@ -51,7 +51,7 @@
             <div class="col-md-6 col-lg-4  mb-3 mb-md-0">
 
                 <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage1">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\alexx.jpg" alt="" width="" height=""  >
+                    <img class="w-100 mb-4 rounded modal-galeria" src="img\alex.jpg" alt="" width="" height=""  >
 
                 </a>
                 <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage2">
@@ -78,7 +78,7 @@
 
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                    <img src="img\alexx.jpg" alt="">
+                    <img src="img\alex.jpg" alt="">
 
                 </div>
 
@@ -129,23 +129,7 @@
         {{-- imafen#5 --}}
         <div tabindex="-1" aria-labelledby="modalimage5" aria-hidden="true" class="modal fade" id="modalimage5">
 
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <img src="img\iglesai5.jpg" alt="">
-
-                </div>
-
-            </div>
-
-        </div>
-        {{-- imafen#6 --}}
-        <div tabindex="-1" aria-labelledby="modalimage6" aria-hidden="true" class="modal fade" id="modalimage6">
-
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <img src="img\iglesia6.jpg" alt="">
-
-                </div>
+     
 
             </div>
 
