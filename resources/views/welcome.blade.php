@@ -132,7 +132,8 @@ y directivos información detallada sobre el desempeño académico de los alumno
                     <blockquote class="col-12  text-white text-center">
                     
                      <!-- img de la persona  -->
-                    <img src="./img/john-doe.jpeg" alt="nombre de la persona juan " class="commets__img">
+                     <img src="./img/Logo.png" alt="" class="commets__img" style="width: 180px; height: 180px;">
+
                       <!-- comentiario de la persona -->
                     <p class="d-none d-md-block">“SOFTWARE DE CALIFICACIONES”</p>
                        <!-- name  -->

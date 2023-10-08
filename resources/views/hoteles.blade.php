@@ -4,33 +4,38 @@
 
 @section('content')
     {{-- <div class="container text-center mt-5 bg-gray bold">
-    <h1>lllllllllllllllllllll</h1>
+    <h1>-</h1>
 </div> --}}
 
     <header class="header linear-white hoteles-img">
 
 
+    <div class="container vh-50">
+    <!-- descripcion -->
+    <div class="row  h-100 align-items-center">
+        <div class="col-10 col-lg-6 text-info">
+            <!-- title -->
+            <h1 class="text-capitalize" style="background-color: rgba(255, 255, 255, 0.7); padding: 15px; border-radius: 5px;">
+                <span class="text-black h2">VISIÓN</span><br />RATINGSOFT
+            </h1>
 
-        <div class="container vh-50">
             <!-- descripcion -->
-            <div class="row  h-100 align-items-center">
-                <div class="col-10 col-lg-6 text-white">
-                    <!-- title -->
-                    <h1 class="text-capitalize ">
-                        <span class="text-black h2">VISIÓN</span><br />RATING
-                        SOFT
-                    </h1>
+            <p class="d-none d-md-block" style="font-size: 22px; color: black; background-color: rgba(255, 255, 255, 0.7); padding: 15px; border-radius: 5px;">
+                RATINGSOFT será un sistema de información muy reconocido en el ámbito educativo por
+                sus eficiencia, calidad, seguridad y responsabilidad en cuanto a manejo de información y
+                calificaciones, iremos innovando poco a poco tanto así que para el año 2027 lograremos
+                implementar este sistema de información para instituciones de educación superior como lo son
+                colegios.
+            </p>
+            
+           
 
-                    <!-- descripcion -->
-                    <p class="d-none d-md-block" style="font-size: 22px;color:black">RATINGSOFT será un sistema de información muy reconocido en el ámbito educativo por
-                    sus eficiencia, calidad, seguridad y responsabilidad en cuanto a manejo de información y
-                    calificaciones, iremos innovando poco a poco tanto así que para el año 2027 lograremos
-                    implementar este sistema de información para instituciones de educación superior como lo son
-                    colegios.
-                </p>
-                    <!--boton -->
-                    <a href="http://127.0.0.1:8000/senderismo" class="text-reset btn btn-info">Saber más!</a>
-                </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
 
 
             </div>
@@ -65,7 +70,7 @@
                         <p class="card-text">Según el arquitecto, crítico e historiador Germán Téllez, la fachada de este
                             templo constituye la mejor muestra del barroco en toda Colombia. Su construcción fue comisionada
                             por las familias Valencia y Arroyo.</p>
-                        <a href="#" class="text-reset">leer mas </a>
+                        <a href="" class="text-reset">leer mas </a>
                     </div>
                 </div>
             </article>

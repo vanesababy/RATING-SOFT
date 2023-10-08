@@ -49,7 +49,7 @@
                     
                     <div class="col-12 text-center">
                     <h2 class="text-danger text-uppercase">ratingsoft</h2>
-                    <h3 class="text-capitalize">un lugar donde  </h3>
+                    <h3 class="text-capitalize">un lugar donde</h3>
                     <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis nesciunt in tempore voluptate, ab cumque qui delectus nisi assumenda a error eveniet beatae pariatur ut dolorem nihil explicabo fugit.
                     
                     </p>
@@ -107,7 +107,7 @@
                     <blockquote class="col-12  text-white text-center">
                     
                      <!-- img de la persona  -->
-                    <img src="./img/john-doe.jpeg" alt="nombre de la persona juan " class="commets__img">
+                    <img src="./img/Logo.png" alt="" class="commets__img">
                       <!-- comentiario de la persona -->
                     <p class="d-none d-md-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi at impedit tempore sit, tempora, laboriosam quidem placeat quo, atque veritatis architecto! Amet soluta tempore nostrum nisi? Temporibus officia minus quod.</p>
                        <!-- name  -->

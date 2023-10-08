@@ -51,14 +51,14 @@ color: #fdfffe;
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
          
-            <div class="card-body p-5 text-center ">
+            <div class="card-body p-5 text-center" style="color:black; font-size:20px">
             <p  id="log">Iniciar Sesión</p>
   
                 <form method="POST" action="{{ route('login') }}" class="allog">
                     @csrf
 
                     <div class="form-outline mb-4">
-                        <label for="email" class="col-md-4 col-form-label">{{ __('Correo ') }}</label>
+                        <label for="email" class="col-md-4 col-form-label" style="font-size: 18px; color:black">{{ __('Correo Electrónico ') }}</label>
 
                         <div class="form-outline mb-4">
                             <input id="email" type="email" class="form-control @error('email') es incorrecto  @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -72,7 +72,7 @@ color: #fdfffe;
                     </div>
 
                     <div class="form-outline mb-4">
-                        <label for="password" class="col-md-4 col-form-label ">{{ __('Contraseña') }}</label>
+                        <label for="password" class="col-md-4 col-form-label" style="font-size: 18px; color:black">{{ __('Contraseña') }}</label>
 
                         <div class="form-outline mb-4">
                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
@@ -98,23 +98,35 @@ color: #fdfffe;
                     </div>
 
                   
+
+
+
+
+                 
+
+
                     <button  class="btn btn-white"  type="submit" id="boton1"> 
-                        {{ __('Iniciar Sesión') }}
+                        {{ __('Continuar') }}
                     </button>
+                    <br><br>
+                    
+
 
                     <hr class="my-1">
 
-                            @if (Route::has('password.request'))
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('olvidó su contraseña?') }}
-                                </a>
-                            @endif
+                    @if (Route::has('password.request'))
+    <div class="mb-3">
+        <a class="btn btn-danger" href="{{ route('password.request') }}">
+            {{ __('¿Olvidó su contraseña?') }}
+        </a>
+    </div>
+@endif
 
-                            
-                        </div>
-                    </div>  
-                </form>
-            </div>
+            <div class="mb-3">
+         <a href="http://127.0.0.1:8000/" class="btn btn-primary">Atrás</a>
+    </div>
+
+            
         </div>
     </div>
 </div>

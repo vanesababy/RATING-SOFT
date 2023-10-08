@@ -22,14 +22,14 @@
     <span class="text-block h5">RATING</span><br/>SOFT</h1>
   
   <!-- descripcion -->
-  <p class="d-none d-md-block" style="color: black; font-size:20px">RATINGSOFT es un software el cual te facilita la sistematización de información de
+  <p class="d-none d-md-block" style="color: black; font-size:20px; font-size: 22px; color: black; background-color: rgba(255, 255, 255, 0.7); padding: 15px; border-radius: 5px;">RATINGSOFT es un software el cual te facilita la sistematización de información de
 administrativos, alumnos y profesores, esto te permite registrar, editar y eliminar información
 dependiendo el usuario al que pertenezca, este proyecto surge debido a la manera en que los
 profesores llevan a cabo el manejo de calificaciones, este sistema de información va dirigido
 especialmente para el ámbito educativo exactamente para una institución de educación media.</p>
 
   <!--boton -->
-  <a href="http://127.0.0.1:8000/senderismo" class="text-reset btn btn-info">Saber más!</a>
+  
   </div>
   
   
