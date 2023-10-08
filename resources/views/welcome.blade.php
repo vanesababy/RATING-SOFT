@@ -71,7 +71,8 @@ rendimiento académico.</p>
                     <div class="col-12 text-center">
                     <h2 class="text-danger text-uppercase">RATINGSOFT</h2>
                     <h3 class="text-capitalize">Sistematización de notas </h3>
-                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis nesciunt in tempore voluptate, ab cumque qui delectus nisi assumenda a error eveniet beatae pariatur ut dolorem nihil explicabo fugit.
+                    <p class="text-muted">Este sistema de información ayudara en el proceso de manejo de calificaciones de estudiantes
+de una institución educativa mediante su sistematización.
                     
                     </p>
                     </div>
