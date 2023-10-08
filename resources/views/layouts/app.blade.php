@@ -139,12 +139,19 @@
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
             <!-- Left -->
             <div class="me-5 d-none d-lg-block  ">
-                <span>Get connected with us on social networks:</span>
+            <div>
+    <span style="font-size: 34px;">
+        <i class="fas fa-icons"></i>
+    </span>
+    <span style="font-size: 24px; color:white">Nuestras redes sociales</span>
+</div>
+
+
             </div>
             <!-- Left -->
 
             <!-- Right -->
-            <div>
+            <div style="font-size: 34px;">
                 <a href="" class="me-4 text-reset">
                     <i class="fab fa-facebook-f"></i>
                 </a>
@@ -177,8 +184,7 @@
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>RATINGSOFT
-                        </h6>
+                        <img src="/public/img/Logo.png" alt="" class="me-3">RATINGSOFT </h6>
                         <p>
                         "RATINGSOFT es la solución definitiva para simplificar y mejorar la gestión de calificaciones en su institución educativa. Este software ha sido diseñado pensando en docentes, estudiantes y padres por igual. Con RATINGSOFT, los docentes pueden registrar y actualizar fácilmente las calificaciones de sus alumnos
                         </p>
@@ -210,25 +216,25 @@
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 ">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4 ">
-                            Useful links
+                            Creadores
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Pricing</a>
+                            <a href="https://www.facebook.com/juanjose.orozco.961" class="text-reset">Juan Orozco</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Settings</a>
+                            <a href="https://www.facebook.com/andresfelipe.suaza.7/" class="text-reset">Andres Suaza</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Orders</a>
+                            <a href="" class="text-reset">Evelyn Meneses</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Help</a>
+                            <a href="https://www.facebook.com/profile.php?id=100083360104661" class="text-reset">Alexander Gómez</a>
                         </p>
                     </div>
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" style="font-size: 20px;">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
                             Contactos

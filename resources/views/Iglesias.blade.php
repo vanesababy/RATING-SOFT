@@ -16,16 +16,20 @@
  
    <!-- descripcion -->
   <div class="row  h-100 align-items-center">
-  <div class="col-10 col-lg-6 text-white">
+  <div class="col-10 col-lg-6 text-black">
   <!-- title -->
   <h1 class="text-capitalize ">
-    <span class="text-danger h5">RATING</span><br/>SOFT</h1>
+    <span class="text-block h5">RATING</span><br/>SOFT</h1>
   
   <!-- descripcion -->
-  <p class="d-none d-md-block" style="color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt perferendis ullam molestias quae dolore! Ipsum cum quaerat repudiandae unde accusamus aut neque. At necessitatibus modi, natus eos corrupti animi.</p>
+  <p class="d-none d-md-block" style="color: black; font-size:20px">RATINGSOFT es un software el cual te facilita la sistematización de información de
+administrativos, alumnos y profesores, esto te permite registrar, editar y eliminar información
+dependiendo el usuario al que pertenezca, este proyecto surge debido a la manera en que los
+profesores llevan a cabo el manejo de calificaciones, este sistema de información va dirigido
+especialmente para el ámbito educativo exactamente para una institución de educación media.</p>
 
   <!--boton -->
-  <a href="#" class="text-reset btn btn-info">bye now</a>
+  <a href="http://127.0.0.1:8000/senderismo" class="text-reset btn btn-info">Saber más!</a>
   </div>
   
   
