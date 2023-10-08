@@ -80,7 +80,7 @@ de una institución educativa mediante su sistematización.
                     <!-- card #1 -->
                     <article class="col-md-6 col-lg-4 card-effect mb-3 mb-md-0">
                     <div class="card">
-                      <img src="https://media.istockphoto.com/photos/sunsets-on-popayan-picture-id1335778651?b=1&k=20&m=1335778651&s=170667a&w=0&h=xuqX7F6Jneu4UtyewJisccG4LgeXd9y_SkuCLBZYXxY=" 
+                      <img src="img/home5.jpg" 
                        alt="torre"    class="card-img  card-img-filter " />
                       <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
                         <h4 class="card-title">RATINGSOFT</h4>
@@ -94,7 +94,7 @@ las calificaciones de los alumnos de forma sencilla.</p>
                     <!-- card #2 -->
                     <article class="col-md-6 col-lg-4 card-effect  mb-3 mb-md-0">
                       <div class="card">
-                        <img src="https://media.istockphoto.com/photos/church-of-santo-domingo-popayan-colombia-picture-id186073664?k=20&m=186073664&s=612x612&w=0&h=D7ALcBKY4zT2n-V6_8i8RJHxbbYg81VLRKgT4ajiAhk=" 
+                        <img src="img/home2.jpg" 
                          alt="iglesia"    class="card-img  card-img-filter " />
                         <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
                           <h4 class="card-title">RATINGSOFT</h4>
@@ -108,7 +108,7 @@ académicos de los estudiantes y evite posibles brechas de seguridad.</p>
                       <!-- card #3-->
                     <article class="col-md-6 col-lg-4 card-effect mt-md-4 mt-lg-0">
                       <div class="card">
-                        <img src="https://media.istockphoto.com/photos/the-ermita-on-a-dawn-picture-id1138490864?k=20&m=1138490864&s=612x612&w=0&h=IgOPRWbObv4qZ5qTaML1QAN5opx4aPJJV4JqewuGTIY=" 
+                        <img src="img/home3.jpg" 
                          alt="iglesia2"    class="card-img  card-img-filter " />
                         <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
                           <h4 class="card-title">RATINGSOFT</h4>
@@ -155,7 +155,7 @@ y directivos información detallada sobre el desempeño académico de los alumno
                       <!--  media objeto 1 -->
                     <ul class="col-12 col-md-6 mt-3">
                     <li class="media">
-                      <img src="./img/ggggg.jpg" alt="iglesia " class="media-object-img">
+                      <img src="./img/home.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
                     <h5 class="h6 mb-0 mb-1">subtitle</h5>
                     
@@ -172,7 +172,7 @@ y directivos información detallada sobre el desempeño académico de los alumno
                     
                     
                     <li class="media">
-                      <img src="./img/ggggg.jpg" alt="iglesia " class="media-object-img">
+                      <img src="./img/home4.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
                     <h5 class="h6 mb-0 mb-1">subtitle</h5>
                     
@@ -189,7 +189,7 @@ y directivos información detallada sobre el desempeño académico de los alumno
                     
                     
                     <li class="media">
-                      <img src="./img/ggggg.jpg" alt="iglesia " class="media-object-img">
+                      <img src="./img/home1.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
                     <h5 class="h6 mb-0 mb-1">subtitle</h5>
                     
