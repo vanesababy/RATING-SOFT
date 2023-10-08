@@ -80,7 +80,7 @@ de una institución educativa mediante su sistematización.
                     <!-- card #1 -->
                     <article class="col-md-6 col-lg-4 card-effect mb-3 mb-md-0">
                     <div class="card">
-                      <img src="img/home1.jpg" 
+                      <img src="img/home5.jpg" 
                        alt="torre"    class="card-img  card-img-filter " />
                       <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
                         <h4 class="card-title">Card title</h4>
@@ -152,7 +152,7 @@ de una institución educativa mediante su sistematización.
                       <!--  media objeto 1 -->
                     <ul class="col-12 col-md-6 mt-3">
                     <li class="media">
-                      <img src="./img/ggggg.jpg" alt="iglesia " class="media-object-img">
+                      <img src="./img/home.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
                     <h5 class="h6 mb-0 mb-1">subtitle</h5>
                     
@@ -169,7 +169,7 @@ de una institución educativa mediante su sistematización.
                     
                     
                     <li class="media">
-                      <img src="./img/ggggg.jpg" alt="iglesia " class="media-object-img">
+                      <img src="./img/home4.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
                     <h5 class="h6 mb-0 mb-1">subtitle</h5>
                     
@@ -186,7 +186,7 @@ de una institución educativa mediante su sistematización.
                     
                     
                     <li class="media">
-                      <img src="./img/ggggg.jpg" alt="iglesia " class="media-object-img">
+                      <img src="./img/home1.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
                     <h5 class="h6 mb-0 mb-1">subtitle</h5>
                     

@@ -58,7 +58,7 @@
                     <!-- card #1 -->
                     <article class="col-md-6 col-lg-4 card-effect mb-3 mb-md-0">
                     <div class="card">
-                      <img src="https://media.istockphoto.com/photos/sunsets-on-popayan-picture-id1335778651?b=1&k=20&m=1335778651&s=170667a&w=0&h=xuqX7F6Jneu4UtyewJisccG4LgeXd9y_SkuCLBZYXxY=" 
+                      <img src="img/home3.jpg" 
                        alt="torre"    class="card-img  card-img-filter " />
                       <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
                         <h4 class="card-title">Card title</h4>
@@ -71,7 +71,7 @@
                     <!-- card #2 -->
                     <article class="col-md-6 col-lg-4 card-effect  mb-3 mb-md-0">
                       <div class="card">
-                        <img src="../public/img/home.jpg" 
+                        <img src="img/home5.jpg" 
                          alt="iglesia"    class="card-img  card-img-filter " />
                         <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
                           <h4 class="card-title">Card title</h4>
@@ -84,7 +84,7 @@
                       <!-- card #3-->
                     <article class="col-md-6 col-lg-4 card-effect mt-md-4 mt-lg-0">
                       <div class="card">
-                        <img src="https://media.istockphoto.com/photos/the-ermita-on-a-dawn-picture-id1138490864?k=20&m=1138490864&s=612x612&w=0&h=IgOPRWbObv4qZ5qTaML1QAN5opx4aPJJV4JqewuGTIY=" 
+                        <img src="img/home2.jpg" 
                          alt="iglesia2"    class="card-img  card-img-filter " />
                         <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
                           <h4 class="card-title">Card title</h4>
