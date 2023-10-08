@@ -19,7 +19,7 @@
   <div class="col-10 col-lg-6 text-white">
   <!-- title -->
   <h1 class="text-capitalize ">
-    <span class="text-danger h5">popayán</span><br/>turims</h1>
+    <span class="text-danger h5">RATING</span><br/>SOFT</h1>
   
   <!-- descripcion -->
   <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt perferendis ullam molestias quae dolore! Ipsum cum quaerat repudiandae unde accusamus aut neque. At necessitatibus modi, natus eos corrupti animi.</p>
