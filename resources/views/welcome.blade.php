@@ -69,8 +69,8 @@ rendimiento académico.</p>
                     <!-- en este pedaso se pone texto relacionado al tema de turismo -->
                     
                     <div class="col-12 text-center">
-                    <h2 class="text-danger text-uppercase">popayán</h2>
-                    <h3 class="text-capitalize">un lugar donde encontraras lugares unicos </h3>
+                    <h2 class="text-danger text-uppercase">RATINGSOFT</h2>
+                    <h3 class="text-capitalize">Sistematización de notas </h3>
                     <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis nesciunt in tempore voluptate, ab cumque qui delectus nisi assumenda a error eveniet beatae pariatur ut dolorem nihil explicabo fugit.
                     
                     </p>
