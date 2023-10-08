@@ -53,17 +53,17 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('iglesias') }}">{{ __('Iglesias') }}</a>
+                        <a class="nav-link text-white" href="{{ route('iglesias') }}">{{ __('Misión') }}</a>
                     <li class="nav-item">
 
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('hoteles.index') }}">{{ __('Hoteles') }}</a>
+                        <a class="nav-link text-white" href="{{ route('hoteles.index') }}">{{ __('Visión') }}</a>
                     <li class="nav-item   text-white">
-                        <a class="nav-link  text-white" href="{{ route('museos.index') }}">{{ __('Museos') }}</a>
+                        <a class="nav-link  text-white" href="{{ route('museos.index') }}">{{ __('Sobre Nosotros') }}</a>
                     <li class="nav-item  text-white">
                         <a class="nav-link  text-white"
-                            href="{{ route('senderismo.index') }}">{{ __('Senderismo') }}</a>
+                            href="{{ route('senderismo.index') }}">{{ __('Saber más!') }}</a>
                     </li>
 
                 </ul>

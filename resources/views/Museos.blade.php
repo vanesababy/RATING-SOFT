@@ -17,7 +17,7 @@
   <div class="col-10 col-lg-6 text-white">
   <!-- title -->
   <h1 class="text-capitalize ">
-    <span class="text-danger h5">popayán</span><br/>turims</h1>
+    <span class="text-danger h5">RATING</span><br/>SOFT</h1>
   
   <!-- descripcion -->
   <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt perferendis ullam molestias quae dolore! Ipsum cum quaerat repudiandae unde accusamus aut neque. At necessitatibus modi, natus eos corrupti animi.</p>
@@ -40,8 +40,8 @@
         <!-- en este pedaso se pone texto relacionado al tema de turismo -->
         
         <div class="col-12 text-center">
-        <h2 class="text-danger text-uppercase">popayán</h2>
-        <h3 class="text-capitalize">un lugar donde encontraras lugares unicos </h3>
+        <h2 class="text-danger text-uppercase">RATINGSOFT</h2>
+        <h3 class="text-capitalize">Equipo de trabajo</h3>
         <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis nesciunt in tempore voluptate, ab cumque qui delectus nisi assumenda a error eveniet beatae pariatur ut dolorem nihil explicabo fugit.
         
         </p>
