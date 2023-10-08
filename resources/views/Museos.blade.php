@@ -60,7 +60,7 @@
             </div>
             <div class="col-md-6 col-lg-4  mb-3 mb-md-0">
                 <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage3">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\iglesia3.jpeg" alt=""></a>
+                    <img class="w-100 mb-4 rounded modal-galeria" src="img\orozco.jpeg" alt=""></a>
 
 
                 <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage4">
@@ -105,7 +105,7 @@
 
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                    <img src="img\iglesia3.jpeg" alt="">
+                    <img src="img\orozco.jpeg" alt="">
 
                 </div>
 
