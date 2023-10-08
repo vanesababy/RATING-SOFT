@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <header class="header linear-white ">
+    
 
         <section class="container">
 
