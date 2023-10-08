@@ -134,11 +134,11 @@ y directivos información detallada sobre el desempeño académico de los alumno
                      <!-- img de la persona  -->
                     <img src="./img/john-doe.jpeg" alt="nombre de la persona juan " class="commets__img">
                       <!-- comentiario de la persona -->
-                    <p class="d-none d-md-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi at impedit tempore sit, tempora, laboriosam quidem placeat quo, atque veritatis architecto! Amet soluta tempore nostrum nisi? Temporibus officia minus quod.</p>
+                    <p class="d-none d-md-block">“SOFTWARE DE CALIFICACIONES”</p>
                        <!-- name  -->
                     <footer class="blockquote-footer  text-white">
                     
-                    <cite> Alex</cite>
+                    <cite>RATINGSOFT</cite>
                     </footer>
                     </blockquote>
                       </div>
@@ -150,23 +150,23 @@ y directivos información detallada sobre el desempeño académico de los alumno
                     <div class="row">
                       <!--  titulo" -->
                       <div class="col-12 text-center">
-                      <h3 class="text-danger text-uppercase h6">¿Qué puedes hacer en Popayán?</h3>
-                      <h2 class="text-capitalize">Una sensación de paz envuelve a quienes caminan por las calles de Popayán. </h2>
+                      <h3 class="text-danger text-uppercase h6">El principal beneficiario de RATINGSOFT son las instituciones educativas que lo implementen.</h3>
+                      <h2 class="text-capitalize">El objetivo es optimizar los procesos en tiempo y recursos. </h2>
                       <!--  media objeto 1 -->
                     <ul class="col-12 col-md-6 mt-3">
                     <li class="media">
                       <img src="./img/home.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
-                    <h5 class="h6 mb-0 mb-1">subtitle</h5>
+                    <h5 class="h6 mb-0 mb-1">-</h5>
                     
                     <h4 class="h5">
-                      <a href=""> titluo de objeto </a>
+                      <a href="">Administrativo:</a>
                     </h4>
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio sed eligendi porro quasi, ?</p>
-                    
-                    
-                    
-                    
+                      <p>Conceder permisos a usuarios y docentes</p>
+                      <p>Registrar cada alumno en su grado respectivo.</p>
+                      <p>Dar de baja a personal docente.</p>
+                      <p>Consultar personal docente.</p>
+
                       </div>
                     </li>
                     
@@ -174,16 +174,16 @@ y directivos información detallada sobre el desempeño académico de los alumno
                     <li class="media">
                       <img src="./img/home4.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
-                    <h5 class="h6 mb-0 mb-1">subtitle</h5>
+                    <h5 class="h6 mb-0 mb-1">-</h5>
                     
                     <h4 class="h5">
-                      <a href=""> titluo de objeto </a>
+                      <a href="">Personal docente:</a>
                     </h4>
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio sed eligendi porro quasi, ?</p>
-                    
-                    
-                    
-                    
+                      <p>Subir calificaciones.</p>
+                      <p>Modificar calificaciones(solicitando permisos a administrador).</p>
+                      <p>Consultar lista de grados y alumnos.</p>
+                      <p>Subir reportes académicos.</p>
+             
                       </div>
                     </li>
                     
@@ -191,13 +191,13 @@ y directivos información detallada sobre el desempeño académico de los alumno
                     <li class="media">
                       <img src="./img/home1.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
-                    <h5 class="h6 mb-0 mb-1">subtitle</h5>
+                    <h5 class="h6 mb-0 mb-1">-</h5>
                     
                     <h4 class="h5">
-                      <a href=""> titluo de objeto </a>
+                      <a href="">Usuarios</a>
                     </h4>
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio sed eligendi porro quasi, ?</p>
-                    
+                      <p>Visualizar informes académicos por alumno.</p>
+                      <p>Consultar calificaciones.</p>
                     
                     
                     
@@ -211,11 +211,11 @@ y directivos información detallada sobre el desempeño académico de los alumno
                         <section class="carousel slide" id="carousel-weston">
                           <div class="carousel-caption carousel-weston-middle">
                             <!-- algun titulo de acuerdo a las imagnes o al tema   -->
-                            <h2 class="d-none d-md-block text-uppercase">senderismo </h2>
-                            <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias velit officia perspiciatis voluptates cupiditate nulla quaerat autem illo, optio necessitatibus accusamus iste ea magni? Deleniti nostrum provident delectus quis modi?</p>
+                            <h2 class="d-none d-md-block text-uppercase">RATINGSOFT</h2>
+                            <p class="d-none d-md-block">SISTEMATIZAMOS PARA AYUDARTE</p>
                             <button class="btn btn-light px4 text-capitalize d-none d-md-block mx-auto">
                               
-                              <a href="{{ route('senderismo.index') }}">  GO!</a> 
+                              <a href="{{ route('senderismo.index') }}">Saber más?</a> 
                             </button>
                     
                           </div>
@@ -248,8 +248,8 @@ y directivos información detallada sobre el desempeño académico de los alumno
                     <div class="div row">
                     <!-- title  -->
                     <div class="col-12 text-center">
-                      <h3 class="text-danger text-uppercase h6">¿Qué puedes hacer en Popayán?</h3>
-                      <h2 class="text-capitalize">Una sensación de paz envuelve a quienes caminan por las calles de Popayán. </h2>
+                      <h3 class="text-danger text-uppercase h6">RATINGSOFT</h3>
+                      <h2 class="text-capitalize">"Inspirados por la excelencia"</h2>
                     </div>
                     <!-- agregar algo de ultimo  -->
                     </div>
