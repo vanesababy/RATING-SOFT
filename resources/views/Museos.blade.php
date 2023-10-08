@@ -51,11 +51,11 @@
             <div class="col-md-6 col-lg-4  mb-3 mb-md-0">
 
                 <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage1">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\Iglesia_San_Francisco_2.jpg" alt="">
+                    <img class="w-100 mb-4 rounded modal-galeria" src="img\alex.jpg" alt="">
 
                 </a>
                 <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage2">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\alrededores.jpg" alt=""></a>
+                    <img class="w-100 mb-4 rounded modal-galeria" src="img\andy.jpeg" alt=""></a>
 
             </div>
             <div class="col-md-6 col-lg-4  mb-3 mb-md-0">
@@ -67,14 +67,7 @@
                     <img class="w-100 mb-4 rounded modal-galeria" src="img\imagen4.jpg " alt=""></a>
 
             </div>
-            <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage5">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\iglesai5.jpg" alt=""></a>
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage6">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\iglesia6.jpg" alt=""></a>
-
-            </div>
+          
 
 
         </div>
@@ -85,7 +78,7 @@
 
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                    <img src="img\Iglesia_San_Francisco_2.jpg" alt="">
+                    <img src="img\alex.jpg" alt="">
 
                 </div>
 
@@ -100,7 +93,7 @@
 
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                    <img src="img\alrededores.jpg " alt="">
+                    <img src="img\andy.jpeg" alt="">
 
                 </div>
 
