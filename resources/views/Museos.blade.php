@@ -14,20 +14,15 @@
  
    <!-- descripcion -->
   <div class="row  h-100 align-items-center">
-  <div class="col-10 col-lg-6 text-black">
+  <div class="col-10 col-lg-6 text-white">
   <!-- title -->
   <h1 class="text-capitalize ">
-    <span class="text-black h4">EQUIPO</span><br/>RATINGSOFT</h1>
+    <span class="text-danger h5">RATING</span><br/>SOFT</h1>
   
   <!-- descripcion -->
-  <p class="d-none d-md-block"style="color: black;">"Nuestro equipo es un grupo de personas apasionadas por la educación y la tecnología. Somos programadores, diseñadores, trabajamos juntos para crear soluciones que hagan la vida más fácil a docentes, estudiantes y padres. Nuestra motivación es mejorar la forma en que se gestionan las calificaciones y, en última instancia, mejorar la calidad de la educación. Somos un equipo comprometido y apasionado que está listo para hacer una diferencia en la educación."
-
-
-
-
-</p>
+  <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt perferendis ullam molestias quae dolore! Ipsum cum quaerat repudiandae unde accusamus aut neque. At necessitatibus modi, natus eos corrupti animi.</p>
   <!--boton -->
-  <a href="" class="text-reset btn btn-info">Saber más!</a>
+  <a href="#" class="text-reset btn btn-danger">bye now</a>
   </div>
   
   
