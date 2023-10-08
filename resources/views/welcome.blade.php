@@ -37,9 +37,9 @@
                     <div class="row  h-100 align-items-center">
                     <div class="col-10 col-lg-6 text-white">
                     <!-- title -->
-                    <h1 class="text-capitalize ">
+                    <h1 class="text-capitalize">
                      
-                      <span class="text-danger h5">RATING</span><br/>SOFT</h1>
+                      <span class="text-info h5">RATING</span><br/>SOFT</h1>
                      
                     <!-- descripcion -->
                     <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt perferendis ullam molestias quae dolore! Ipsum cum quaerat repudiandae unde accusamus aut neque. At necessitatibus modi, natus eos corrupti animi.</p>
@@ -131,7 +131,7 @@
                        <!-- name  -->
                     <footer class="blockquote-footer  text-white">
                     
-                    <cite> juan manuel anacona </cite>
+                    <cite> Alex</cite>
                     </footer>
                     </blockquote>
                       </div>
@@ -215,15 +215,15 @@
                           <div class="carousel-inner">
                               <!-- carousel#1  -->
                             <div class="carousel-item active">
-                              <img src="./img/carousel/Carousel-01.jpg" class="d-block w-100" alt="...">
+                              <img src="./img/carousel/fother.webp" class="d-block w-100" alt="...">
                             </div>
                               <!-- carousel#2  -->
                             <div class="carousel-item">
-                              <img src="./img/carousel/Carousel-02.jpg" class="d-block w-100" alt="...">
+                              <img src="./img/carousel/2.jpg" class="d-block w-100" alt="...">
                             </div>
                               <!-- carousel#3  -->
                             <div class="carousel-item">
-                              <img src="./img/carousel/Carousel-03.jpg" class="d-block w-100" alt="...">
+                              <img src="./img/carousel/3.jpeg" class="d-block w-100" alt="...">
                             </div>
                           </div>
                          <a href="#carousel-weston" class="carousel-control-prev" data-slide="prev">

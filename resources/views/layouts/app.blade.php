@@ -32,9 +32,14 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm ">
 
-            <a class="navbar-brand text-danger" href="{{ url('home') }}">
+            <a class="navbar-brand text-info" href="{{ url('home') }}">
+                 <img src="./img/descarga.png" alt="" width="50%" height="50%">
+            </a>
+
+            <a class="navbar-brand text-info" href="{{ url('home') }}">
                 {{ config('', 'RATINGSOFT') }}
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="{{ __('Toggle navigation') }}">
@@ -69,12 +74,12 @@
                     @guest
                         @if (Route::has('login'))
                             <button id="logboton" type="submit" class="btn btn-outline-primary mb-4 button_color">
-                                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                             </button>
                         @endif
                         @if (Route::has('register'))
                             <button id="registro" type="submit" class="btn btn-outline-primary mb-4 button_color">
-                                <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                             </button>
                         @endif
                     @else

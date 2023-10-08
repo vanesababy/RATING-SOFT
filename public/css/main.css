@@ -7,7 +7,7 @@
 
    
 .header {
-    background-image: url(../img/neil-mark-thomas-aDjw7Uqmz2Y-unsplash.jpg);
+    background-image: url(../img/fondo.webp);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -79,7 +79,7 @@
 
 
 .comments {
-background-image: url(../img/bg-clients.jpeg) ;
+background-image: url(../img/fondo2.jpeg) ;
 background-position: center;
 background-size: cover;
 position: relative;
@@ -196,8 +196,8 @@ margin-right: 15px;
 
 #app  nav {
    background-size: 400% 400%;
-   background-color: #000000;
-   background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+   background-color: #12c8e0;
+   background-image: linear-gradient(147deg, #6b8b8e 0%, #2c3e50 74%);
  position: relative;
  animation:cambiar 10s ease infinite;
 
