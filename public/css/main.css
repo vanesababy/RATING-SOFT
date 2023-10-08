@@ -7,7 +7,7 @@
 
    
 .header {
-    background-image: url(../img/fondo.webp);
+    background-image: url(../img/fon.jpeg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -138,7 +138,7 @@ margin-right: 15px;
    
 
 .iglesia-img {
-    background-image: url('../img/oiglesia.jpg');
+    background-image: url('../img/3.jpeg');
     background-position: center;
     background-size: cover;
     position: relative;

@@ -180,8 +180,7 @@
                             <i class="fas fa-gem me-3"></i>RATINGSOFT
                         </h6>
                         <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum
-                            dolor sit amet, consectetur adipisicing elit.
+                        "RATINGSOFT es la solución definitiva para simplificar y mejorar la gestión de calificaciones en su institución educativa. Este software ha sido diseñado pensando en docentes, estudiantes y padres por igual. Con RATINGSOFT, los docentes pueden registrar y actualizar fácilmente las calificaciones de sus alumnos
                         </p>
                     </div>
                     <!-- Grid column -->

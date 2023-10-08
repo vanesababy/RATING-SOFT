@@ -22,9 +22,10 @@
     <span class="text-danger h5">RATING</span><br/>SOFT</h1>
   
   <!-- descripcion -->
-  <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt perferendis ullam molestias quae dolore! Ipsum cum quaerat repudiandae unde accusamus aut neque. At necessitatibus modi, natus eos corrupti animi.</p>
+  <p class="d-none d-md-block" style="color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt perferendis ullam molestias quae dolore! Ipsum cum quaerat repudiandae unde accusamus aut neque. At necessitatibus modi, natus eos corrupti animi.</p>
+
   <!--boton -->
-  <a href="#" class="text-reset btn btn-danger">bye now</a>
+  <a href="#" class="text-reset btn btn-info">bye now</a>
   </div>
   
   
