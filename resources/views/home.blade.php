@@ -21,12 +21,12 @@
                     <div class="col-10 col-lg-6 text-white">
                     <!-- title -->
                     <h1 class="text-capitalize ">
-                      <span class="text-danger h5">RATIN</span><br/>SOFT</h1>
+                      <span class="text-info h5">RATING</span><br/>SOFT</h1>
                     
                     <!-- descripcion -->
-                    <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt perferendis ullam molestias quae dolore! Ipsum cum quaerat repudiandae unde accusamus aut neque. At necessitatibus modi, natus eos corrupti animi.</p>
+                    <p class="d-none d-md-block">sistema de información web para sistematizar las calificaciones de alumnos de un colegio.</p>
                     <!--boton -->
-                    <a href="#" class="text-reset btn btn-danger">bye now</a>
+                    <a href="#" class="text-reset btn btn-info"></a>
                     </div>
                     
                     

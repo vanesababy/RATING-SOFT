@@ -5,7 +5,7 @@
     <style>
   .gradient-custom {
 
-background-image:url("img/fonto.jpg");
+background-image:url("img/register.webp");
 background-repeat: no-repeat;
 background-size: cover;
 

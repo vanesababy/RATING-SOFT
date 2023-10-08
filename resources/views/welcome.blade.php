@@ -42,9 +42,12 @@
                       <span class="text-info h5">RATING</span><br/>SOFT</h1>
                      
                     <!-- descripcion -->
-                    <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nesciunt perferendis ullam molestias quae dolore! Ipsum cum quaerat repudiandae unde accusamus aut neque. At necessitatibus modi, natus eos corrupti animi.</p>
+                    <p class="d-none d-md-block">Contribuir en el proceso del manejo de calificaciones de una institución educativa,
+mediante un sistema de información que permite el manejo y almacenamiento de calificaciones
+de los estudiantes de una forma digital; tanto el estudiante como acudiente puede visualizar el
+rendimiento académico.</p>
                     <!--boton -->
-                    <a href="#" class="text-reset btn btn-danger">bye now</a>
+                    <a href="/resources/views/auth/register.blade.php" class="text-reset btn btn-info">Acceder</a>
                     </div>
                     
                     
