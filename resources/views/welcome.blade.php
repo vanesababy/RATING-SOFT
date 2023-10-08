@@ -83,9 +83,10 @@ de una institución educativa mediante su sistematización.
                       <img src="https://media.istockphoto.com/photos/sunsets-on-popayan-picture-id1335778651?b=1&k=20&m=1335778651&s=170667a&w=0&h=xuqX7F6Jneu4UtyewJisccG4LgeXd9y_SkuCLBZYXxY=" 
                        alt="torre"    class="card-img  card-img-filter " />
                       <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="text-reset">Goooooo  moreeeee</a>
+                        <h4 class="card-title">RATINGSOFT</h4>
+                        <p class="card-text">Diseñamos una interfaz intuitiva y amigable que permita a los profesores ingresar y actualizar
+las calificaciones de los alumnos de forma sencilla.</p>
+                        <a href="#" class="text-reset">Sistematiza!</a>
                       </div>
                     </div>
                     </article>
@@ -96,9 +97,10 @@ de una institución educativa mediante su sistematización.
                         <img src="https://media.istockphoto.com/photos/church-of-santo-domingo-popayan-colombia-picture-id186073664?k=20&m=186073664&s=612x612&w=0&h=D7ALcBKY4zT2n-V6_8i8RJHxbbYg81VLRKgT4ajiAhk=" 
                          alt="iglesia"    class="card-img  card-img-filter " />
                         <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="text-reset">Goooooo  moreeeee</a>
+                          <h4 class="card-title">RATINGSOFT</h4>
+                          <p class="card-text">Servicio de hosting seguro y confiable que garantice la protección de los datos
+académicos de los estudiantes y evite posibles brechas de seguridad.</p>
+                          <a href="#" class="text-reset">-</a>
                         </div>
                       </div>
                       </article>
@@ -109,9 +111,10 @@ de una institución educativa mediante su sistematización.
                         <img src="https://media.istockphoto.com/photos/the-ermita-on-a-dawn-picture-id1138490864?k=20&m=1138490864&s=612x612&w=0&h=IgOPRWbObv4qZ5qTaML1QAN5opx4aPJJV4JqewuGTIY=" 
                          alt="iglesia2"    class="card-img  card-img-filter " />
                         <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="text-reset">Goooooo  moreeeee</a>
+                          <h4 class="card-title">RATINGSOFT</h4>
+                          <p class="card-text">Desarrollamos un sistema de análisis y generación de reportes que proporcione a los docentes
+y directivos información detallada sobre el desempeño académico de los alumnos.</p>
+                          <a href="#" class="text-reset">---</a>
                         </div>
                       </div>
                      </article>
