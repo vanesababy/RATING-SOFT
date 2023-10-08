@@ -42,7 +42,7 @@
                       <span class="text-info h5">RATING</span><br/>SOFT</h1>
                      
                     <!-- descripcion -->
-                    <p class="d-none d-md-block">Contribuir en el proceso del manejo de calificaciones de una institución educativa,
+                    <p class="d-none d-md-block" style="color: black;">Contribuir en el proceso del manejo de calificaciones de una institución educativa,
 mediante un sistema de información que permite el manejo y almacenamiento de calificaciones
 de los estudiantes de una forma digital; tanto el estudiante como acudiente puede visualizar el
 rendimiento académico.</p>
