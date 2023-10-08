@@ -48,7 +48,7 @@
                     <!-- en este pedaso se pone texto relacionado al tema de turismo -->
                     
                     <div class="col-12 text-center">
-                    <h2 class="text-danger text-uppercase">popayán</h2>
+                    <h2 class="text-danger text-uppercase">ratingsoft</h2>
                     <h3 class="text-capitalize">un lugar donde encontraras lugares unicos </h3>
                     <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis nesciunt in tempore voluptate, ab cumque qui delectus nisi assumenda a error eveniet beatae pariatur ut dolorem nihil explicabo fugit.
                     
@@ -71,7 +71,7 @@
                     <!-- card #2 -->
                     <article class="col-md-6 col-lg-4 card-effect  mb-3 mb-md-0">
                       <div class="card">
-                        <img src="https://media.istockphoto.com/photos/church-of-santo-domingo-popayan-colombia-picture-id186073664?k=20&m=186073664&s=612x612&w=0&h=D7ALcBKY4zT2n-V6_8i8RJHxbbYg81VLRKgT4ajiAhk=" 
+                        <img src="../public/img/home.jpg" 
                          alt="iglesia"    class="card-img  card-img-filter " />
                         <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
                           <h4 class="card-title">Card title</h4>
