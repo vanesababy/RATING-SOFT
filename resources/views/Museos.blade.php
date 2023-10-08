@@ -51,7 +51,7 @@
             <div class="col-md-6 col-lg-4  mb-3 mb-md-0">
 
                 <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage1">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\alex.jpg" alt="" width="" height=""  >
+                    <img class="w-100 mb-4 rounded modal-galeria" src="img\alexx.jpg" alt="" width="" height=""  >
 
                 </a>
                 <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage2">
@@ -78,7 +78,7 @@
 
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                    <img src="img\alex.jpg" alt="">
+                    <img src="img\alexx.jpg" alt="">
 
                 </div>
 
