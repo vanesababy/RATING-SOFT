@@ -177,7 +177,7 @@
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>popáyan turims
+                            <i class="fas fa-gem me-3"></i>RATINGSOFT
                         </h6>
                         <p>
                             Here you can use rows and columns to organize your footer content. Lorem ipsum
@@ -193,13 +193,13 @@
                             Nosotros
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Angular</a>
+                            <a href="#!" class="text-reset">Java-scrip</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">React</a>
+                            <a href="#!" class="text-reset">PHP</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Vue</a>
+                            <a href="#!" class="text-reset">HTML:5 y CSS:3</a>
                         </p>
                         <p>
                             <a href="#!" class="text-reset">Laravel</a>
@@ -234,13 +234,13 @@
                         <h6 class="text-uppercase fw-bold mb-4">
                             Contactos
                         </h6>
-                        <p><i class="fas fa-home me-3"></i> Popayan, 10012, COL</p>
+                        <p><i class="fas fa-home me-3"></i>CL 19 N #3-27</p>
                         <p>
                             <i class="fas fa-envelope me-3"></i>
-                            Popayan-turims.com
+                            ratingsoft@gmail.com
                         </p>
-                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                        <p><i class="fas fa-phone me-3"></i> + 57 318 746 81 60</p>
+                        <p><i class="fas fa-print me-3"></i> + 57 312 624 26 64</p>
                     </div>
                     <!-- Grid column -->
                 </div>
@@ -252,7 +252,7 @@
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2021 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Popayan-turims.com</a>
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">ratingsoft@gmail.com</a>
         </div>
         <!-- Copyright -->
     </footer>
