@@ -20,7 +20,7 @@
     <span class="text-black h4">EQUIPO</span><br/>RATINGSOFT</h1>
   
   <!-- descripcion -->
-  <p class="d-none d-md-block"style="color: black; font-size: 24px">"Nuestro equipo es un grupo de personas apasionadas por la educación y la tecnología. Somos programadores, diseñadores, trabajamos juntos para crear soluciones que hagan la vida más fácil a docentes, estudiantes y padres. Nuestra motivación es mejorar la forma en que se gestionan las calificaciones y, en última instancia, mejorar la calidad de la educación. Somos un equipo comprometido y apasionado que está listo para hacer una diferencia en la educación."
+  <p class="d-none d-md-blñock"style="color: black; font-size: 24px">"Nuestro equipo es un grupo de personas apasionadas por la educación y la tecnología. Somos programadores, diseñadores, trabajamos juntos para crear soluciones que hagan la vida más fácil a docentes, estudiantes y padres. Nuestra motivación es mejorar la forma en que se gestionan las calificaciones y, en última instancia, mejorar la calidad de la educación. Somos un equipo comprometido y apasionado que está listo para hacer una diferencia en la educación."
 
 
 
@@ -51,27 +51,63 @@
         
         </p>
         </div>
-        <div class="row m-5 ">
 
-            <div class="col-md-6 col-lg-4  mb-3 mb-md-0">
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage1">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\alex.jpg" alt="" width="" height=""  >
-
-                </a>
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage2">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\andy.jpg" alt="" width="" height="></a>
-
+        <div class="row m-5">
+    <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+        <div class="card h-100">
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage1">
+                <img class="card-img-top rounded" src="img\alex.jpg" alt="Alex">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Alex</h5>
+                <p class="card-text precio">DOCUMENTADOR<span></span></p>
+                
             </div>
-            <div class="col-md-6 col-lg-4  mb-3 mb-md-0">
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage3">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\orozco.jpeg" alt=""></a>
+        </div>
+    </div>
 
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage4">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\evelyn.jpeg" alt=""></a>
-
+    <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+        <div class="card h-100">
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage2">
+                <img class="card-img-top rounded" src="img\andy.jpg" alt="Andy">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Andy</h5>
+                <p class="card-text precio">PROGRAMADOR<span></span></p>
+                
             </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+        <div class="card h-100">
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage3">
+                <img class="card-img-top rounded" src="img\orozco.jpeg" alt="Orozco">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Orozco</h5>
+                <p class="card-text precio">DESARROLLADOR<span></span></p>
+                <button class="btn btn-primary">CIO</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+        <div class="card h-100">
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage4">
+                <img class="card-img-top rounded" src="img\evelyn.jpeg" alt="Evelyn">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Evelyn</h5>
+                <p class="card-text precio">TESTER<span></span></p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
           
 
 

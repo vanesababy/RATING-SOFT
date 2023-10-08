@@ -46,134 +46,22 @@ especialmente para el ámbito educativo exactamente para una institución de edu
     <div class="row justify-content-md-center">
         <!-- en este pedaso se pone texto relacionado al tema de turismo -->
         
-        <div class="col-12 text-center">
-        <h2 class="text-danger text-uppercase">popayán</h2>
-        <h3 class="text-capitalize">un lugar donde encontraras lugares unicos </h3>
-        <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis nesciunt in tempore voluptate, ab cumque qui delectus nisi assumenda a error eveniet beatae pariatur ut dolorem nihil explicabo fugit.
-        
         </p>
         </div>
         <div class="row m-5 ">
 
-            <div class="col-md-6 col-lg-4  mb-3 mb-md-0">
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage1">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\Iglesia_San_Francisco_2.jpg" alt="">
-
-                </a>
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage2">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\alrededores.jpg" alt=""></a>
-
-            </div>
-            <div class="col-md-6 col-lg-4  mb-3 mb-md-0">
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage3">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\iglesia3.jpeg" alt=""></a>
-
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage4">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\imagen4.jpg " alt=""></a>
-
-            </div>
-            <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage5">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\iglesai5.jpg" alt=""></a>
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalimage6">
-                    <img class="w-100 mb-4 rounded modal-galeria" src="img\iglesia6.jpg" alt=""></a>
-
-            </div>
-
+            
 
         </div>
 
-        {{-- modal --}}
-        {{-- imafen#1 --}}
-        <div tabindex="-1" aria-labelledby="modalimage1" aria-hidden="true" class="modal fade" id="modalimage1">
-
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <img src="img\Iglesia_San_Francisco_2.jpg" alt="">
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        {{-- imafen#2 --}}
-        <div tabindex="-1" aria-labelledby="modalimage2" aria-hidden="true" class="modal fade" id="modalimage2">
-
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <img src="img\alrededores.jpg " alt="">
-
-                </div>
-
-            </div>
-
-        </div>
-        {{-- imafen#3 --}}
-        <div tabindex="-1" aria-labelledby="modalimage3" aria-hidden="true" class="modal fade" id="modalimage3">
-
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <img src="img\iglesia3.jpeg" alt="">
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        {{-- imafen#4 --}}
-        <div tabindex="-1" aria-labelledby="modalimage4" aria-hidden="true" class="modal fade" id="modalimage4">
-
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <img src="img\imagen4.jpg" alt="">
-
-                </div>
-
-            </div>
-
-        </div>
-        {{-- imafen#5 --}}
-        <div tabindex="-1" aria-labelledby="modalimage5" aria-hidden="true" class="modal fade" id="modalimage5">
-
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <img src="img\iglesai5.jpg" alt="">
-
-                </div>
-
-            </div>
-
-        </div>
-        {{-- imafen#6 --}}
-        <div tabindex="-1" aria-labelledby="modalimage6" aria-hidden="true" class="modal fade" id="modalimage6">
-
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <img src="img\iglesia6.jpg" alt="">
-
-                </div>
-
-            </div>
-
-        </div>
     
         <div class="row justify-content-md-center">
             <!-- en este pedaso se pone texto relacionado al tema de turismo -->
             
             <div class="col-12 text-center">
-            <h2 class="text-danger text-uppercase">popayán</h2>
-            <h3 class="text-capitalize">un lugar donde encontraras lugares unicos </h3>
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis nesciunt in tempore voluptate, ab cumque qui delectus nisi assumenda a error eveniet beatae pariatur ut dolorem nihil explicabo fugit.
+            <h2 class="text-danger text-uppercase">RATINGSOFT</h2>
+            <h3 class="text-capitalize">Inspirados por la excelencia </h3>
             
-            </p>
             </div>
         </div>
 

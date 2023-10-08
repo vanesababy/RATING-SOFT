@@ -49,8 +49,8 @@
             <!-- en este pedaso se pone texto relacionado al tema de turismo -->
 
             <div class="col-12 text-center">
-                <h2 class="text-danger text-uppercase">popayán</h2>
-                <h3 class="text-capitalize">Hoteles que te ofrese popayán, para hacer de tu viaje una historia inolvidable! 
+                <h2 class="text-danger text-uppercase">RATINGSOFT</h2>
+                <h3 class="text-capitalize">Inspirados por la excelencia! 
 
                 </p>
             </div>
