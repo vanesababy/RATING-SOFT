@@ -1,13 +1,30 @@
 @extends('layouts.app')
-@section('template_home')
+@section('template_welcome')
 @section('content')
-                
+               
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
+                    <!DOCTYPE html>
+                    <html lang="es">
+                      <head>
+                        <meta charset="UTF-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <title>RATINGSOFT</title>
+                        <!-- CSS Bootstrap -->
+                        <link rel="stylesheet" href="./css/bootstrap.min.css" />
+                        <!-- CDN Font awesome -->
+                        <link
+                          rel="stylesheet"
+                          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+                        />
+                        <!-- CSS Main -->
+                        <link rel="stylesheet" href="./css/main.css" />
+                      </head>
+                      <body>
                     
                         <!--header -->
                     <header class="header linear-white">
@@ -15,23 +32,27 @@
                     
                     <!-- navbar -->
                     
-                   
+                    
                      <!-- descripcion -->
                     <div class="row  h-100 align-items-center">
                     <div class="col-10 col-lg-6 text-white">
                     <!-- title -->
-                    <h1 class="text-capitalize ">
+                    <h1 class="text-capitalize">
+                     
                       <span class="text-info h5">RATING</span><br/>SOFT</h1>
-                    
+                     
                     <!-- descripcion -->
-                    <p class="d-none d-md-block">sistema de información web para sistematizar las calificaciones de alumnos de un colegio.</p>
+                    <p class="d-none d-md-block">Contribuir en el proceso del manejo de calificaciones de una institución educativa,
+mediante un sistema de información que permite el manejo y almacenamiento de calificaciones
+de los estudiantes de una forma digital; tanto el estudiante como acudiente puede visualizar el
+rendimiento académico.</p>
                     <!--boton -->
-                    <a href="#" class="text-reset btn btn-info"></a>
+                    <a href="http://127.0.0.1:8000/senderismo" class="text-reset btn btn-info">Saber más!</a>
                     </div>
                     
                     
                     </div>
-                     <!-- 44 -->
+                     {{-- <h2 class="text-center"> Hola {{ Auth::user()->name }}, Empieza tu avenetura en </h2>  --}}
                     
                     </div>
                      <!-- separador  con imagen -->
@@ -48,9 +69,10 @@
                     <!-- en este pedaso se pone texto relacionado al tema de turismo -->
                     
                     <div class="col-12 text-center">
-                    <h2 class="text-danger text-uppercase">ratingsoft</h2>
-                    <h3 class="text-capitalize">un lugar donde</h3>
-                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis nesciunt in tempore voluptate, ab cumque qui delectus nisi assumenda a error eveniet beatae pariatur ut dolorem nihil explicabo fugit.
+                    <h2 class="text-danger text-uppercase">RATINGSOFT</h2>
+                    <h3 class="text-capitalize">Sistematización de notas </h3>
+                    <p class="text-muted">Este sistema de información ayudara en el proceso de manejo de calificaciones de estudiantes
+de una institución educativa mediante su sistematización.
                     
                     </p>
                     </div>
@@ -58,12 +80,13 @@
                     <!-- card #1 -->
                     <article class="col-md-6 col-lg-4 card-effect mb-3 mb-md-0">
                     <div class="card">
-                      <img src="img/home3.jpg" 
+                      <img src="img/home5.jpg" 
                        alt="torre"    class="card-img  card-img-filter " />
                       <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="text-reset">Goooooo  moreeeee</a>
+                        <h4 class="card-title">RATINGSOFT</h4>
+                        <p class="card-text">Diseñamos una interfaz intuitiva y amigable que permita a los profesores ingresar y actualizar
+las calificaciones de los alumnos de forma sencilla.</p>
+                        <a href="#" class="text-reset">Sistematiza!</a>
                       </div>
                     </div>
                     </article>
@@ -71,12 +94,13 @@
                     <!-- card #2 -->
                     <article class="col-md-6 col-lg-4 card-effect  mb-3 mb-md-0">
                       <div class="card">
-                        <img src="img/home5.jpg" 
+                        <img src="img/home2.jpg" 
                          alt="iglesia"    class="card-img  card-img-filter " />
                         <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="text-reset">Goooooo  moreeeee</a>
+                          <h4 class="card-title">RATINGSOFT</h4>
+                          <p class="card-text">Servicio de hosting seguro y confiable que garantice la protección de los datos
+académicos de los estudiantes y evite posibles brechas de seguridad.</p>
+                          <a href="#" class="text-reset">-</a>
                         </div>
                       </div>
                       </article>
@@ -84,12 +108,13 @@
                       <!-- card #3-->
                     <article class="col-md-6 col-lg-4 card-effect mt-md-4 mt-lg-0">
                       <div class="card">
-                        <img src="img/home2.jpg" 
+                        <img src="img/home3.jpg" 
                          alt="iglesia2"    class="card-img  card-img-filter " />
                         <div class="card-img-overlay   text-white d-flex flex-column justify-content-center text-center">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="text-reset">Goooooo  moreeeee</a>
+                          <h4 class="card-title">RATINGSOFT</h4>
+                          <p class="card-text">Desarrollamos un sistema de análisis y generación de reportes que proporcione a los docentes
+y directivos información detallada sobre el desempeño académico de los alumnos.</p>
+                          <a href="#" class="text-reset">---</a>
                         </div>
                       </div>
                      </article>
@@ -107,13 +132,14 @@
                     <blockquote class="col-12  text-white text-center">
                     
                      <!-- img de la persona  -->
-                    <img src="./img/Logo.png" alt="" class="commets__img">
+                     <img src="./img/Logo.png" alt="" class="commets__img" style="width: 180px; height: 180px;">
+
                       <!-- comentiario de la persona -->
-                    <p class="d-none d-md-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi at impedit tempore sit, tempora, laboriosam quidem placeat quo, atque veritatis architecto! Amet soluta tempore nostrum nisi? Temporibus officia minus quod.</p>
+                    <p class="d-none d-md-block">“SOFTWARE DE CALIFICACIONES”</p>
                        <!-- name  -->
                     <footer class="blockquote-footer  text-white">
                     
-                    <cite>Juan Orozco - Alex Gómez - Andres Suaza - Evelyn Meneses</cite>
+                    <cite>RATINGSOFT</cite>
                     </footer>
                     </blockquote>
                       </div>
@@ -125,54 +151,54 @@
                     <div class="row">
                       <!--  titulo" -->
                       <div class="col-12 text-center">
-                      <h3 class="text-danger text-uppercase h6">¿Qué puedes hacer en Popayán?</h3>
-                      <h2 class="text-capitalize">Una sensación de paz envuelve a quienes caminan por las calles de Popayán. </h2>
+                      <h3 class="text-danger text-uppercase h6">El principal beneficiario de RATINGSOFT son las instituciones educativas que lo implementen.</h3>
+                      <h2 class="text-capitalize">El objetivo es optimizar los procesos en tiempo y recursos. </h2>
                       <!--  media objeto 1 -->
                     <ul class="col-12 col-md-6 mt-3">
                     <li class="media">
-                      <img src="./img/ggggg.jpg" alt="iglesia " class="media-object-img">
+                      <img src="./img/home.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
-                    <h5 class="h6 mb-0 mb-1">subtitle</h5>
+                    <h5 class="h6 mb-0 mb-1">-</h5>
                     
                     <h4 class="h5">
-                      <a href=""> titluo de objeto </a>
+                      <a href="">Administrativo:</a>
                     </h4>
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio sed eligendi porro quasi, ?</p>
-                    
-                    
-                    
-                    
+                      <p>Conceder permisos a usuarios y docentes</p>
+                      <p>Registrar cada alumno en su grado respectivo.</p>
+                      <p>Dar de baja a personal docente.</p>
+                      <p>Consultar personal docente.</p>
+
                       </div>
                     </li>
                     
                     
                     <li class="media">
-                      <img src="./img/ggggg.jpg" alt="iglesia " class="media-object-img">
+                      <img src="./img/home4.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
-                    <h5 class="h6 mb-0 mb-1">subtitle</h5>
+                    <h5 class="h6 mb-0 mb-1">-</h5>
                     
                     <h4 class="h5">
-                      <a href=""> titluo de objeto </a>
+                      <a href="">Personal docente:</a>
                     </h4>
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio sed eligendi porro quasi, ?</p>
-                    
-                    
-                    
-                    
+                      <p>Subir calificaciones.</p>
+                      <p>Modificar calificaciones(solicitando permisos a administrador).</p>
+                      <p>Consultar lista de grados y alumnos.</p>
+                      <p>Subir reportes académicos.</p>
+             
                       </div>
                     </li>
                     
                     
                     <li class="media">
-                      <img src="./img/ggggg.jpg" alt="iglesia " class="media-object-img">
+                      <img src="./img/home1.jpg" alt="iglesia " class="media-object-img">
                       <div class="media-body">
-                    <h5 class="h6 mb-0 mb-1">subtitle</h5>
+                    <h5 class="h6 mb-0 mb-1">-</h5>
                     
                     <h4 class="h5">
-                      <a href=""> titluo de objeto </a>
+                      <a href="">Usuarios</a>
                     </h4>
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio sed eligendi porro quasi, ?</p>
-                    
+                      <p>Visualizar informes académicos por alumno.</p>
+                      <p>Consultar calificaciones.</p>
                     
                     
                     
@@ -186,25 +212,26 @@
                         <section class="carousel slide" id="carousel-weston">
                           <div class="carousel-caption carousel-weston-middle">
                             <!-- algun titulo de acuerdo a las imagnes o al tema   -->
-                            <h2 class="d-none d-md-block text-uppercase">senderismo </h2>
-                            <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias velit officia perspiciatis voluptates cupiditate nulla quaerat autem illo, optio necessitatibus accusamus iste ea magni? Deleniti nostrum provident delectus quis modi?</p>
+                            <h2 class="d-none d-md-block text-uppercase">RATINGSOFT</h2>
+                            <p class="d-none d-md-block">SISTEMATIZAMOS PARA AYUDARTE</p>
                             <button class="btn btn-light px4 text-capitalize d-none d-md-block mx-auto">
-                              Go!
+                              
+                              <a href="{{ route('senderismo.index') }}">Saber más?</a> 
                             </button>
                     
                           </div>
                           <div class="carousel-inner">
                               <!-- carousel#1  -->
                             <div class="carousel-item active">
-                              <img src="./img/carousel/Carousel-01.jpg" class="d-block w-100" alt="...">
+                              <img src="./img/carousel/fother.webp" class="d-block w-100" alt="...">
                             </div>
                               <!-- carousel#2  -->
                             <div class="carousel-item">
-                              <img src="./img/carousel/Carousel-02.jpg" class="d-block w-100" alt="...">
+                              <img src="./img/carousel/2.jpg" class="d-block w-100" alt="...">
                             </div>
                               <!-- carousel#3  -->
                             <div class="carousel-item">
-                              <img src="./img/carousel/Carousel-03.jpg" class="d-block w-100" alt="...">
+                              <img src="./img/carousel/3.jpeg" class="d-block w-100" alt="...">
                             </div>
                           </div>
                          <a href="#carousel-weston" class="carousel-control-prev" data-slide="prev">
@@ -222,8 +249,8 @@
                     <div class="div row">
                     <!-- title  -->
                     <div class="col-12 text-center">
-                      <h3 class="text-danger text-uppercase h6">¿Qué puedes hacer en Popayán?</h3>
-                      <h2 class="text-capitalize">Una sensación de paz envuelve a quienes caminan por las calles de Popayán. </h2>
+                      <h3 class="text-danger text-uppercase h6">RATINGSOFT</h3>
+                      <h2 class="text-capitalize">"Inspirados por la excelencia"</h2>
                     </div>
                     <!-- agregar algo de ultimo  -->
                     </div>
@@ -231,5 +258,24 @@
                     </section>
                     
                     
-                
+                     <!-- PIE de paginaaaa  "footer"-->
+                        
+                    
+                    
+                        
+                        <!-- Jquery -->
+                        <script src="./js/jquery-3.5.0.min.js"></script>
+                        <!-- Popper -->
+                        <script src="./js/popper.min.js"></script>
+                        <!-- JS Bootstrap -->
+                        <script src="./js/bootstrap.min.js"></script>
+                      </body>
+                    </html>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
