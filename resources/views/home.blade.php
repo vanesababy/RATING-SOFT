@@ -156,7 +156,7 @@ y directivos información detallada sobre el desempeño académico de los alumno
                       <!--  media objeto 1 -->
                     <ul class="col-12 col-md-6 mt-3">
                     <li class="media">
-                      <img src="./img/home.jpg" alt="iglesia " class="media-object-img">
+                      <img src="./img/home.jpg" alt="" class="media-object-img">
                       <div class="media-body">
                     <h5 class="h6 mb-0 mb-1">-</h5>
                     

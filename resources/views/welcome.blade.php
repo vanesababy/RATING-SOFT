@@ -47,7 +47,7 @@ mediante un sistema de información que permite el manejo y almacenamiento de ca
 de los estudiantes de una forma digital; tanto el estudiante como acudiente puede visualizar el
 rendimiento académico.</p>
                     <!--boton -->
-                    <a href="/resources/views/auth/register.blade.php" class="text-reset btn btn-info">Acceder</a>
+                    <a href="http://127.0.0.1:8000/login" class="text-reset btn btn-info">Acceder</a>
                     </div>
                     
                     
@@ -154,59 +154,43 @@ y directivos información detallada sobre el desempeño académico de los alumno
                       <h3 class="text-danger text-uppercase h6">El principal beneficiario de RATINGSOFT son las instituciones educativas que lo implementen.</h3>
                       <h2 class="text-capitalize">El objetivo es optimizar los procesos en tiempo y recursos. </h2>
                       <!--  media objeto 1 -->
-                    <ul class="col-12 col-md-6 mt-3">
-                    <li class="media">
-                      <img src="./img/home.jpg" alt="iglesia " class="media-object-img">
-                      <div class="media-body">
-                    <h5 class="h6 mb-0 mb-1">-</h5>
-                    
-                    <h4 class="h5">
-                      <a href="">Administrativo:</a>
-                    </h4>
-                      <p>Conceder permisos a usuarios y docentes</p>
-                      <p>Registrar cada alumno en su grado respectivo.</p>
-                      <p>Dar de baja a personal docente.</p>
-                      <p>Consultar personal docente.</p>
-
-                      </div>
-                    </li>
-                    
-                    
-                    <li class="media">
-                      <img src="./img/home4.jpg" alt="iglesia " class="media-object-img">
-                      <div class="media-body">
-                    <h5 class="h6 mb-0 mb-1">-</h5>
-                    
-                    <h4 class="h5">
-                      <a href="">Personal docente:</a>
-                    </h4>
-                      <p>Subir calificaciones.</p>
-                      <p>Modificar calificaciones(solicitando permisos a administrador).</p>
-                      <p>Consultar lista de grados y alumnos.</p>
-                      <p>Subir reportes académicos.</p>
-             
-                      </div>
-                    </li>
-                    
-                    
-                    <li class="media">
-                      <img src="./img/home1.jpg" alt="iglesia " class="media-object-img">
-                      <div class="media-body">
-                    <h5 class="h6 mb-0 mb-1">-</h5>
-                    
-                    <h4 class="h5">
-                      <a href="">Usuarios</a>
-                    </h4>
-                      <p>Visualizar informes académicos por alumno.</p>
-                      <p>Consultar calificaciones.</p>
-                    
-                    
-                    
-                      </div>
-                    </li>
-                    </ul>
-                      </div>
-                    </section>
+                      <ul class="col-12 col-md-6 mt-3">
+                <li class="media">
+                    <i class="fas fa-user-tie fa-3x mr-3"></i> <!-- Icono grande -->
+                    <div class="media-body">
+                        <h4 class="h5">
+                            <a href="">Administrativo:</a>
+                        </h4>
+                        <p>Conceder permisos a usuarios y docentes</p>
+                        <p>Registrar cada alumno en su grado respectivo.</p>
+                        <p>Dar de baja a personal docente.</p>
+                        <p>Consultar personal docente.</p>
+                    </div>
+                </li>
+                <li class="media">
+                    <i class="fas fa-chalkboard-teacher fa-3x mr-3"></i> <!-- Icono grande -->
+                    <div class="media-body">
+                        <h4 class="h5">
+                            <a href="">Personal docente:</a>
+                        </h4>
+                        <p>Subir calificaciones.</p>
+                        <p>Modificar calificaciones (solicitando permisos a administrador).</p>
+                        <p>Consultar lista de grados y alumnos.</p>
+                        <p>Subir reportes académicos.</p>
+                    </div>
+                </li>
+                <li class="media">
+                    <i class="fas fa-users fa-3x mr-3"></i> <!-- Icono grande -->
+                    <div class="media-body">
+                        <h4 class="h5">
+                            <a href="">Usuarios</a>
+                        </h4>
+                        <p>Visualizar informes académicos por alumno.</p>
+                        <p>Consultar calificaciones.</p>
+                    </div>
+                </li>
+            </ul>
+            </section>
                        
                         <!-- carousel  -->
                         <section class="carousel slide" id="carousel-weston">
