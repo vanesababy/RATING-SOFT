@@ -14,26 +14,30 @@ background-size: cover;
 
 }
 
-.card-body{
+.card-body {
     border-radius: 5%;
-   background: hsla(0, 8%, 53%, 0.2);
-   backdrop-filter: blur(5px);
+    background: hsla(200, 100%, 80%, 0.7); /* HSLA con opacidad azul claro */
+    backdrop-filter: blur(15px); /* No es necesario 'solid(1)' aquí */
 }
+
+
+
 #boton1{
 color:rgb(255, 255, 255);
 letter-spacing: 4px;
-font-size: 24px;
+font-size: 18px;
 border:10px;
 border: 2px solid #feffff;
-
+width: 150px;
+height: 10%;
 
 transition: 0.5s;
 
 }
  #boton1:hover{
-background: #04f066;
-box-shadow: 0 0 10px #04f066, 0 0 40px 
-#04f066, 0 0 80px #04f066;
+background: #44918f;
+box-shadow: 0 0 10px #9ade1d, 0 0 40px 
+#9ade1d, 0 0 80px #9ade1d;
 
  }
  #log{
@@ -99,10 +103,11 @@ color: #fdfffe;
 
                   
 
+                    <br></br>
 
 
-
-                 
+                    
+                
 
 
                     <button  class="btn btn-white"  type="submit" id="boton1"> 
