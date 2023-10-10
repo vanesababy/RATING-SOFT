@@ -17,7 +17,7 @@ background-size: cover;
 .card-body{
     border-radius: 5%;
    background: hsla(0, 8%, 53%, 0.2);
-   backdrop-filter: blur(5px);
+   backdrop-filter: blur(15px);
 }
 #boton1{
 color:rgb(255, 255, 255);
