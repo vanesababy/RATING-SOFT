@@ -357,49 +357,46 @@ margin-right: 15px;
  }
 /* fin */
 
-
-
-/* boton de loguin */
- #registro{
-    color:rgb(255, 255, 255);
-    letter-spacing: 2px;
-    font-size: 12px;
-    border-radius: 15px;
-     
-    
-    
-    transition: 0.5s;
-    
-    }
-     #registro:hover{
-    background: #04f066;
-    box-shadow: 0 0 10px #04f066, 0 0 40px 
-    #04f066, 0 0 80px #04f066;
-    
-     }
-   
-
-
-
-#logboton{
-    color:rgb(255, 255, 255);
+/* Botón de registro */
+#registro {
+    color: white; /* Color de texto blanco por defecto */
     letter-spacing: 2px;
     font-size: 12px;
     border-radius: 15px;
     transition: 0.5s;
-  justify-content: left 10px;
-    
-    }
-     #logboton:hover{
-    background: #04f066;
-    box-shadow: 0 0 40px #04f066, 0 0 40px 
-    #f004c9, 0 0 80px #04f066;
-    
-     }
+}
 
+#registro:hover {
+    background: #2cb4de;
+    color: black; /* Cambia el color del texto a negro al pasar el cursor */
+    box-shadow: 0 0 10px #2cb4de, 0 0 40px #2cb4de, 0 0 80px #2cb4de;
+}
 
+/* Botón de inicio de sesión */
+#logboton {
+    color: white; /* Color de texto blanco por defecto */
+    letter-spacing: 2px;
+    font-size: 12px;
+    border-radius: 15px;
+    transition: 0.5s;
+}
 
-     /* boton de loguin  fin */
+#logboton:hover {
+    background: #2cb4de;
+    color: black !important; /* Cambia el color del texto a negro al pasar el cursor */
+    box-shadow: 0 0 40px #2cb4de, 0 0 40px #2cb4de, 0 0 80px #2cb4de;
+}
+
+/* Anula los estilos de Bootstrap en los botones */
+#registro.btn {
+    background: none;
+    border: none;
+}
+
+#logboton.btn {
+    background: none;
+    border: none;
+}
 
 
 /* modal para los efectos de la galeria  */

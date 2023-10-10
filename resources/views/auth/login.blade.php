@@ -16,8 +16,9 @@ background-size: cover;
 
 .card-body {
     border-radius: 5%;
-    background: hsla(200, 100%, 80%, 0.7); /* HSLA con opacidad azul claro */
-    backdrop-filter: blur(15px); /* No es necesario 'solid(1)' aquí */
+    background: hsla(0, 0%, 50%, 0.7); /* Gris al 50% de luminosidad con 70% de opacidad */
+ /* HSLA con opacidad azul claro */
+    backdrop-filter: blur(10px); /* No es necesario 'solid(1)' aquí */
 }
 
 
@@ -35,9 +36,9 @@ transition: 0.5s;
 
 }
  #boton1:hover{
-background: #44918f;
-box-shadow: 0 0 10px #9ade1d, 0 0 40px 
-#9ade1d, 0 0 80px #9ade1d;
+background: #0d5178;
+box-shadow: 0 0 10px #2cb4de, 0 0 40px 
+#2cb4de, 0 0 80px #2cb4de;
 
  }
  #log{
@@ -46,6 +47,19 @@ color: #fdfffe;
 
 
  }
+
+ .btn-custom {
+    background-color: #2cb4de; /* Cambia este color a tu azul más claro deseado */
+    border-color: #2cb4de;
+    color: #fff; /* Esto establecerá el texto en blanco */
+}
+
+
+.btn-custom-light {
+    background-color: #2cb4de; /* Cambia este color a tu azul más claro deseado */
+    border-color: #2cb4de;
+    color: #fff; /* Esto establecerá el texto en blanco */
+}
 
 
     </style>
@@ -62,7 +76,7 @@ color: #fdfffe;
                     @csrf
 
                     <div class="form-outline mb-4">
-                        <label for="email" class="col-md-4 col-form-label" style="font-size: 18px; color:black">{{ __('Correo Electrónico ') }}</label>
+                        <label for="email" class="col-md-4 col-form-label" style="font-size: 18px; color:white">{{ __('Correo Electrónico ') }}</label>
 
                         <div class="form-outline mb-4">
                             <input id="email" type="email" class="form-control @error('email') es incorrecto  @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -76,7 +90,7 @@ color: #fdfffe;
                     </div>
 
                     <div class="form-outline mb-4">
-                        <label for="password" class="col-md-4 col-form-label" style="font-size: 18px; color:black">{{ __('Contraseña') }}</label>
+                        <label for="password" class="col-md-4 col-form-label" style="font-size: 18px; color:white">{{ __('Contraseña') }}</label>
 
                         <div class="form-outline mb-4">
                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
@@ -90,16 +104,16 @@ color: #fdfffe;
                     </div>
 
                     <div class="form-outline mb-4">
-                        <div class="col-md-6 offset-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+    <div class="col-md-6 offset-md-4">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                <label class="form-check-label" for="remember">
-                                    {{ __('Recordar contraseña') }}
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+            <label class="form-check-label" for="remember" style="color: white;">
+                {{ __('Recordar contraseña') }}
+            </label>
+        </div>
+    </div>
+</div>
 
                   
 
@@ -120,16 +134,19 @@ color: #fdfffe;
                     <hr class="my-1">
 
                     @if (Route::has('password.request'))
-    <div class="mb-3">
-        <a class="btn btn-danger" href="{{ route('password.request') }}">
-            {{ __('¿Olvidó su contraseña?') }}
-        </a>
-    </div>
+                    <div class="mb-3">
+    <a class="btn btn-custom" href="{{ route('password.request') }}">
+        {{ __('¿Olvidó su contraseña?') }}
+    </a>
+</div>
+
+
 @endif
 
-            <div class="mb-3">
-         <a href="http://127.0.0.1:8000/" class="btn btn-primary">Atrás</a>
-    </div>
+<div class="mb-3">
+    <a href="http://127.0.0.1:8000/" class="btn btn-custom-light">Atrás</a>
+</div>
+
 
             
         </div>
