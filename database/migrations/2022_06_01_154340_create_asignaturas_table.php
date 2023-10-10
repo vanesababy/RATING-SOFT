@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMapasTable extends Migration
+class CreateAsignaturasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateMapasTable extends Migration
      */
     public function up()
     {
-        Schema::create('mapas', function (Blueprint $table) {
-            $table->id();
-            $table->string('gps');
-            $table->string('ubicacion');
-            $table->string('multimedia');
+        Schema::create('asignaturas', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nombreAsignatura');
+            $table->string('codigo');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateMapasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mapas');
+        Schema::dropIfExists('asignaturas');
     }
 }

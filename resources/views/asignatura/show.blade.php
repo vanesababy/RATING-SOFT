@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('template_title')
-    {{ $mapa->name ?? 'Show Mapa' }}
+    {{ $asignatura->name ?? 'Show Asignatura' }}
 @endsection
 
 @section('content')
@@ -11,28 +11,23 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Mapa</span>
+                            <span class="card-title">Asignatura</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('mapas.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('asignaturas.index') }}"> Back</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Gps:</strong>
-                            {{ $mapa->gps }}
+                            <strong>Nombre Asignatura:</strong>
+                            {{ $asignatura->nombreAsignatura }}
                         </div>
                         <div class="form-group">
-                            <strong>Ubicacion:</strong>
-                            {{ $mapa->ubicacion }}
+                            <strong>Codigo:</strong>
+                            {{ $asignatura->codigo }}
                         </div>
-                        <div class="form-group">
-                            <strong>Multimedia:</strong>
-                            {{ $mapa->multimedia }}
-                        </div>
-
                     </div>
                 </div>
             </div>

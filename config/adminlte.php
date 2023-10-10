@@ -308,155 +308,193 @@ return [
         ],
      
         [
-            'text' => 'Usuarios',
+            'text' => 'Gestion Usuarios',
             'route'  => 'usuarios.index',
             'icon' => 'fas fa-fw fa-user',
             'can'  => 'admin'
         
         ],
         [
-            'text' => 'lugares',
+            'text' => 'Gestion Profesor',
             'route'  => 'lugars.index',
             'icon' => 'fas fa-fw fa-city',
             'can'=> 'admin',
         ],
         [
-            'text' => 'convenio',
+            'text' => 'Gestion Alumnos',
             'route'  => 'convenios.index',
             'icon' => 'fas fa-fw fa-book',
             'can'=> 'admin',
         ],
 
         [
-            'text' => 'Calificasiones',
-            'route'  => 'calificasiones.index',
+            'text' => 'gestion Calificiones',
+            'route'  => 'asignaturas.index',
             'icon' => 'fas fa-fw fa-star',
             'can'=> 'admin',
         ],
+        // [
+        //         'text'    => 'multilevel',
+        //         'icon'    => 'fas fa-fw fa-share',
+        //         'submenu' => [
+        //             [
+        //                 'text' => 'level_one',
+        //                 'url'  => '#',
+        //             ],
+        //             [
+        //                 'text'    => 'level_one',
+        //                 'url'     => '#',
+        //                 'submenu' => [
+        //                     [
+        //                         'text' => 'level_two',
+        //                         'url'  => '#',
+        //                     ],
+        //                     [
+        //                         'text'    => 'level_two',
+        //                         'url'     => '#',
+        //                         'submenu' => [
+        //                             [
+        //                                 'text' => 'level_three',
+        //                                 'url'  => '#',
+        //                             ],
+        //                             [
+        //                                 'text' => 'level_three',
+        //                                 'url'  => '#',
+        //                             ],
+        //                         ],
+        //                     ],
+        //                 ],
+        //             ],
+        //             [
+        //                 'text' => 'level_one',
+        //                 'url'  => '#',
+        //             ],
+        //         ],
+        //     ],
 
-        [
-            'text' => 'evento',
-            'route'  => 'eventos.index',
-            'icon' => 'fas fa-fw fa-users',
-            'can'=> 'admin',
-        ],
-        [
-            'text' => 'Mapa',
-            'route'  => 'mapas.index',
-            'icon' => 'fas fa-fw fa-map',
-            'can'=> 'admin',
-        ],
-        [
-            'text' => 'post',
-            'route'  => 'posts.index',
-            'icon' => 'fas fa-fw fa-pen',
-            'can'=> 'admin',
-        ],
-        [
-            'text' => 'ruta',
-            'route'  => 'rutas.index',
-            'icon' => 'fas fa-fw fa-map',
-            'can'=> 'admin',
-        ],
+        // [
+        //     'text' => 'evento',
+        //     'route'  => 'eventos.index',
+        //     'icon' => 'fas fa-fw fa-users',
+        //     'can'=> 'admin',
+        // ],
+        // [
+        //     'text' => 'Mapa',
+        //     'route'  => 'mapas.index',
+        //     'icon' => 'fas fa-fw fa-map',
+        //     'can'=> 'admin',
+        // ],
+        // [
+        //     'text' => 'post',
+        //     'route'  => 'posts.index',
+        //     'icon' => 'fas fa-fw fa-pen',
+        //     'can'=> 'admin',
+        // ],
+        // [
+        //     'text' => 'ruta',
+        //     'route'  => 'rutas.index',
+        //     'icon' => 'fas fa-fw fa-map',
+        //     'can'=> 'admin',
+        // ],
 
-        [
-            'text' => 'Servicio',
-            'route'  => 'servicios.index',
-            'icon' => 'fas fa-fw fa-hotel',
-            'can'=> 'admin',
-        ],
-        [
-            'text' => 'Tipo-convenio',
-            'route'  => 'tipconvenios.index',
-            'icon' => 'fas fa-fw fa-book',
-            'can'=> 'admin',
-        ],
-        [
-            'text' => 'Tipo-evento',
-            'route'  => 'tipoeventos.index',
-            'icon' => 'fas fa-fw fa-users',
-            'can'=> 'admin',
-        ],
-        [
-            'text' => 'Tipo-lugar',
-            'route'  => 'tipolugars.index',
-            'icon' => 'fas fa-fw fa-city',
-            'can'=> 'admin',
+        // [
+        //     'text' => 'Servicio',
+        //     'route'  => 'servicios.index',
+        //     'icon' => 'fas fa-fw fa-hotel',
+        //     'can'=> 'admin',
+        // ],
+        // [
+        //     'text' => 'Tipo-convenio',
+        //     'route'  => 'tipconvenios.index',
+        //     'icon' => 'fas fa-fw fa-book',
+        //     'can'=> 'admin',
+        // ],
+        // [
+        //     'text' => 'Tipo-evento',
+        //     'route'  => 'tipoeventos.index',
+        //     'icon' => 'fas fa-fw fa-users',
+        //     'can'=> 'admin',
+        // ],
+        // [
+        //     'text' => 'Tipo-lugar',
+        //     'route'  => 'tipolugars.index',
+        //     'icon' => 'fas fa-fw fa-city',
+        //     'can'=> 'admin',
 
-        ],
-        [
-            'text' => 'Tipo-servicio',
-            'route'  => 'tiposervicios.index',
-            'icon' => 'fas fa-fw fa-hotel',
-            'can'=> 'admin',
-        ],
+        // ],
+        // [
+        //     'text' => 'Tipo-servicio',
+        //     'route'  => 'tiposervicios.index',
+        //     'icon' => 'fas fa-fw fa-hotel',
+        //     'can'=> 'admin',
+        // ],
        
      
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+        // ['header' => 'account_settings'],
+        // [
+        //     'text' => 'profile',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'fas fa-fw fa-user',
+        // ],
+        // [
+        //     'text' => 'change_password',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'fas fa-fw fa-lock',
+        // ],
+        // [
+        //     'text'    => 'multilevel',
+        //     'icon'    => 'fas fa-fw fa-share',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'level_one',
+        //             'url'  => '#',
+        //         ],
+        //         [
+        //             'text'    => 'level_one',
+        //             'url'     => '#',
+        //             'submenu' => [
+        //                 [
+        //                     'text' => 'level_two',
+        //                     'url'  => '#',
+        //                 ],
+        //                 [
+        //                     'text'    => 'level_two',
+        //                     'url'     => '#',
+        //                     'submenu' => [
+        //                         [
+        //                             'text' => 'level_three',
+        //                             'url'  => '#',
+        //                         ],
+        //                         [
+        //                             'text' => 'level_three',
+        //                             'url'  => '#',
+        //                         ],
+        //                     ],
+        //                 ],
+        //             ],
+        //         ],
+        //         [
+        //             'text' => 'level_one',
+        //             'url'  => '#',
+        //         ],
+        //     ],
+        // ],
+        // ['header' => 'labels'],
+        // [
+        //     'text'       => 'important',
+        //     'icon_color' => 'red',
+        //     'url'        => '#',
+        // ],
+        // [
+        //     'text'       => 'warning',
+        //     'icon_color' => 'yellow',
+        //     'url'        => '#',
+        // ],
+        // [
+        //     'text'       => 'information',
+        //     'icon_color' => 'cyan',
+        //     'url'        => '#',
+        // ],
     ],
 
     /*

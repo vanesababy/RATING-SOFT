@@ -20,8 +20,8 @@ class CreateRutasTable extends Migration
             $table->string('descripcion');
 
             
-            $table->unsignedBigInteger('mapas_id')->unsigned();
-            $table->foreign('mapas_id')->references('id')->on('mapas');
+            // $table->unsignedBigInteger('mapas_id')->unsigned();
+            // $table->foreign('mapas_id')->references('id')->on('mapas');
            
             $table->timestamps();
         });

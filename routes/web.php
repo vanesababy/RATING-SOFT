@@ -21,11 +21,10 @@ Auth::routes();
 
 Route::resource('lugars', App\Http\Controllers\LugarController::class);
 Route::resource('servicios', App\Http\Controllers\ServicioController::class);
-
 Route::resource('convenios', App\Http\Controllers\ConvenioController::class);
 Route::resource('eventos', App\Http\Controllers\EventoController::class);
 Route::resource('gastronomias', App\Http\Controllers\GastronomiaController::class);
-Route::resource('mapas', App\Http\Controllers\MapaController::class);
+Route::resource('asignaturas', App\Http\Controllers\AsignaturaController::class);
 Route::resource('tiposervicios', App\Http\Controllers\TiposervicioController::class);
 Route::resource('rutas', App\Http\Controllers\RutaController::class);
 Route::resource('servicios', App\Http\Controllers\ServicioController::class);
@@ -38,9 +37,7 @@ Route::resource('calificasiones', App\Http\Controllers\CalificasioneController::
 
 
 Route::get('iglesias', [App\Http\Controllers\IglesiaController::class, 'index'])->name('iglesias');
-
 Route::get('Administrador', [App\Http\Controllers\AdminController::class, 'index'])->middleware('can:admin')->name('Administrador');
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('senderismo', App\Http\Controllers\senderismocontroller::class);
 Route::resource('hoteles', App\Http\Controllers\Hotelescontroller::class);

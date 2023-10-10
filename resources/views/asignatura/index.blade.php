@@ -20,11 +20,9 @@
 
     <thead class="bg bg-success">
         <tr>
-            <th>No</th>
-                                        
-            <th>Gps</th>
-            <th>Ubicacion</th>
-            <th>Multimedia</th>
+            <th>No</th>                             
+            <th>nombre Asignatura</th>
+            <th>codigo</th>
 
             <th></th>
          
@@ -32,19 +30,18 @@
     </thead>
 
 <tbody>
-    @foreach ($mapas as $mapa)
+    @foreach ($asignaturas as $asignatura)
         <tr>
             
             <td>{{ ++$i }}</td>
                                             
-			<td>{{ $mapa->gps }}</td>
-			<td>{{ $mapa->ubicacion }}</td>
-			<td>{{ $mapa->multimedia }}</td>
+			<td>{{ $asignatura->nombreAsignatura }}</td>
+			<td>{{ $asignatura->codigo }}</td>
 
               <td width="280px">
-                <form action="{{ route('mapas.destroy',$mapa->id) }}" method="POST">
-                    <a class="btn btn-sm btn-primary " href="{{ route('mapas.show',$mapa->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                    <a class="btn btn-sm btn-success" href="{{ route('mapas.edit',$mapa->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                <form action="{{ route('asignatura.destroy',$asignatura->id) }}" method="POST">
+                    <a class="btn btn-sm btn-primary " href="{{ route('asignaturas.show',$asignatura->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                    <a class="btn btn-sm btn-success" href="{{ route('asignaturas.edit',$asignatura->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
