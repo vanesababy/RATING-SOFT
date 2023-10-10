@@ -117,7 +117,7 @@
                         <div class="card">
                             <div class="card-body" id="cal">
                                 <div class="d-flex flex-column align-items-center text-center">
-                                    <img src="{{ 'http://localhost/popayanturims/public/storage/Avatar/' . Auth::user()->Avatar }} "
+                                    <img src="{{ 'http://localhost/----/public/storage/Avatar/' . Auth::user()->Avatar }} "
                                         style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px">
                                     <div class="mt-3">
                                         <h4>{{ auth::user()->name }}</h4>

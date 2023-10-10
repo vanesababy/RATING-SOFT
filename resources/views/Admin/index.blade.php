@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'AdminPT')
+@section('title', 'Administrador')
 
 @section('content_header')
     <h1><span class="pf pf-atm">RATINGSOFT</span></h1>
