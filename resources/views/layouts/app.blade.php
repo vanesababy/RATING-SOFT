@@ -34,7 +34,7 @@
                 <img src="./img/descarga.png" alt="" width="50%" height="50%">
             </a>
 
-            <a class="navbar-brand text-info" href="{{ url('home') }}">
+            <a class="navbar-brand text-info" href="{{ url('') }}">
                 {{ config('app.name', 'RATINGSOFT') }}
             </a>
 
