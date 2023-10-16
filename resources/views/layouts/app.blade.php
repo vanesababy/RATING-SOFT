@@ -17,6 +17,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
@@ -151,7 +152,7 @@
 
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Nosotros
+                            Tecnologías
                         </h6>
                         <p>
                             <a href="#!" class="text-reset">Java-scrip</a>

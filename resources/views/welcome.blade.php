@@ -15,6 +15,7 @@
                         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                         <title>RATINGSOFT</title>
                         <!-- CSS Bootstrap -->
+                        <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
                         <link rel="stylesheet" href="./css/bootstrap.min.css" />
                         <!-- CDN Font awesome -->
                         <link
