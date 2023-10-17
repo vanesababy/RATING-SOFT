@@ -28,7 +28,7 @@ class Roleseeder extends Seeder
 
 
         
-        Permission::create(['name'=>'lugars.index'])->syncRoles([$role1],[$role2]);
+        Permission::create(['name'=>'lugars.index'])->syncRoles([$role1,$role2]);
         Permission::create(['name'=>'lugars.create'])->syncRoles([$role1]);
         Permission::create(['name'=>'lugars.edit'])->syncRoles([$role1]);
         Permission::create(['name'=>'lugars.show'])->syncRoles([$role1]);
