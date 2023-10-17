@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Asignatura;
-use App\Models\Mapa;
+use App\Models\TipoAsignatura;
 use Illuminate\Http\Request;
 
 class AsignaturaController extends Controller
@@ -19,19 +19,22 @@ class AsignaturaController extends Controller
 
    
     public function create()
-    {
-        $asignatura = new Asignatura();
-        return view('asignatura.create', compact('asignatura+'));
-    }
+{
+    $asignatura = new Asignatura();
+    $tiposAsignatura = TipoAsignatura::pluck('nombreTipoAsignatura', 'id');
+
+    return view('asignatura.create', compact('asignatura', 'tiposAsignatura'));
+}
+
 
     
     public function store(Request $request)
     {
-        request()->validate(Mapa::$rules);
+        request()->validate(Asignatura::$rules);
 
         $asignatura = Asignatura::create($request->all());
 
-        return redirect()->route('asignatura.index')
+        return redirect()->route('asignaturas.index')
             ->with('success', 'asignatura created successfully.');
     }
 
@@ -58,7 +61,7 @@ class AsignaturaController extends Controller
 
         $asignatura->update($request->all());
 
-        return redirect()->route('asignatura.index')
+        return redirect()->route('asignaturas.index')
             ->with('success', 'Asignatura updated successfully');
     }
 
@@ -67,7 +70,7 @@ class AsignaturaController extends Controller
     {
         $asignatura = Asignatura::find($id)->delete();
 
-        return redirect()->route('asignatura.index')
+        return redirect()->route('asignaturas.index')
             ->with('success', 'Asignatura deleted successfully');
     }
 }

@@ -1,25 +1,26 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('template_title')
-    Create Tipoevento
+    Actualizar Curso
 @endsection
 
 @section('content')
     <section class="content container-fluid">
-        <div class="row">
+        <div class="">
             <div class="col-md-12">
 
                 @includeif('partials.errors')
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Tipoevento</span>
+                        <span class="card-title">Actualizar Curso</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('tipoeventos.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('cursos.update', $curso->id) }}"  role="form" enctype="multipart/form-data">
+                            {{ method_field('PATCH') }}
                             @csrf
 
-                            @include('tipoevento.form')
+                            @include('curso.form')
 
                         </form>
                     </div>

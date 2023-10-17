@@ -7,24 +7,27 @@ use Illuminate\Database\Eloquent\Model;
 class Asignatura extends Model
 {
     
- protected $guarded;
+    static $rules = [
+		  'nombreAsignatura' => 'required',
+		  'codigo' => 'required',
+      'descripcion' => 'required',
+      'idTipoAsignatura' => 'required',
+      'profesorEncargado' => 'required',
+    ];
 
-    // static $rules = [
-		// 'nombreAsinatura' => 'required',
-		// 'codigo' => 'required',
-    // ];
-
-    // protected $perPage = 20;
-    // protected $fillable = ['nombreAsinatura','codigo'];
-
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    // public function rutas()
-    // {
-    //     return $this->hasMany('App\Models\Ruta', 'mapas_id', 'id');
-    // }
+    protected $perPage = 20;
     
+    protected $fillable = [
+      'nombreAsignatura',
+      'codigo',
+      'descripcion',
+      'idTipoAsignatura',
+      'profesorEncargado',
+    ];
+
+    public function tipoAsignatura()
+    {
+        return $this->belongsTo(TipoAsignatura::class, 'idTipoAsignatura');
+    }
 
 }

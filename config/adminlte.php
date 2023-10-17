@@ -89,8 +89,8 @@ return [
             'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
             'alt' => 'Auth Logo',
             'class' => '',
-            'width' => 50,
-            'height' => 50,
+            'width' => 70,
+            'height' => 70,
         ],
     ],
 
@@ -110,10 +110,10 @@ return [
         'enabled' => true,
         'img' => [
             'path' => 'vendor/adminlte/dist/img/fp.jpg',
-            'alt' => 'AdminLTE Preloader Image',
+            'alt' => null,
             'effect' => 'animation__shake',
-            'width' => 90,
-            'height' => 90,
+            'width' => 120,
+            'height' => 120,
         ],
     ],
 
@@ -134,7 +134,7 @@ return [
     'usermenu_header_class' => 'bg-info',
     'usermenu_image' => true,
     'usermenu_desc' => true,
-    'usermenu_profile_url' => false,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -297,6 +297,7 @@ return [
             'topnav_right' => true,
         ],
         [
+
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
@@ -311,190 +312,53 @@ return [
             'text' => 'Gestion Usuarios',
             'route'  => 'usuarios.index',
             'icon' => 'fas fa-fw fa-user',
-            'can'  => 'admin'
+            'can'  => 'admin.users.index'
+        
+        ],
+        [
+            'text' => 'Gestion Roles',
+            'route'  => 'admin.roles.index',
+            'icon' => 'fas fa-fw fa-user-cog',
+            'can'  => 'admin.roles.index'
         
         ],
         [
             'text' => 'Gestion Profesor',
-            'route'  => 'lugars.index',
-            'icon' => 'fas fa-fw fa-city',
-            'can'=> 'admin',
+            'route'  => 'Administrador',
+            'icon' => 'fas fa-fw fa-chalkboard',
+            'can'=> 'profesor.index',
         ],
         [
             'text' => 'Gestion Alumnos',
-            'route'  => 'convenios.index',
-            'icon' => 'fas fa-fw fa-book',
-            'can'=> 'admin',
+            'route'  => 'Administrador',
+            'icon' => 'fas fa-doutone fa-users',
+            'can'=> 'alumnos.index',
         ],
-
         [
-            'text' => 'gestion Calificiones',
-            'route'  => 'asignaturas.index',
-            'icon' => 'fas fa-fw fa-star',
-            'can'=> 'admin',
+            'text' => 'Gestion Cursos',
+            'route'  => 'cursos.index',
+            'icon' => 'fas fa-fw fa-school',
+            'can'=> 'curso.index',
         ],
-        // [
-        //         'text'    => 'multilevel',
-        //         'icon'    => 'fas fa-fw fa-share',
-        //         'submenu' => [
-        //             [
-        //                 'text' => 'level_one',
-        //                 'url'  => '#',
-        //             ],
-        //             [
-        //                 'text'    => 'level_one',
-        //                 'url'     => '#',
-        //                 'submenu' => [
-        //                     [
-        //                         'text' => 'level_two',
-        //                         'url'  => '#',
-        //                     ],
-        //                     [
-        //                         'text'    => 'level_two',
-        //                         'url'     => '#',
-        //                         'submenu' => [
-        //                             [
-        //                                 'text' => 'level_three',
-        //                                 'url'  => '#',
-        //                             ],
-        //                             [
-        //                                 'text' => 'level_three',
-        //                                 'url'  => '#',
-        //                             ],
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
-        //             [
-        //                 'text' => 'level_one',
-        //                 'url'  => '#',
-        //             ],
-        //         ],
-        //     ],
-
-        // [
-        //     'text' => 'evento',
-        //     'route'  => 'eventos.index',
-        //     'icon' => 'fas fa-fw fa-users',
-        //     'can'=> 'admin',
-        // ],
-        // [
-        //     'text' => 'Mapa',
-        //     'route'  => 'mapas.index',
-        //     'icon' => 'fas fa-fw fa-map',
-        //     'can'=> 'admin',
-        // ],
-        // [
-        //     'text' => 'post',
-        //     'route'  => 'posts.index',
-        //     'icon' => 'fas fa-fw fa-pen',
-        //     'can'=> 'admin',
-        // ],
-        // [
-        //     'text' => 'ruta',
-        //     'route'  => 'rutas.index',
-        //     'icon' => 'fas fa-fw fa-map',
-        //     'can'=> 'admin',
-        // ],
-
-        // [
-        //     'text' => 'Servicio',
-        //     'route'  => 'servicios.index',
-        //     'icon' => 'fas fa-fw fa-hotel',
-        //     'can'=> 'admin',
-        // ],
-        // [
-        //     'text' => 'Tipo-convenio',
-        //     'route'  => 'tipconvenios.index',
-        //     'icon' => 'fas fa-fw fa-book',
-        //     'can'=> 'admin',
-        // ],
-        // [
-        //     'text' => 'Tipo-evento',
-        //     'route'  => 'tipoeventos.index',
-        //     'icon' => 'fas fa-fw fa-users',
-        //     'can'=> 'admin',
-        // ],
-        // [
-        //     'text' => 'Tipo-lugar',
-        //     'route'  => 'tipolugars.index',
-        //     'icon' => 'fas fa-fw fa-city',
-        //     'can'=> 'admin',
-
-        // ],
-        // [
-        //     'text' => 'Tipo-servicio',
-        //     'route'  => 'tiposervicios.index',
-        //     'icon' => 'fas fa-fw fa-hotel',
-        //     'can'=> 'admin',
-        // ],
-       
-     
-        // ['header' => 'account_settings'],
-        // [
-        //     'text' => 'profile',
-        //     'url'  => 'admin/settings',
-        //     'icon' => 'fas fa-fw fa-user',
-        // ],
-        // [
-        //     'text' => 'change_password',
-        //     'url'  => 'admin/settings',
-        //     'icon' => 'fas fa-fw fa-lock',
-        // ],
-        // [
-        //     'text'    => 'multilevel',
-        //     'icon'    => 'fas fa-fw fa-share',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //         [
-        //             'text'    => 'level_one',
-        //             'url'     => '#',
-        //             'submenu' => [
-        //                 [
-        //                     'text' => 'level_two',
-        //                     'url'  => '#',
-        //                 ],
-        //                 [
-        //                     'text'    => 'level_two',
-        //                     'url'     => '#',
-        //                     'submenu' => [
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
-        //         ],
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //     ],
-        // ],
-        // ['header' => 'labels'],
-        // [
-        //     'text'       => 'important',
-        //     'icon_color' => 'red',
-        //     'url'        => '#',
-        // ],
-        // [
-        //     'text'       => 'warning',
-        //     'icon_color' => 'yellow',
-        //     'url'        => '#',
-        // ],
-        // [
-        //     'text'       => 'information',
-        //     'icon_color' => 'cyan',
-        //     'url'        => '#',
-        // ],
+        [
+            'text'    => 'Gestion Asignaturas',
+            'icon'    => 'fas fa-fw fa-book',
+            'can'=> 'gestionAsignaturas.index',
+            'submenu' => [
+                [
+                    'text' => 'Tipo Asignatura',
+                    'route'  => 'tipoAsignaturas.index',
+                    'icon' => 'fas fa-fw fa-users',
+                    'can'=> 'tipoAsignaturas.index',
+                ],
+                [
+                    'text' => 'Asignaturas',
+                    'route'  => 'asignaturas.index',
+                    'icon' => 'fas fa-fw fa-star',
+                    'can'=> 'asignaturas.index',
+                ]
+            ],
+        ],
     ],
 
     /*

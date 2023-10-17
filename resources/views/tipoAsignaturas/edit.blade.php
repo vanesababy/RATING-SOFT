@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('template_title')
-    Update Tipoevento
+    Actualizar Tipo Asignatura
 @endsection
 
 @section('content')
@@ -13,14 +13,14 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Tipoevento</span>
+                        <span class="card-title">Actualizar Tipo Asignatura</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('tipoeventos.update', $tipoevento->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('tipoAsignaturas.update', $tipoAsignatura->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
-                            @include('tipoevento.form')
+                            @include('tipoAsignaturas.form')
 
                         </form>
                     </div>

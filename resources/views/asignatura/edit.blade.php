@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('template_title')
-    Update Asignatura
+    Actualizar Asignatura
 @endsection
 
 @section('content')
@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Asignatura</span>
+                        <span class="card-title">Actualizar Asignatura</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('asignaturas.update', $asignatura->id) }}"  role="form" enctype="multipart/form-data">
