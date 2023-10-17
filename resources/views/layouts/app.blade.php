@@ -17,6 +17,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
@@ -33,7 +34,7 @@
                 <img src="./img/descarga.png" alt="" width="50%" height="50%">
             </a>
 
-            <a class="navbar-brand text-info" href="{{ url('home') }}">
+            <a class="navbar-brand text-info" href="{{ url('') }}">
                 {{ config('app.name', 'RATINGSOFT') }}
             </a>
 
@@ -156,7 +157,7 @@
 
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Tecnologias
+                            Tecnologías
                         </h6>
                         <p>
                             <a href="#!" class="text-reset">Java-script</a>
