@@ -19,6 +19,7 @@ class Roleseeder extends Seeder
         $role2  = Role::create(['name'=>'Usuario']);
         $role3  = Role::create(['name'=>'Profesor']);
         $role4  = Role::create(['name'=>'Directivo']);
+        $role5  = Role::create(['name'=>'alumno']);
 
         //permisos para el home del admin
         Permission::create(['name'=>'admin.index',
@@ -43,6 +44,14 @@ class Roleseeder extends Seeder
                             'description' => 'Eliminar asignatura'])->syncRoles([$role1]);
         Permission::create(['name'=>'asignaturas.show',
                             'description' => 'Ver asignatura'])->syncRoles([$role1]);
+
+        //permisos directivos
+        Permission::create(['name'=>'directivo.index',
+                            'description' => 'gestion Directivos'])->syncRoles([$role1]);
+
+        //gestion de personal
+        Permission::create(['name'=>'gestionPersonal.index',
+                            'description' => 'gestion Personal'])->syncRoles([$role1]);
         
         //permisos para gestions de  profesores
         Permission::create(['name'=>'profesor.index',

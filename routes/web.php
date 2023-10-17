@@ -35,7 +35,9 @@ Route::resource('tipolugars', App\Http\Controllers\TipolugarController::class);
 Route::resource('tipoplatos', App\Http\Controllers\TipoplatoController::class);
 Route::resource('tiposervicios', App\Http\Controllers\TiposervicioController::class);
 Route::resource('calificasiones', App\Http\Controllers\CalificasioneController::class);
-
+Route::resource('profesores', App\Http\Controllers\ProfesorController::class)->names('profesores');
+Route::resource('alumnos', App\Http\Controllers\AlumnoController::class)->names('alumnos');
+Route::resource('directivos', App\Http\Controllers\DirectivoController::class)->names('directivos');
 
 Route::get('iglesias', [App\Http\Controllers\IglesiaController::class, 'index'])->name('iglesias');
 // Route::get('Administrador', [App\Http\Controllers\AdminController::class, 'index'])->middleware('can:admin.index')->name('Administrador');
@@ -44,6 +46,73 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('senderismo', App\Http\Controllers\senderismocontroller::class);
 Route::resource('hoteles', App\Http\Controllers\Hotelescontroller::class);
 Route::resource('museos', App\Http\Controllers\Museoscontroller::class);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -323,22 +323,35 @@ return [
         
         ],
         [
-            'text' => 'Gestion Profesor',
-            'route'  => 'Administrador',
-            'icon' => 'fas fa-fw fa-chalkboard',
-            'can'=> 'profesor.index',
-        ],
-        [
-            'text' => 'Gestion Alumnos',
-            'route'  => 'Administrador',
-            'icon' => 'fas fa-doutone fa-users',
-            'can'=> 'alumnos.index',
-        ],
-        [
             'text' => 'Gestion Cursos',
             'route'  => 'cursos.index',
             'icon' => 'fas fa-fw fa-school',
             'can'=> 'curso.index',
+        ],
+        [
+            'text'    => 'Gestion Personal',
+            'icon'    => 'fas fa-doutone fa-users',
+            'can'=> 'gestionPersonal.index',
+            'submenu' => [
+                [
+                    'text' => 'Gestion Directivos',
+                    'route'  => 'directivos.index',
+                    'icon' => 'fas fa-fw fa-chalkboard',
+                    'can'=> 'directivo.index',
+                ],
+                [
+                    'text' => 'Gestion Profesor',
+                    'route'  => 'profesores.index',
+                    'icon' => 'fas fa-fw fa-chalkboard',
+                    'can'=> 'profesor.index',
+                ],
+                [
+                    'text' => 'Gestion Alumnos',
+                    'route'  => 'alumnos.index',
+                    'icon' => 'fas fa-doutone fa-users',
+                    'can'=> 'alumnos.index',
+                ]
+            ],
         ],
         [
             'text'    => 'Gestion Asignaturas',
