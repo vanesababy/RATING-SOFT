@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,14 +23,14 @@ Auth::routes();
 Route::resource('lugars', App\Http\Controllers\LugarController::class);
 Route::resource('servicios', App\Http\Controllers\ServicioController::class);
 Route::resource('convenios', App\Http\Controllers\ConvenioController::class);
-Route::resource('eventos', App\Http\Controllers\EventoController::class);
+Route::resource('cursos', App\Http\Controllers\CursoController::class)->names('cursos');
 Route::resource('gastronomias', App\Http\Controllers\GastronomiaController::class);
-Route::resource('asignaturas', App\Http\Controllers\AsignaturaController::class);
+Route::resource('asignaturas', App\Http\Controllers\AsignaturaController::class)->names('asignaturas');
 Route::resource('tiposervicios', App\Http\Controllers\TiposervicioController::class);
 Route::resource('rutas', App\Http\Controllers\RutaController::class);
 Route::resource('servicios', App\Http\Controllers\ServicioController::class);
 Route::resource('tipconvenios', App\Http\Controllers\TipconvenioController::class);
-Route::resource('tipoeventos', App\Http\Controllers\TipoeventoController::class);
+Route::resource('tipoAsignaturas', App\Http\Controllers\TipoAsignaturaController::class)->names('tipoAsignaturas');
 Route::resource('tipolugars', App\Http\Controllers\TipolugarController::class);
 Route::resource('tipoplatos', App\Http\Controllers\TipoplatoController::class);
 Route::resource('tiposervicios', App\Http\Controllers\TiposervicioController::class);
@@ -37,7 +38,8 @@ Route::resource('calificasiones', App\Http\Controllers\CalificasioneController::
 
 
 Route::get('iglesias', [App\Http\Controllers\IglesiaController::class, 'index'])->name('iglesias');
-Route::get('Administrador', [App\Http\Controllers\AdminController::class, 'index'])->middleware('can:admin')->name('Administrador');
+// Route::get('Administrador', [App\Http\Controllers\AdminController::class, 'index'])->middleware('can:admin.index')->name('Administrador');
+Route::get('Administrador', [App\Http\Controllers\AdminController::class, 'index'])->name('Administrador');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('senderismo', App\Http\Controllers\senderismocontroller::class);
 Route::resource('hoteles', App\Http\Controllers\Hotelescontroller::class);

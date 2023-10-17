@@ -78,7 +78,7 @@
                     @else
                         <li class="nav-item dropdown">
                             <a role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <img src="{{ 'http://localhost/---/public/storage/Avatar/' . Auth::user()->Avatar }}"
+                                <img src="{{ asset('storage/Avatar/'). Auth::user()->Avatar }}"
                                     style="width: 40px; height:40px; float: left; border-radius:50px; margin-right:25px">
                             </a>
                             <p class="text-block" style="color:black"> {{ Auth::user()->name }}</p>
@@ -87,6 +87,11 @@
                                 <a class="dropdown-item" href="{{ route('ActualizarPerfil') }}">
                                     {{ __('Tu Perfil') }}
                                 </a>
+                                {{-- @can('admin.index') --}}
+                                    <a class="dropdown-item" href="{{route('Administrador')}}" class="block px-4 py-2 text-sm" >
+                                        {{ __('Administrador') }}
+                                    </a>
+                                {{-- @endcan --}}
                                 <a class="dropdown-item fas fa-fw fa-hotel" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -106,7 +111,7 @@
 
     @yield('content')
 
-    <footer class="text-center text-lg-start  text-muted color-fondo p-2">
+    <footer class="text-center text-lg-start text-muted color-fondo p-2">
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
             <div class="me-5 d-none d-lg-block">
                 <div>
@@ -151,10 +156,10 @@
 
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Nosotros
+                            Tecnologias
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Java-scrip</a>
+                            <a href="#!" class="text-reset">Java-script</a>
                         </p>
                         <p>
                             <a href="#!" class="text-reset">PHP</a>
@@ -172,7 +177,7 @@
                             Creadores
                         </h6>
                         <p>
-                            <a href="https://www.facebook.com/juanjose.orozco.961" class="text-reset">Juan Orozco</a>
+                            <a href="https://github.com/OrozcoDev" class="text-reset">Juan Orozco</a>
                         </p>
                         <p>
                             <a href="https://www.facebook.com/andresfelipe.suaza.7/" class="text-reset">Andres Suaza</a>

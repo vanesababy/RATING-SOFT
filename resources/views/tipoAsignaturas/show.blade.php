@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('template_title')
-    {{ $tipoevento->name ?? 'Show Tipoevento' }}
+    {{ $tipoAsignatura->name ?? 'Ver Tipo Asignatura' }}
 @endsection
 
 @section('content')
@@ -11,10 +11,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Tipoevento</span>
+                            <span class="card-title">Ver Tipo Asignatura</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('tipoeventos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('tipoAsignaturas.index') }}"> Volver</a>
                         </div>
                     </div>
 
@@ -22,7 +22,11 @@
                         
                         <div class="form-group">
                             <strong>Nombre:</strong>
-                            {{ $tipoevento->nombre }}
+                            {{ $tipoAsignatura->nombreTipoAsignatura }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Descripcion:</strong>
+                            {{ $tipoAsignatura->descripcion }}
                         </div>
 
                     </div>

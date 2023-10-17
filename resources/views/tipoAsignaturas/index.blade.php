@@ -1,7 +1,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Usuarios') 
+@section('title', 'tipoAsignatura') 
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
@@ -11,8 +11,8 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        @can('asignaturas.create')
-            <a href="{{ route('asignaturas.create') }}" class="btn btn-primary btn-sm "
+        @can('tipoAsignaturas.create')
+            <a href="{{ route('tipoAsignaturas.create') }}" class="btn btn-primary btn-sm "
                 data-placement="left">
                 {{ __('Nuevo') }}
             </a>
@@ -23,54 +23,44 @@
     <thead class="bg bg-success">
         <tr>
             <th>No</th>                             
-            <th>Nombre Asignatura</th>
-            <th>Código</th>
+            <th>Nombre</th>
             <th>Descripcion</th>
-            <th>Tipo Asignatura</th>
-            <th>Profesor Encargado</th>
             <th>Acciones</th>
          
         </tr>
     </thead>
 
-<tbody>
-    @foreach ($asignaturas as $asignatura)
-        <tr>
-            
-            <td>{{ ++$i }}</td>
-                                            
-			<td>{{ $asignatura->nombreAsignatura }}</td>
-			<td>{{ $asignatura->codigo }}</td>
-            <td>{{ $asignatura->descripcion}}</td>
-            <td>{{ $asignatura->tipoAsignatura->nombreTipoAsignatura }}</td>
-            <td>{{ $asignatura->profesorEncargado }}</td>
-
-              <td width="280px">
-                <form action="{{ route('asignaturas.destroy',$asignatura->id) }}" method="POST">
-
-                    @can('asignaturas.show')
-                        <a class="btn btn-sm btn-primary " href="{{ route('asignaturas.show',$asignatura->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
-                    @endcan
+    <tbody>
+        @foreach ($tipoAsignaturas as $tipoAsignatura)
+            <tr>
                 
-                    @can('asignaturas.edit')
-                        <a class="btn btn-sm btn-success" href="{{ route('asignaturas.edit',$asignatura->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
-                    @endcan
-                    
-                    @csrf
-                    @method('DELETE')
+                <td>{{ ++$i }}</td>
+                                                
+                <td>{{ $tipoAsignatura->nombreTipoAsignatura }}</td>
+                <td>{{ $tipoAsignatura->descripcion }}</td>
+    
+                <td width="280px">
+                    <form action="{{ route('tipoAsignaturas.destroy',$tipoAsignatura->id) }}" method="POST">
 
-                    @can('asignaturas.destroy')
-                        <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
-                    @endcan
-                    
-                </form>
-                
+                        @can('tipoAsignaturas.show')
+                            <a class="btn btn-sm btn-primary " href="{{ route('tipoAsignaturas.show',$tipoAsignatura->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                        @endcan
+                        @can('tipoAsignaturas.edit')
+                            <a class="btn btn-sm btn-success" href="{{ route('tipoAsignaturas.edit',$tipoAsignatura->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                        @endcan
+                        
+                        @csrf
+                        @method('DELETE')
+
+                        @can('tipoAsignaturas.destroy')
+                            <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
+                        @endcan
+                        
+                    </form>
                 </td>
-
-        </tr>
-    @endforeach
-</tbody>
-
+            </tr>
+        @endforeach
+    </tbody>
 </table>
 </div>
 </div>
@@ -102,4 +92,3 @@ autoWidth:false,
 }); 
 </script>
 @endsection
-
