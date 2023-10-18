@@ -307,7 +307,6 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
-     
         [
             'text' => 'Gestion Usuarios',
             'route'  => 'usuarios.index',
@@ -322,11 +321,31 @@ return [
             'can'  => 'admin.roles.index'
         
         ],
+        
         [
             'text' => 'Gestion Cursos',
             'route'  => 'cursos.index',
             'icon' => 'fas fa-fw fa-school',
             'can'=> 'curso.index',
+        ],
+        [
+            'text'    => 'Gestion Documentos',
+            'icon'    => 'fas fa-doutone fa-folder',
+            'can'=> 'gestionPersonal.index',
+            'submenu' => [
+                [
+                    'text' => 'Documentos',
+                    'route'  => 'documentos.index',
+                    'icon' => 'fas fa-folder-open',
+                    'can'=> 'directivo.index',
+                ],
+                [
+                    'text' => 'Tipo Documentos',
+                    'route'  => 'tipoDocumentos.index',
+                    'icon' => 'fas fa-folder-open',
+                    'can'=> 'profesor.index',
+                ],
+            ],
         ],
         [
             'text'    => 'Gestion Personal',
