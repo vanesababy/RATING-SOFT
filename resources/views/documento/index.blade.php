@@ -1,9 +1,9 @@
 
 @extends('adminlte::page')
 
-@section('title', 'TIPO_DOCUMENTOS') 
+@section('title', 'DOCUMENTOS') 
 @section('content_header')
-    <h1>Lista de Tipo de Documentos</h1>
+    <h1>Lista de Documentos</h1>
 @stop
 
 @section('css')
@@ -16,7 +16,7 @@
 <div class="card">
     <div class="card-body">
         @can('tipoAsignaturas.create')
-            <a href="{{ route('tipoDocumentos.create') }}" class="btn btn-primary btn-sm "
+            <a href="{{ route('documentos.create') }}" class="btn btn-primary btn-sm "
                 data-placement="left">
                 {{ __('Nuevo') }}
             </a>
@@ -28,29 +28,30 @@
         <tr>
             <th>No</th>                             
             <th>Nombre</th>
-            <th>Descripcion</th>
+            <th>Persona</th>
+            <th>Tipo documento</th>
             <th>Acciones</th>
          
         </tr>
     </thead>
 
     <tbody>
-        @foreach ($tipoDocumentos as $tipoDocumento)
+        @foreach ($documentos as $documento)
             <tr>
                 
-                <td>{{ ++$i }}</td>
-                                                
-                <td>{{ $tipoDocumento->nombre }}</td>
-                <td>{{ $tipoDocumento->descripcion }}</td>
+                <td>{{ $documento->id }}</td>                        
+                <td>{{ $documento->nombre }}</td>
+                <td>{{ $documento->idPersona }}</td>
+                <td>{{ $documento->idTipoDocumento }}</td>
     
                 <td width="280px">
-                    <form action="{{ route('tipoDocumentos.destroy',$tipoDocumento->id) }}" method="POST">
+                    <form action="{{ route('documentos.destroy',$documento->id) }}" method="POST">
 
                         @can('tipoAsignaturas.show')
-                            <a class="btn btn-sm btn-primary " href="{{ route('tipoDocumentos.show',$tipoDocumento->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                            <a class="btn btn-sm btn-primary " href="{{ route('documentos.show',$documento->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
                         @endcan
                         @can('tipoAsignaturas.edit')
-                            <a class="btn btn-sm btn-success" href="{{ route('tipoDocumentos.edit',$tipoDocumento->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                            <a class="btn btn-sm btn-success" href="{{ route('documentos.edit',$documento->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                         @endcan
                         
                         @csrf

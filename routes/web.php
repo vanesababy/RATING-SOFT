@@ -38,9 +38,8 @@ Route::resource('calificasiones', App\Http\Controllers\CalificasioneController::
 Route::resource('profesores', App\Http\Controllers\ProfesorController::class)->names('profesores');
 Route::resource('alumnos', App\Http\Controllers\AlumnoController::class)->names('alumnos');
 Route::resource('directivos', App\Http\Controllers\DirectivoController::class)->names('directivos');
-Route::resource('documentos', App\Http\Controllers\DocumentoController::class)->names('directivos');
-Route::resource('tipoDocumentos', App\Http\Controllers\TipoDocumentosController::class)->names('directivos');
-
+Route::resource('documentos', App\Http\Controllers\DocumentoController::class)->names('documentos');
+Route::resource('tipoDocumentos', App\Http\Controllers\TipoDocumentoController::class)->names('tipoDocumentos');
 Route::get('iglesias', [App\Http\Controllers\IglesiaController::class, 'index'])->name('iglesias');
 // Route::get('Administrador', [App\Http\Controllers\AdminController::class, 'index'])->middleware('can:admin.index')->name('Administrador');
 Route::get('Administrador', [App\Http\Controllers\AdminController::class, 'index'])->name('Administrador');
