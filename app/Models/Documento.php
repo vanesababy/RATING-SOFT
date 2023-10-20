@@ -8,19 +8,23 @@ use Illuminate\Database\Eloquent\Model;
 class Documento extends Model
 {
 
-    use HasFactory;
-    protected $table = 'documento';
+  use HasFactory;
+  protected $table = 'documento';
 
-    static $rules = [
-		'nombre' => 'required',
-        'descripcion' => 'required',
-    ];
+  static $rules = [
+  'nombre' => 'required',
+  'enlace' => 'required',
+  'idPersona' => 'required',
+  'idTipoDocumento' => 'required',
+  ];
 
-    protected $perPage = 20;
+  protected $perPage = 20;
 
-    
-    protected $fillable = [
-      'nombre',
-      'descripcion',
-    ];
+  
+  protected $fillable = [
+    'nombre',
+    'enlace',
+    'idPersona',
+    'idTipoDocumento'
+  ];
 }

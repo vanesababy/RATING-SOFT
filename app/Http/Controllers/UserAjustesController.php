@@ -45,20 +45,4 @@ public function perfil(){
     return view('perfil.editarPerfil', array('user'=>Auth::user()) ); 
 }
 
-
-public function avatar(Request $request){
-
-    $file=$request->file("Avatar");
-    $nombreArchivo = "img_".time().".".$file->guessExtension();
-    $request->file('Avatar')->storeAs('public/Avatar', $nombreArchivo );
-    $avatar['Avatar']= "$nombreArchivo";
-
-
-$user = Auth::user();
-$user->avatar = $nombreArchivo;
-$user->save();
-
-return view('perfil.editarPerfil', array('user'=>Auth::user()) );
-}
-
 }

@@ -23,22 +23,26 @@ class DocumentoController extends Controller
 
 
     public function store(Request $request)
-{
-    $request->validate([
-        'archivo' => 'required|mimes:pdf|max:10240',
-    ]);
+    {
+        //validacion para que solo reciba archivos pdf y de determinado tamaño
+        $request->validate([
+            'enlace' => 'required|mimes:pdf|max:10240',
+        ]);
 
-    $archivo = $request->file('archivo');
-    $nombreArchivo = time() . '_' . $archivo->getClientOriginalName();
-    $archivo->storeAs('Documentos', $nombreArchivo);
 
-    $rutaArchivo = 'Documentos/' . $nombreArchivo;
 
-    $documento = Documento::create(array_merge($request->all(), ['ruta_archivo' => $rutaArchivo]));
+        $data = $request->all();
+        $documento = new Documento($data);
+        
+        
+        $nombreArchivo = "Doc_" . time() . "." . $request->file('enlace')->guessExtension();
+        $request->file('enlace')->storeAs('public/Documentos', $nombreArchivo);
+        $documento->enlace = $nombreArchivo;
 
-    return redirect()->route('documentos.index')
-        ->with('success', 'Documento creado exitosamente.');
-}
+        $documento->save();
+
+        return redirect()->route('documentos.index')->with('success', 'Documento creado exitosamente.');
+    }
 
 
 

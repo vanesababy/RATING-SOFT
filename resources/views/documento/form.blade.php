@@ -8,20 +8,19 @@
         </div>
         <div class="form-group">
             {{ Form::label('Documento') }}
-            {{ Form::file('documento', $documento ->enlace, ['class' => 'form-control' . ($errors->has('documento') ? ' is-invalid' : ''), 'placeholder' => 'enlace']) }}
-            {!! $errors->first('documento', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::file('enlace', ['class' => 'form-control' . ($errors->has('enlace') ? ' is-invalid' : '')]) }}
+            {!! $errors->first('enlace', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+                <div class="form-group">
+            {{ Form::label('Id Persona') }}
+            {{ Form::text('idPersona', $documento->idPersona, ['class' => 'form-control' . ($errors->has('idPersona') ? ' is-invalid' : ''), 'placeholder' => 'Persona ']) }}
+            {!! $errors->first('idPersona', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('Tipo Documento') }}
-            {{ Form::text('tipoDocumento', $documento->idTipoDocumento, ['class' => 'form-control' . ($errors->has('tipoDocumento') ? ' is-invalid' : ''), 'placeholder' => 'Nombre Tipo Documento']) }}
-            {!! $errors->first('tipoDocumento', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::text('idTipoDocumento', $documento->idTipoDocumento, ['class' => 'form-control' . ($errors->has('idTipoDocumento') ? ' is-invalid' : ''), 'placeholder' => 'Nombre Tipo Documento']) }}
+            {!! $errors->first('idTipoDocumento', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::label('Id Persona') }}
-            {{ Form::text('persona', $documento->idPersona, ['class' => 'form-control' . ($errors->has('persona') ? ' is-invalid' : ''), 'placeholder' => 'Persona ']) }}
-            {!! $errors->first('persona', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-
     </div>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Aceptar</button>
