@@ -29,11 +29,8 @@ class DocumentoController extends Controller
             'enlace' => 'required|mimes:pdf|max:10240',
         ]);
 
-
-
         $data = $request->all();
         $documento = new Documento($data);
-        
         
         $nombreArchivo = "Doc_" . time() . "." . $request->file('enlace')->guessExtension();
         $request->file('enlace')->storeAs('public/Documentos', $nombreArchivo);
