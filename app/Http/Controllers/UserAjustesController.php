@@ -42,7 +42,7 @@ class UserAjustesController extends Controller
     
 
 public function perfil(){
-    return view('perfil.editarPerfil', array('user'=>Auth::user()) ); 
+    return view('persona.edit', array('user'=>Auth::user()) ); 
 }
 
 }

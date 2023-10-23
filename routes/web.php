@@ -40,6 +40,8 @@ Route::resource('alumnos', App\Http\Controllers\AlumnoController::class)->names(
 Route::resource('directivos', App\Http\Controllers\DirectivoController::class)->names('directivos');
 Route::resource('documentos', App\Http\Controllers\DocumentoController::class)->names('documentos');
 Route::resource('tipoDocumentos', App\Http\Controllers\TipoDocumentoController::class)->names('tipoDocumentos');
+Route::resource('personas', App\Http\Controllers\PersonaController::class)->names('personas');
+
 Route::get('iglesias', [App\Http\Controllers\IglesiaController::class, 'index'])->name('iglesias');
 // Route::get('Administrador', [App\Http\Controllers\AdminController::class, 'index'])->middleware('can:admin.index')->name('Administrador');
 Route::get('Administrador', [App\Http\Controllers\AdminController::class, 'index'])->name('Administrador');
@@ -129,6 +131,8 @@ Route::get('publicacion', [App\Http\Controllers\PostController::class, 'publicac
 Route::get('lugar/pdf', [App\Http\Controllers\LugarController::class, 'pdf'])->name('lugarpdf');
 
 // perfil y foto de perfil 
+Route::put('/personas/{id}', [PersonaController::class, 'update']);
+
 Route::post('perfil', [App\Http\Controllers\UserAjustesController::class,'avatar'])->name('Avatar');
 Route::get('perfil', [App\Http\Controllers\UserAjustesController::class, 'perfil'])->name('perfil');
 Route::get('/Miperfil', [App\Http\Controllers\UserAjustesController::class, 'Miperfil'])->name('ActualizarPerfil')->middleware('auth');
