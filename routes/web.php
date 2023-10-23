@@ -131,7 +131,7 @@ Route::get('publicacion', [App\Http\Controllers\PostController::class, 'publicac
 Route::get('lugar/pdf', [App\Http\Controllers\LugarController::class, 'pdf'])->name('lugarpdf');
 
 // perfil y foto de perfil 
-Route::put('/personas/{id}', [PersonaController::class, 'update']);
+Route::put('/personas/{id}', [App\Http\Controllers\PersonaController::class, 'update']);
 
 Route::post('perfil', [App\Http\Controllers\UserAjustesController::class,'avatar'])->name('Avatar');
 Route::get('perfil', [App\Http\Controllers\UserAjustesController::class, 'perfil'])->name('perfil');

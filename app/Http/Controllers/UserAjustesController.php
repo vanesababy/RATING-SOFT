@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Auth;
 class UserAjustesController extends Controller
 {
      public function Miperfil(){
-        return view('perfil.editarPerfil');
+        
+        return view('usuarios.edit')->compact('user');
     }
 
 
