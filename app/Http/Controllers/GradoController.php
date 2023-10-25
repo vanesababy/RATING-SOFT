@@ -12,7 +12,7 @@ class GradoController extends Controller
     {
         $grados = Grado::paginate();
 
-        return view(' grado.index', compact('grados'))
+        return view('grado.index', compact('grados'))
             ->with('i', (request()->input('page', 1) - 1) * $grados->perPage());
     }
 
@@ -25,56 +25,39 @@ class GradoController extends Controller
 
     public function store(Request $request)
     {
-        request()->validate(Curso::$rules);
+        request()->validate(Grado::$rules);
 
-        $curso = Curso::create($request->all());
+        $grado = Grado::create($request->all());
 
-        return redirect()->route('cursos.index')
-            ->with('success', 'Curso created successfully.');
+        return redirect()->route('grados.index')
+            ->with('success', 'Grado created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Grado  $grado
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Grado $grado)
+    public function show($id)
     {
-        //
+        $grado = Grado::find($id);
+        return view('grado.show', compact('grado'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Grado  $grado
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Grado $grado)
+
+    public function edit($id)
     {
-        //
+        $grado = Grado::find($id);
+        return view('grado.edit', compact('grado'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Grado  $grado
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Grado $grado)
     {
-        //
+        request()->validate(Grado::$rules);
+        $grado->update($request->all());
+        return redirect()->route('grado.index')->with('success','Grado updated successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Grado  $grado
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Grado $grado)
+
+    public function destroy($id)
     {
-        //
+        $grado = Grado::find($id)->delete();
+        return redirect()->route('grados.index')->with('success','Grado deleted succesfully');
     }
 }

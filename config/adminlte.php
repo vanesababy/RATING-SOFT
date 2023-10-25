@@ -390,6 +390,12 @@ return [
                     'can'=> 'tipoAsignaturas.index',
                 ],
                 [
+                    'text' => 'Grados',
+                    'route'  => 'grados.index',
+                    'icon' => 'fas fa-fw fa-users',
+                    'can'=> 'tipoAsignaturas.index',
+                ],
+                [
                     'text' => 'Asignaturas',
                     'route'  => 'asignaturas.index',
                     'icon' => 'fas fa-fw fa-star',

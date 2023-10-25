@@ -38,7 +38,7 @@
                             <td >{{ $role->id }}</td>
                             <td>{{ $role->name }}</td>
 
-                            <td>
+                            <td class="float-right">
                                 <form action="{{route('admin.roles.destroy',$role->id) }}" method="POST">
                                     <a class="btn btn-sm btn-success" style="margin-left: 40rem !important;" href="{{ route('admin.roles.edit', $role) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
 
