@@ -353,6 +353,12 @@ return [
             'can'=> 'gestionPersonal.index',
             'submenu' => [
                 [
+                    'text' => 'Tipo de Personal',
+                    'route'  => 'tipoPersonas.index',
+                    'icon' => 'fas fa-fw fa-chalkboard',
+                    'can'=> 'directivo.index',
+                ],
+                [
                     'text' => 'Gestion Directivos',
                     'route'  => 'directivos.index',
                     'icon' => 'fas fa-fw fa-chalkboard',

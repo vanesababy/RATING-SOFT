@@ -36,6 +36,10 @@ Route::resource('documentos', App\Http\Controllers\DocumentoController::class)->
 Route::resource('tipoDocumentos', App\Http\Controllers\TipoDocumentoController::class)->names('tipoDocumentos');
 Route::resource('personas', App\Http\Controllers\PersonaController::class)->names('personas');
 Route::resource('logros', App\Http\Controllers\LogroController::class)->names('logros');
+Route::resource('tipoPersonas', App\Http\Controllers\TipoPersonaController::class)->names('tipoPersonas');
+Route::resource('grados', App\Http\Controllers\GradoController::class)->names('grados');
+
+
 
 // perfil y foto de perfil 
 Route::put('/personas/{id}', [App\Http\Controllers\PersonaController::class, 'update']);
