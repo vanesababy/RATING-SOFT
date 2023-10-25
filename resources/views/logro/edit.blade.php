@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('template_title')
-    Update Gastronomia
+    Actualizar Logro
 @endsection
 
 @section('content')
@@ -13,14 +13,14 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Gastronomia</span>
+                        <span class="card-title">Actualizar Logro</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('gastronomias.update', $gastronomia->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('logros.update', $logro->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
-                            @include('gastronomia.form')
+                            @include('logro.form')
 
                         </form>
                     </div>

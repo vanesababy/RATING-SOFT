@@ -388,6 +388,12 @@ return [
                     'route'  => 'asignaturas.index',
                     'icon' => 'fas fa-fw fa-star',
                     'can'=> 'asignaturas.index',
+                ],
+                [
+                    'text' => 'Logros',
+                    'route'  => 'logros.index',
+                    'icon' => 'fas fa-fw fa-star',
+                    'can'=> 'asignaturas.index',
                 ]
             ],
         ],
