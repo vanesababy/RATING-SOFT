@@ -353,6 +353,12 @@ return [
             'can'=> 'gestionPersonal.index',
             'submenu' => [
                 [
+                    'text' => 'Tipo de Personal',
+                    'route'  => 'tipoPersonas.index',
+                    'icon' => 'fas fa-fw fa-chalkboard',
+                    'can'=> 'directivo.index',
+                ],
+                [
                     'text' => 'Gestion Directivos',
                     'route'  => 'directivos.index',
                     'icon' => 'fas fa-fw fa-chalkboard',
@@ -384,13 +390,25 @@ return [
                     'can'=> 'tipoAsignaturas.index',
                 ],
                 [
+                    'text' => 'Grados',
+                    'route'  => 'grados.index',
+                    'icon' => 'fas fa-fw fa-users',
+                    'can'=> 'tipoAsignaturas.index',
+                ],
+                [
                     'text' => 'Asignaturas',
                     'route'  => 'asignaturas.index',
                     'icon' => 'fas fa-fw fa-star',
                     'can'=> 'asignaturas.index',
                 ],
                 [
-                    'text' => 'Periodo',
+                    'text' => 'Logros',
+                    'route'  => 'logros.index',
+                    'icon' => 'fas fa-fw fa-star',
+                    'can'=> 'asignaturas.index',
+                ],
+                [
+                    'text' => 'Periodos',
                     'route'  => 'periodos.index',
                     'icon' => 'fas fa-fw fa-star',
                     'can'=> 'asignaturas.index',

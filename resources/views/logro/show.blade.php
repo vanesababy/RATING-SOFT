@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('template_title')
-    {{ $curso->name ?? 'Show Curso' }}
+    {{ $logro->nombre ?? 'Ver Logro' }}
 @endsection
 
 @section('content')
@@ -11,21 +11,22 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Ver Curso</span>
+                            <span class="card-title">Ver Logro</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('cursos.index') }}">Volver</a>
+                            <a class="btn btn-primary" href="{{ route('logros.index') }}"> Volver</a>
                         </div>
                     </div>
 
                     <div class="card-body">
+                        
                         <div class="form-group">
-                            <strong>Nombre Curso:</strong>
-                            {{ $curso->nombre }}
+                            <strong>Nombre:</strong>
+                            {{ $logro->nombre }}
                         </div>
                         <div class="form-group">
                             <strong>Descripcion:</strong>
-                            {{ $curso->descripcion }}
+                            {{ $logro->descripcion }}
                         </div>
                     </div>
                 </div>

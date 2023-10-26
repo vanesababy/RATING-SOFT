@@ -3,7 +3,7 @@
 
 @section('title', 'tipoPersonas') 
 @section('content_header')
-    <h1>Lista de Cursos</h1>
+    <h1>Lista de Tipo de Personas</h1>
 @stop
 
 @section('css')
@@ -16,7 +16,7 @@
 <div class="card">
     <div class="card-body">
         @can('tipoAsignaturas.create')
-            <a href="{{ route('cursos.create') }}" class="btn btn-primary btn-sm "
+            <a href="{{ route('tipoPersonas.create') }}" class="btn btn-primary btn-sm "
                 data-placement="left">
                 {{ __('Nuevo') }}
             </a>
@@ -35,22 +35,22 @@
     </thead>
 
     <tbody>
-        @foreach ($cursos as $curso)
+        @foreach ($tipoPersonas as $tipoPersona)
             <tr>
                 
                 <td>{{ ++$i }}</td>
                                                 
-                <td>{{ $curso->nombre }}</td>
-                <td>{{ $curso->descripcion }}</td>
+                <td>{{ $tipoPersona->nombre }}</td>
+                <td>{{ $tipoPersona->descripcion }}</td>
     
                 <td width="280px">
-                    <form action="{{ route('cursos.destroy',$curso->id) }}" method="POST">
+                    <form action="{{ route('tipoPersonas.destroy',$tipoPersona->id) }}" method="POST">
 
                         @can('tipoAsignaturas.show')
-                            <a class="btn btn-sm btn-primary " href="{{ route('cursos.show',$curso->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                            <a class="btn btn-sm btn-primary " href="{{ route('tipoPersonas.show',$tipoPersona->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
                         @endcan
                         @can('tipoAsignaturas.edit')
-                            <a class="btn btn-sm btn-success" href="{{ route('cursos.edit',$curso->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                            <a class="btn btn-sm btn-success" href="{{ route('tipoPersonas.edit',$tipoPersona->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                         @endcan
                         
                         @csrf

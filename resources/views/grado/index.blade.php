@@ -1,9 +1,9 @@
 
 @extends('adminlte::page')
 
-@section('title', 'tipoPersonas') 
+@section('title', 'grado') 
 @section('content_header')
-    <h1>Lista de Cursos</h1>
+    <h1>Lista de Grados</h1>
 @stop
 
 @section('css')
@@ -16,7 +16,7 @@
 <div class="card">
     <div class="card-body">
         @can('tipoAsignaturas.create')
-            <a href="{{ route('cursos.create') }}" class="btn btn-primary btn-sm "
+            <a href="{{ route('grados.create') }}" class="btn btn-primary btn-sm "
                 data-placement="left">
                 {{ __('Nuevo') }}
             </a>
@@ -27,30 +27,33 @@
     <thead class="bg bg-success">
         <tr>
             <th>No</th>                             
-            <th>Nombre</th>
+            <th>Grado</th>
             <th>Descripcion</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha FIn</th>
             <th>Acciones</th>
          
         </tr>
     </thead>
 
     <tbody>
-        @foreach ($cursos as $curso)
+        @foreach ($grados as $grado)
             <tr>
                 
-                <td>{{ ++$i }}</td>
-                                                
-                <td>{{ $curso->nombre }}</td>
-                <td>{{ $curso->descripcion }}</td>
+                <td>{{ $grado->id }}</td>                        
+                <td>{{ $grado->grado }}</td>
+                <td>{{ $grado->descripcion }}</td>
+                <td>{{ $grado->fechaInicio }}</td>
+                <td>{{ $grado->fechaFin }}</td>
     
                 <td width="280px">
-                    <form action="{{ route('cursos.destroy',$curso->id) }}" method="POST">
+                    <form action="{{ route('grados.destroy',$grado->id) }}" method="POST">
 
                         @can('tipoAsignaturas.show')
-                            <a class="btn btn-sm btn-primary " href="{{ route('cursos.show',$curso->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                            <a class="btn btn-sm btn-primary " href="{{ route('grados.show',$grado->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
                         @endcan
                         @can('tipoAsignaturas.edit')
-                            <a class="btn btn-sm btn-success" href="{{ route('cursos.edit',$curso->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                            <a class="btn btn-sm btn-success" href="{{ route('grados.edit',$grado->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                         @endcan
                         
                         @csrf

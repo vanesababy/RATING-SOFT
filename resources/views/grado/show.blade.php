@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('template_title')
-    {{ $servicio->name ?? 'Show Servicio' }}
+    {{ $grado->grado ?? 'Ver Grado' }}
 @endsection
 
 @section('content')
@@ -11,34 +11,30 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Servicio</span>
+                            <span class="card-title">Ver Grado</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('servicios.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('grados.index') }}"> Volver</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Nombre:</strong>
-                            {{ $servicio->nombre }}
+                            <strong>Grado:</strong>
+                            {{ $grado->grado }}
                         </div>
                         <div class="form-group">
                             <strong>Descripcion:</strong>
-                            {{ $servicio->descripcion }}
+                            {{ $grado->descripcion }}
                         </div>
                         <div class="form-group">
-                            <strong>Ubicasion:</strong>
-                            {{ $servicio->ubicasion }}
+                            <strong>Fecha Inicio:</strong>
+                            {{ $grado->fechaInicio }}
                         </div>
                         <div class="form-group">
-                            <strong>Horarios:</strong>
-                            {{ $servicio->horarios }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Tiposervicios Id:</strong>
-                            {{ $servicio->tiposervicios_id }}
+                            <strong>Fecha Fin:</strong>
+                            {{ $grado->fechaFin }}
                         </div>
 
                     </div>

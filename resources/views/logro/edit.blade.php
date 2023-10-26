@@ -1,25 +1,26 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('template_title')
-    Create Servicio
+    Actualizar Logro
 @endsection
 
 @section('content')
     <section class="content container-fluid">
-        <div class="row">
+        <div class="">
             <div class="col-md-12">
 
                 @includeif('partials.errors')
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Servicio</span>
+                        <span class="card-title">Actualizar Logro</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('servicios.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('logros.update', $logro->id) }}"  role="form" enctype="multipart/form-data">
+                            {{ method_field('PATCH') }}
                             @csrf
 
-                            @include('servicio.form')
+                            @include('logro.form')
 
                         </form>
                     </div>

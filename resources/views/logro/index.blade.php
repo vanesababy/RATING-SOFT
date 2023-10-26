@@ -1,9 +1,9 @@
 
 @extends('adminlte::page')
 
-@section('title', 'tipoPersonas') 
+@section('title', 'logros') 
 @section('content_header')
-    <h1>Lista de Cursos</h1>
+    <h1>Lista de Logros</h1>
 @stop
 
 @section('css')
@@ -16,7 +16,7 @@
 <div class="card">
     <div class="card-body">
         @can('tipoAsignaturas.create')
-            <a href="{{ route('cursos.create') }}" class="btn btn-primary btn-sm "
+            <a href="{{ route('logros.create') }}" class="btn btn-primary btn-sm "
                 data-placement="left">
                 {{ __('Nuevo') }}
             </a>
@@ -28,29 +28,27 @@
         <tr>
             <th>No</th>                             
             <th>Nombre</th>
-            <th>Descripcion</th>
+            <th>descripcion</th>
             <th>Acciones</th>
          
         </tr>
     </thead>
 
     <tbody>
-        @foreach ($cursos as $curso)
-            <tr>
+        @foreach ($logros as $logro)
                 
-                <td>{{ ++$i }}</td>
-                                                
-                <td>{{ $curso->nombre }}</td>
-                <td>{{ $curso->descripcion }}</td>
+                <td>{{ $logro->id }}</td>                        
+                <td>{{ $logro->nombre }}</td>
+                <td>{{ $logro->descripcion }}</td>
     
                 <td width="280px">
-                    <form action="{{ route('cursos.destroy',$curso->id) }}" method="POST">
+                    <form action="{{ route('logros.destroy',$logro->id) }}" method="POST">
 
                         @can('tipoAsignaturas.show')
-                            <a class="btn btn-sm btn-primary " href="{{ route('cursos.show',$curso->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                            <a class="btn btn-sm btn-primary " href="{{ route('logros.show',$logro->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
                         @endcan
                         @can('tipoAsignaturas.edit')
-                            <a class="btn btn-sm btn-success" href="{{ route('cursos.edit',$curso->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                            <a class="btn btn-sm btn-success" href="{{ route('logros.edit',$logro->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                         @endcan
                         
                         @csrf
