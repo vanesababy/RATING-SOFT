@@ -35,6 +35,9 @@ Route::resource('directivos', App\Http\Controllers\DirectivoController::class)->
 Route::resource('documentos', App\Http\Controllers\DocumentoController::class)->names('documentos');
 Route::resource('tipoDocumentos', App\Http\Controllers\TipoDocumentoController::class)->names('tipoDocumentos');
 Route::resource('personas', App\Http\Controllers\PersonaController::class)->names('personas');
+Route::resource('logros', App\Http\Controllers\LogroController::class)->names('logros');
+Route::resource('periodos', App\Http\Controllers\PeriodoController::class)->names('periodos');
+
 
 
 // perfil y foto de perfil 

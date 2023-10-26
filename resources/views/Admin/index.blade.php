@@ -87,9 +87,9 @@
             </article>
         </div>
     </section>
-    <section class="container">
+    <section class="container text-center">
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12">
                 <h3 class="text-capitalize">
                     <span class="text-info h5">El principal beneficiario de RATINGSOFT son las instituciones
                         educativas que lo implementen.</span><br />
@@ -136,11 +136,6 @@
         <div class="carousel-caption carousel-weston-middle">
             <h2 class="d-none d-md-block text-uppercase">RATINGSOFT</h2>
             <p class="d-none d-md-block">SISTEMATIZAMOS PARA AYUDARTE</p>
-            <button class="btn btn-light px4 text-capitalize d-none d-md-block mx-auto">
-
-                <a href="{{ route('senderismo.index') }}">Saber más?</a>
-            </button>
-
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">

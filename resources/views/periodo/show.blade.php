@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('template_title')
-    {{ $ruta->name ?? 'Show Ruta' }}
+    {{ $periodo->periodo ?? 'Ver Perido Academico' }}
 @endsection
 
 @section('content')
@@ -11,32 +11,27 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Ruta</span>
+                            <span class="card-title">Ver Periodo Academico</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('rutas.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('periodos.index') }}"> Volver</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Ubicasion:</strong>
-                            {{ $ruta->ubicasion }}
+                            <strong>Periodo Academico:</strong>
+                            {{ $periodo->periodo }}
                         </div>
                         <div class="form-group">
-                            <strong>Horarios:</strong>
-                            {{ $ruta->horarios }}
+                            <strong>Fecha Inicio:</strong>
+                            {{ $periodo->fechaInicio }}
                         </div>
                         <div class="form-group">
-                            <strong>Descripcion:</strong>
-                            {{ $ruta->descripcion }}
+                            <strong>Fecha Final:</strong>
+                            {{ $periodo->fechaFin }}
                         </div>
-                        <div class="form-group">
-                            <strong>Mapas Id:</strong>
-                            {{ $ruta->mapas_id }}
-                        </div>
-
                     </div>
                 </div>
             </div>

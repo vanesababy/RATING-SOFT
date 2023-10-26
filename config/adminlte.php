@@ -388,6 +388,12 @@ return [
                     'route'  => 'asignaturas.index',
                     'icon' => 'fas fa-fw fa-star',
                     'can'=> 'asignaturas.index',
+                ],
+                [
+                    'text' => 'Periodo',
+                    'route'  => 'periodos.index',
+                    'icon' => 'fas fa-fw fa-star',
+                    'can'=> 'asignaturas.index',
                 ]
             ],
         ],
