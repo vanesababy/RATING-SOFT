@@ -415,6 +415,12 @@ return [
                 ]
             ],
         ],
+        [
+            'text' => 'Mi Perfil',
+            'route'  => 'actualizarPerfil.index',
+            'icon' => 'fas fa-fw fa-star',
+            'can'=> 'asignaturas.index',
+        ]
     ],
 
     /*

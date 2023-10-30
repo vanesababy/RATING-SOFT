@@ -22,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'idPersona'
     ];
 
     /**
@@ -67,8 +68,7 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Rol');
     }
 
-    public function persona()
-    {
+    public function persona(){
         return $this->hasOne(Persona::class, 'idPersona');
     }
 

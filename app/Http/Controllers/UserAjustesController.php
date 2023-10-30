@@ -8,7 +8,7 @@ class UserAjustesController extends Controller
 {
      public function Miperfil(){
         
-        return view('persona.formulario');
+        return view('persona.edit');
     }
 
 

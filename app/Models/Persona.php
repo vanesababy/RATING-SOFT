@@ -27,11 +27,10 @@ class Persona extends Model
         "perfil",
         "sexo",
         "rh",
-        "rutaFoto"
+        "rutaFoto",
     ];
     
     public function usuario(){
         return $this->belongsTo(User::class, 'idPersona');
     }
-
 }

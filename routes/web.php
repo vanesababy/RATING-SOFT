@@ -39,6 +39,9 @@ Route::resource('logros', App\Http\Controllers\LogroController::class)->names('l
 Route::resource('periodos', App\Http\Controllers\PeriodoController::class)->names('periodos');
 Route::resource('tipoPersonas', App\Http\Controllers\TipoPersonaController::class)->names('tipoPersonas');
 Route::resource('grados', App\Http\Controllers\GradoController::class)->names('grados');
+Route::resource('actualizarPerfil', App\Http\Controllers\PersonaController::class)->names('actualizarPerfil');
+Route::get('/editar/{id}', [App\Http\Controllers\PersonaController::class, 'edit'])->name('editarPerfil');
+
 
 
 

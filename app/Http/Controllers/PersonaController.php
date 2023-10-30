@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class PersonaController extends Controller
 {
+
+    Public function index(){
+        return view('persona.index');
+    }
+
     public function edit($id)
     {
         $usuario = User::find($id);

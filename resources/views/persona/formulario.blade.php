@@ -6,14 +6,7 @@
  <h1 class="titulo">Actualizar Perfil</h1>
 @stop
 @section('content')
-<div class="container bg-custom">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Múltiples Pasos</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-<body>
+<div class="bg-custom">
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-8 offset-md-2">
@@ -25,7 +18,7 @@
                       
                 <form id="multiStepForm">
                     <div class="form-group step step-1" data-step="1">
-                        <h3>Paso 1: Datos Personales</h3>
+                        <h3 class="titulo">Datos Personales</h3>
                         <div class="form-group">
                             <label for="identificacion">Identificacion</label>
                             <input type="text" class="form-control" id="identificacion" name="identificacion" required>
@@ -54,7 +47,7 @@
                     </div>
 
                     <div class="form-group step step-2" data-step="2">
-                        <h3>Paso 2: Datos Contacto</h3>
+                        <h3 class="titulo">Datos Contacto</h3>
                         <div class="form-group">
                             <label for="direccion">Dirección</label>
                             <input type="text" class="form-control" id="direccion" name="direccion" required>
@@ -76,7 +69,7 @@
                     </div>
 
                     <div class="form-group step step-3" data-step="3">
-                        <h3>Paso 3: Datos Familiares</h3>
+                        <h3 class="titulo">Datos Familiares</h3>
                         <div class="form-group">
                             <label for="padre">Nombre del Padre</label>
                             <input type="text" class="form-control" id="padre" name="padre" required>
@@ -90,7 +83,7 @@
                     </div>
 
                     <div class="form-group step step-4" data-step="4">
-                        <h3>Paso 4: Estudios</h3>
+                        <h3 class="titulo">Estudios</h3>
                         <div class="form-group">
                             <label for="grado">Grado</label>
                             <input type="text" class="form-control" id="grado" name="grado" required>
@@ -106,9 +99,13 @@
 </div>
 
 <style>
-.titulo{
-    color: black !important;
+.titulo {
+    padding-top: 2rem;
+    font-family: sans-serif;
+    text-align: center;
+    transform: translateY(-25%);
 }
+
     
 .progress {
     margin-bottom: 30px;
@@ -133,7 +130,7 @@
             $(".step[data-step='" + currentStep + "']").hide();
             currentStep++;
             $(".step[data-step='" + currentStep + "']").show();
-            var progress = (currentStep - 1) * 33.33; // Calcula el progreso
+            var progress = (currentStep - 1) * 25; // Calcula el progreso
             $(".progress-bar").css("width", progress + "%");
         });
 
@@ -141,7 +138,7 @@
             $(".step[data-step='" + currentStep + "']").hide();
             currentStep--;
             $(".step[data-step='" + currentStep + "']").show();
-            var progress = (currentStep - 1) * 33.33; // Calcula el progreso
+            var progress = (currentStep - 1) * 25; // Calcula el progreso
             $(".progress-bar").css("width", progress + "%");
         });
 
@@ -151,7 +148,5 @@
         });
     });
 </script>
-
-</body>
 </div>
 @stop
