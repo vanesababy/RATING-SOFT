@@ -48,23 +48,20 @@
 </table>
 
 <script>
-    $(document).ready(function() {
-        var selectAllCheckbox = $('#select_all');
-        var permissionCheckboxes = $('input[name="permissions[]"]');
-        
-        selectAllCheckbox.click(function() {
-            var isChecked = selectAllCheckbox.prop('checked');
-            permissionCheckboxes.prop('checked', isChecked);
-        });
-
-        permissionCheckboxes.click(function() {
-            if ($(this).prop('checked')) {
-                permissionCheckboxes.not(this).prop('checked', false);
-            }
-            var allChecked = permissionCheckboxes.length === permissionCheckboxes.filter(':checked').length;
-            selectAllCheckbox.prop('checked', allChecked);
-        });
+ $(document).ready(function() {
+    var selectAllCheckbox = $('#select_all');
+    var permissionCheckboxes = $('input[name="permissions[]"]');
+    
+    selectAllCheckbox.click(function() {
+        var isChecked = $(this).prop('checked');
+        permissionCheckboxes.prop('checked', isChecked);
     });
+
+    permissionCheckboxes.click(function() {
+        var allChecked = permissionCheckboxes.length === permissionCheckboxes.filter(':checked').length;
+        selectAllCheckbox.prop('checked', allChecked);
+    });
+});
 </script>
 
 

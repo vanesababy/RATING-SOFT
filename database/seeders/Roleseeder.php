@@ -21,7 +21,7 @@ class Roleseeder extends Seeder
         $role4  = Role::create(['name'=>'Directivo']);
         $role5  = Role::create(['name'=>'alumno']);
 
-        //permisos para el home del admin
+        // permisos para el home del admin
         Permission::create(['name'=>'admin.index',
                             'description' => 'Ver el dashboard'])->syncRoles([$role1]);
         Permission::create(['name'=>'admin.users.index',

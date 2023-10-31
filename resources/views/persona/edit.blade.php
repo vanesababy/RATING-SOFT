@@ -46,7 +46,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             {{ Form::label('Tipo Identificacion') }}
-                            {{ Form::select('tipoIdentificacion', $tiposIdentificacion, $persona->tipoIdentificacion, ['class' => 'form-control' . ($errors->has('tipoIdentificacion') ? ' is-invalid' : '')]) }}
+                            {{ Form::select('tipoIdentificacion', $tiposIdentificacion, $persona->idTipoIdentificacion, ['class' => 'form-control' . ($errors->has('tipoIdentificacion') ? ' is-invalid' : '')]) }}
                             {!! $errors->first('tipoIdentificacion', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
                         <div class="col-md-6">
@@ -107,7 +107,7 @@
                     <h3 class="titulo">Datos Familiares</h3>
                     <div class="form-group">
                         {{ Form::label('Nombre Completo Padre') }}
-                        {{ Form::text('nombrePadre', $persona->nombrePadre, ['class' => 'form-control' . ($errors->has('nombrePadre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre del padre']) }}
+                        {{ Form::text('nombrePadre', $persona->padre, ['class' => 'form-control' . ($errors->has('nombrePadre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre del padre']) }}
                         {!! $errors->first('nombrePadre', '<div class="invalid-feedback">:message</div>') !!}
                     </div>
                     <div class="form-group">
@@ -117,7 +117,7 @@
                     </div>
                     <div class="form-group">
                         {{ Form::label('Nombre Completo Madre') }}
-                        {{ Form::text('nombreMadre', $persona->nombreMadre, ['class' => 'form-control' . ($errors->has('nombreMadre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre de la madre']) }}
+                        {{ Form::text('nombreMadre', $persona->madre, ['class' => 'form-control' . ($errors->has('nombreMadre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre de la madre']) }}
                         {!! $errors->first('nombreMadre', '<div class="invalid-feedback">:message</div>') !!}
                     </div>
                     <div class="form-group">
@@ -130,13 +130,27 @@
                 </div>
 
                 <div class="form-group step step-4" data-step="4">
-                    <h3 class="titulo">Estudios</h3>
+                    <h3 class="titulo">Documentación</h3>
                     <div class="form-group">
-                        <label for="grado">Grado</label>
-                        <input type="text" class="form-control" id="grado" name="grado" required>
+                        {{ Form::label('Documento Identidad') }} <br>
+                        {{ Form::file('documentoIdentidad', ['class' => 'form-control' . ($errors->has('documentoIdentidad') ? ' is-invalid' : ''), 'id' => 'inputGroupFile04', 'aria-describedby' => 'inputGroupFileAddon04', 'aria-label' => 'Upload']) }}
+                        {!! $errors->first('documentoIdentidad', '<div class="invalid-feedback">:message</div>') !!}
                     </div>
+
+                    <div class="form-group">
+                        {{ Form::label('Documento Del Padre') }} <br>
+                        {{ Form::file('documentoIdentidad', ['class' => 'form-control' . ($errors->has('documentoIdentidad') ? ' is-invalid' : ''), 'id' => 'inputGroupFile04', 'aria-describedby' => 'inputGroupFileAddon04', 'aria-label' => 'Upload']) }}
+                        {!! $errors->first('documentoIdentidad', '<div class="invalid-feedback">:message</div>') !!}
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('Documento De La Madre') }} <br>
+                        {{ Form::file('documentoIdentidad', ['class' => 'form-control' . ($errors->has('documentoIdentidad') ? ' is-invalid' : ''), 'id' => 'inputGroupFile04', 'aria-describedby' => 'inputGroupFileAddon04', 'aria-label' => 'Upload']) }}
+                        {!! $errors->first('documentoIdentidad', '<div class="invalid-feedback">:message</div>') !!}
+                    </div>
+
                     <button class="btn btn-primary prev-btn" type="button">Anterior</button>
-                    <button type="submit" class="btn btn-success">Enviar</button>
+                    <button type="submit" class="btn btn-success" id="submitButton">Enviar</button>
                 </div>
             </form>
         </div>

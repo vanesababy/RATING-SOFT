@@ -75,8 +75,7 @@ class RegisterController extends Controller
 
         // Guarda la persona y obtén su ID
         $persona->save();
-        $idPersona = $persona->id;
-
+    
         // Crea un nuevo usuario y asigna el idPersona
         $user = User::create([
             'name' => $data['name'],
