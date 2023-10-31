@@ -28,9 +28,17 @@ class Persona extends Model
         "sexo",
         "rh",
         "rutaFoto",
+        "nombrePadre",
+        "ocupacionPadre",
+        "nombreMadre",
+        "ocupacionMadre",
     ];
     
     public function usuario(){
-        return $this->belongsTo(User::class, 'idPersona');
+        return $this->hasOne(User::class, 'idPersona');
+    }
+
+    public function tipoIdentificacion(){
+        return $this->belongsTo(tipoIdentificacion::class, 'idTipoIdentificacion');
     }
 }

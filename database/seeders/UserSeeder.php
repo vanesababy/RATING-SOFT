@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Persona;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 class UserSeeder extends Seeder
@@ -13,12 +14,21 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
+
+        
+        $persona = new Persona([
+        ]);
+
+        $persona->save();
+
+        $user = User::create([
             'name'=>'Juan Orozco',
             'email'=>'juanjoseorozco9@gmail.com',
-            'password'=> bcrypt('1234567890')
+            'password'=> bcrypt('1234567890'),
+            'idPersona'=> $persona->id
         ])->assignRole('Admin');
 
-        // User::factory(9)->create();
+        return $user;
+
     }
 }

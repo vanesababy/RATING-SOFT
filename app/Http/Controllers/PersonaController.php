@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Persona;
+use App\Models\TipoIdentificacion;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -17,8 +18,9 @@ class PersonaController extends Controller
     {
         $usuario = User::find($id);
         $persona = $usuario->persona;
+        $tiposIdentificacion = TipoIdentificacion::pluck('detalle', 'id');
 
-        return view('persona.edit', compact('usuario', 'persona'));
+        return view('persona.edit', compact('usuario', 'persona','tiposIdentificacion'));
     }
 
 

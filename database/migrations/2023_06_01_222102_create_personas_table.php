@@ -28,7 +28,14 @@ class CreatePersonasTable extends Migration
             $table->text('perfil')->nullable();
             $table->char('sexo', 1)->nullable();
             $table->char('rh', 5)->nullable();
+            $table->string('nombrePadre')->nullable();
+            $table->string('ocupacionPadre')->nullable();
+            $table->string('nombreMadre')->nullable();
+            $table->string('ocupacionMadre')->nullable();
             $table->string('rutaFoto')->nullable();
+
+            $table->unsignedInteger('idTipoIdentificacion')->nullable();
+            $table->foreign('idTipoIdentificacion')->references('id')->on('tipoIdentificacion');
         
             $table->timestamps();
         });

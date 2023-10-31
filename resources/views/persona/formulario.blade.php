@@ -14,34 +14,34 @@
                 <div class="card-body">
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                      
+                    </div>  
                 <form id="multiStepForm">
                     <div class="form-group step step-1" data-step="1">
                         <h3 class="titulo">Datos Personales</h3>
                         <div class="form-group">
-                            <label for="identificacion">Identificacion</label>
-                            <input type="text" class="form-control" id="identificacion" name="identificacion" required>
+                            {{ Form::label('Primer Nombre') }}
+                            {{ Form::text('nombre1', $persona->nombre1, ['class' => 'form-control' . ($errors->has('nombre1') ? ' is-invalid' : ''), 'placeholder' => 'Primer Nombre']) }}
+                            {!! $errors->first('nombre1', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
                         <div class="form-group">
-                            <label for="primerNombre">Primer Nombre</label>
-                            <input type="text" class="form-control" id="primerNombre" name="primerNombre" required>
+                            {{ Form::label('Segundo Nombre') }}
+                            {{ Form::text('nombre2', $persona->nombre2, ['class' => 'form-control' . ($errors->has('nombre2') ? ' is-invalid' : ''), 'placeholder' => 'Segundo Nombre']) }}
+                            {!! $errors->first('nombre2', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
                         <div class="form-group">
-                            <label for="SegundoNombre">Segundo Nombre</label>
-                            <input type="text" class="form-control" id="SegundoNombre" name="SegundoNombre" required>
+                            {{ Form::label('Primer Apellido') }}
+                            {{ Form::text('apellido1', $persona->apellido1, ['class' => 'form-control' . ($errors->has('apellido1') ? ' is-invalid' : ''), 'placeholder' => 'Primer Apellido']) }}
+                            {!! $errors->first('apellido1', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
                         <div class="form-group">
-                            <label for="primerApellido">Primer Apellido</label>
-                            <input type="text" class="form-control" id="primerApellido" name="primerApellido" required>
+                            {{ Form::label('Segundo Apellido') }}
+                            {{ Form::text('apellido2', $persona->apellido2, ['class' => 'form-control' . ($errors->has('apellido2') ? ' is-invalid' : ''), 'placeholder' => 'Segundo Apellido']) }}
+                            {!! $errors->first('apellido2', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
                         <div class="form-group">
-                            <label for="segundoApellido">Segundo Apellido</label>
-                            <input type="text" class="form-control" id="segundoApellido" name="segundoApellido" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                            <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
+                            {{ Form::label('Fecha de Nacimiento') }}
+                            {{ Form::date('fechaNac', $persona->fechaNac, ['class' => 'form-control' . ($errors->has('fechaNac') ? ' is-invalid' : '')]) }}
+                            {!! $errors->first('fechaNac', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
                         <button class="btn btn-primary next-btn" type="button">Siguiente</button>
                     </div>
@@ -49,20 +49,24 @@
                     <div class="form-group step step-2" data-step="2">
                         <h3 class="titulo">Datos Contacto</h3>
                         <div class="form-group">
-                            <label for="direccion">Dirección</label>
-                            <input type="text" class="form-control" id="direccion" name="direccion" required>
+                            {{ Form::label('Direccion') }}
+                            {{ Form::text('direccion', $persona->direccion, ['class' => 'form-control' . ($errors->has('direccion') ? ' is-invalid' : ''), 'placeholder' => 'Direccion']) }}
+                            {!! $errors->first('direccion', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
                         <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            {{ Form::label('Correo Electronico') }}
+                            {{ Form::text('email', $persona->email, ['class' => 'form-control' . ($errors->has('email') ? ' is-invalid' : ''), 'placeholder' => 'Correo Electronico']) }}
+                            {!! $errors->first('email', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
                         <div class="form-group">
-                            <label for="telefonoFijo">Teléfono Fijo</label>
-                            <input type="tel" class="form-control" id="telefonoFijo" name="telefonoFijo" required>
+                            {{ Form::label('Telefono Fijo') }}
+                            {{ Form::text('telefonoFijo', $persona->telefonoFijo, ['class' => 'form-control' . ($errors->has('telefonoFijo') ? ' is-invalid' : ''), 'placeholder' => 'Telefono Fijo']) }}
+                            {!! $errors->first('telefonoFijo', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
                         <div class="form-group">
-                            <label for="celular">Celular</label>
-                            <input type="tel" class="form-control" id="celular" name="celular" required>
+                            {{ Form::label('Celular') }}
+                            {{ Form::text('celular', $persona->celular, ['class' => 'form-control' . ($errors->has('celular') ? ' is-invalid' : ''), 'placeholder' => 'Celular']) }}
+                            {!! $errors->first('celular', '<div class="invalid-feedback">:message</div>') !!}
                         </div>
                         <button class="btn btn-primary prev-btn" type="button">Anterior</button>
                         <button class="btn btn-primary next-btn" type="button">Siguiente</button>

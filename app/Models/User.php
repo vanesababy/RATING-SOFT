@@ -69,7 +69,7 @@ class User extends Authenticatable
     }
 
     public function persona(){
-        return $this->hasOne(Persona::class, 'idPersona');
+        return $this->belongsTo(Persona::class, 'id');
     }
 
 }

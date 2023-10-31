@@ -42,6 +42,7 @@
                 <div class="row text-center mb-4 mt-5">
                     <div class="cold-md-12">
                         <button type="submit" class=" btn btn-danger" id="formSubmit">Guardar cambios</button>
+                        <a href="{{ route('editarPerfil', ['id' => Auth::user()->id]) }}" class="btn btn-primary">Actualizar Información</a>
                 </div>
             </form>
         </div>

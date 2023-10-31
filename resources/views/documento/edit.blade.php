@@ -16,13 +16,12 @@
                         <span class="card-title">Actualizar Documento</span>
                     </div>
                     <div class="card-body">
-                        {{-- <form method="POST" action="{{ route('documentos.update', $documento->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('documentos.update', $documento->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
-
                             @include('documento.form')
 
-                        </form> --}}
+                        </form>
                     </div>
                 </div>
             </div>
