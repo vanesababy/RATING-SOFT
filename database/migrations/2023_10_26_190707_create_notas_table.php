@@ -15,15 +15,13 @@ class CreateNotasTable extends Migration
     {
         Schema::create('nota', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('nota1');
-            $table->integer('nota2');
-            $table->integer('nota3');
-            $table->integer('nota4');
-            $table->integer('notaFinal');
-            $table->integer('idPersona');
-            $table->integer('idArea');
-            $table->integer('idPerido');
-            $table->integer('idCurso');
+            $table->date('fecha');
+            $table->string('detalle');
+            $table->string('descripcion');
+            $table->integer('valor');
+            $table->unsignedInteger('idPersona');
+
+            $table->foreign('idPersona')->references('id')->on('persona');
             $table->timestamps();
         });
     }

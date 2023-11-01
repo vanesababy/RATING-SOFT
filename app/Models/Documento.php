@@ -27,4 +27,12 @@ class Documento extends Model
     'idPersona',
     'idTipoDocumento'
   ];
+
+  public function persona(){
+    return $this->belongsTo(Persona::class, 'idPersona');
+  }
+
+  public function tipoDocumento(){
+    return $this->belongsTo(TipoDocumento::class, 'idTipoDocumento');
+  }
 }

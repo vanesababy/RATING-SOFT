@@ -65,14 +65,14 @@
                     <div class="row">
                         <div class="col-md-6">
                             {{ Form::label('Sexo') }}
-                            {{ Form::text('sexo', $persona->sexo, ['class' => 'form-control' . ($errors->has('sexo') ? ' is-invalid' : ''), 'placeholder' => 'Sexo']) }}
+                            {{ Form::select('sexo', ['M' => 'Masculino', 'F' => 'Femenino', 'O' => '39 Tipos de gays'], $persona->sexo, ['class' => 'form-control' . ($errors->has('sexo') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione el sexo']) }}
                             {!! $errors->first('sexo', '<div class="invalid-feedback">:message</div>') !!}
-                        </div>
+                        </div>                        
                         <div class="col-md-6">
-                            {{ Form::label('RH') }}
-                            {{ Form::text('rh', $persona->rh, ['class' => 'form-control' . ($errors->has('rh') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese su RH']) }}
+                            {{ Form::label('rh', 'RH') }}
+                            {{ Form::select('rh', ['A+' => 'A+', 'A-' => 'A-', 'B+' => 'B+', 'B-' => 'B-', 'AB+' => 'AB+', 'AB-' => 'AB-', 'O+' => 'O+', 'O-' => 'O-'], $persona->rh, ['class' => 'form-control' . ($errors->has('rh') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione su RH']) }}
                             {!! $errors->first('rh', '<div class="invalid-feedback">:message</div>') !!}
-                        </div>
+                        </div>                        
                     </div>
                     <button class="btn btn-primary next-btn" style="margin-top: 2rem" type="button">Siguiente</button>
                 </div>
@@ -125,30 +125,6 @@
                         {{ Form::text('ocupacionMadre', $persona->ocupacionMadre, ['class' => 'form-control' . ($errors->has('ocupacionMadre') ? ' is-invalid' : ''), 'placeholder' => 'Ocupacion de la madre']) }}
                         {!! $errors->first('ocupacionMadre', '<div class="invalid-feedback">:message</div>') !!}
                     </div>
-                    <button class="btn btn-primary prev-btn" type="button">Anterior</button>
-                    <button class="btn btn-primary next-btn" type="button">Siguiente</button>
-                </div>
-
-                <div class="form-group step step-4" data-step="4">
-                    <h3 class="titulo">Documentación</h3>
-                    <div class="form-group">
-                        {{ Form::label('Documento Identidad') }} <br>
-                        {{ Form::file('documentoIdentidad', ['class' => 'form-control' . ($errors->has('documentoIdentidad') ? ' is-invalid' : ''), 'id' => 'inputGroupFile04', 'aria-describedby' => 'inputGroupFileAddon04', 'aria-label' => 'Upload']) }}
-                        {!! $errors->first('documentoIdentidad', '<div class="invalid-feedback">:message</div>') !!}
-                    </div>
-
-                    <div class="form-group">
-                        {{ Form::label('Documento Del Padre') }} <br>
-                        {{ Form::file('documentoIdentidad', ['class' => 'form-control' . ($errors->has('documentoIdentidad') ? ' is-invalid' : ''), 'id' => 'inputGroupFile04', 'aria-describedby' => 'inputGroupFileAddon04', 'aria-label' => 'Upload']) }}
-                        {!! $errors->first('documentoIdentidad', '<div class="invalid-feedback">:message</div>') !!}
-                    </div>
-
-                    <div class="form-group">
-                        {{ Form::label('Documento De La Madre') }} <br>
-                        {{ Form::file('documentoIdentidad', ['class' => 'form-control' . ($errors->has('documentoIdentidad') ? ' is-invalid' : ''), 'id' => 'inputGroupFile04', 'aria-describedby' => 'inputGroupFileAddon04', 'aria-label' => 'Upload']) }}
-                        {!! $errors->first('documentoIdentidad', '<div class="invalid-feedback">:message</div>') !!}
-                    </div>
-
                     <button class="btn btn-primary prev-btn" type="button">Anterior</button>
                     <button type="submit" class="btn btn-success" id="submitButton">Enviar</button>
                 </div>
