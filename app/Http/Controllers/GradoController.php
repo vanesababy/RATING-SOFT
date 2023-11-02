@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Curso;
 use App\Models\Grado;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,8 @@ class GradoController extends Controller
     public function create()
     {
         $grado = new Grado();
-        return view(' grado.create', compact('grado'));
+        $cursos = Curso::pluck('nombre', 'id');
+        return view(' grado.create', compact('grado','cursos'));
     }
 
     public function store(Request $request)

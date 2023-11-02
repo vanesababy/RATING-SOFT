@@ -420,6 +420,18 @@ return [
             'route'  => 'actualizarPerfil.index',
             'icon' => 'fas fa-fw fa-star',
             'can'=> 'asignaturas.index',
+        ],
+        [
+            'text' => 'Calificar',
+            'route'  => 'calificar.create',
+            'icon' => 'fas fa-fw fa-star',
+            'can'=> 'asignaturas.index',
+        ],
+        [
+            'text' => 'Notas',
+            'route'  => 'calificar.index',
+            'icon' => 'fas fa-fw fa-star',
+            'can'=> 'asignaturas.index',
         ]
     ],
 

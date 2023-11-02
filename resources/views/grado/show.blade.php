@@ -25,18 +25,13 @@
                             {{ $grado->grado }}
                         </div>
                         <div class="form-group">
+                            <strong>Curso:</strong>
+                            {{ $grado->curso->nombre }}
+                        </div>
+                        <div class="form-group">
                             <strong>Descripcion:</strong>
                             {{ $grado->descripcion }}
                         </div>
-                        <div class="form-group">
-                            <strong>Fecha Inicio:</strong>
-                            {{ $grado->fechaInicio }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Fecha Fin:</strong>
-                            {{ $grado->fechaFin }}
-                        </div>
-
                     </div>
                 </div>
             </div>

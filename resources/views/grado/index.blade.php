@@ -28,9 +28,8 @@
         <tr>
             <th>No</th>                             
             <th>Grado</th>
+            <th>Curso</th>
             <th>Descripcion</th>
-            <th>Fecha Inicio</th>
-            <th>Fecha FIn</th>
             <th>Acciones</th>
          
         </tr>
@@ -42,10 +41,8 @@
                 
                 <td>{{ $grado->id }}</td>                        
                 <td>{{ $grado->grado }}</td>
+                <td>{{ $grado->curso->nombre }}</td>
                 <td>{{ $grado->descripcion }}</td>
-                <td>{{ $grado->fechaInicio }}</td>
-                <td>{{ $grado->fechaFin }}</td>
-    
                 <td width="280px">
                     <form action="{{ route('grados.destroy',$grado->id) }}" method="POST">
 

@@ -1,7 +1,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'tipoPersonas') 
+@section('title', 'CURSOS') 
 @section('content_header')
     <h1>Lista de Cursos</h1>
 @stop

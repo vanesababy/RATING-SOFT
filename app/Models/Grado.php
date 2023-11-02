@@ -14,14 +14,17 @@ class Grado extends Model
     protected $fillable = [
         'grado',
         'descripcion',
-        'fechaInicio',
-        'fechaFin'
+        'idCurso'
     ];
 
     static $rules = [
         'grado' => 'required',
         'descripcion' => 'required',
-        'fechaInicio' =>'required',
-        'fechaFin' =>'required'
+        'idCurso' =>'required'
     ];
+
+
+    public function curso(){
+        return $this->belongsTo(Curso::class, 'idCurso');
+    }
 }

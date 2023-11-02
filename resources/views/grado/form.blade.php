@@ -12,14 +12,9 @@
             {!! $errors->first('descripcion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Fecha de Inicio') }}
-            {{ Form::date('fechaInicio', $grado->fechaInicio, ['class' => 'form-control' . ($errors->has('fechaInicio') ? ' is-invalid' : ''), 'placeholder' => 'Fecha de Inicio']) }}
-            {!! $errors->first('fechaInicio', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('Fecha de Fin') }}
-            {{ Form::date('fechaFin', $grado->fechaFin, ['class' => 'form-control' . ($errors->has('fechaFin') ? ' is-invalid' : ''), 'placeholder' => 'Fecha de Fin']) }}
-            {!! $errors->first('fechaFin', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::label('Curso') }}
+            {{ Form::select('idCurso', $cursos, $grado->curso, ['class' => 'form-control' . ($errors->has('idCurso') ? ' is-invalid' : ''), 'placeholder'=>'Ingrese el Curso']) }}
+            {!! $errors->first('idCurso', '<div class="invalid-feedback">:message</div>') !!}
         </div>
     </div>
     <div class="box-footer mt20">

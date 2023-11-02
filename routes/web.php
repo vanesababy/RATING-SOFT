@@ -41,6 +41,7 @@ Route::resource('tipoPersonas', App\Http\Controllers\TipoPersonaController::clas
 Route::resource('grados', App\Http\Controllers\GradoController::class)->names('grados');
 Route::resource('actualizarPerfil', App\Http\Controllers\PersonaController::class)->names('actualizarPerfil');
 Route::get('/editar/{id}', [App\Http\Controllers\PersonaController::class, 'edit'])->name('editarPerfil');
+Route::resource('calificar', App\Http\Controllers\NotaController::class)->names('calificar');
 
 
 

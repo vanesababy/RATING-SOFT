@@ -17,8 +17,10 @@ class CreateGradosTable extends Migration
             $table->increments('id');
             $table->string('grado');
             $table->string('descripcion');
-            $table->date('fechaInicio');
-            $table->date('fechaFin');
+            $table->unsignedInteger('idCurso');
+
+            $table->foreign('idCurso')->references('id')->on('cursos');
+
             $table->timestamps();
         });
     }
