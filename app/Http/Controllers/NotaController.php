@@ -30,11 +30,11 @@ class NotaController extends Controller
         request()->validate(Nota::$rules);
 
         $nota = Nota::create($request->all());
+        $nota->fecha = now()->format('Y-m-d H:i:s');
         $fechaNota = $nota->fecha;
         $periodo = Periodo::where('fechaInicio', '<=', $fechaNota)
                         ->where('fechaFin', '>=', $fechaNota)
                         ->first();
-
         $nota->idPeriodo = $periodo->id;
         $nota->save();
 

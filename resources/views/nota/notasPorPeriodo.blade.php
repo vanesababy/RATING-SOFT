@@ -16,7 +16,7 @@
 <div class="card">
     <div class="card-body">
         <div class="float-right">
-            <a class="btn btn-primary" href="{{ route('notasPeriodos') }}"> Volver</a>
+            <a class="btn btn-primary mb-3" href="{{ route('notasPeriodos') }}"> Volver</a>
         </div>
         <table id="tuser" class="table table-striped">
             <thead class="bg bg-success">

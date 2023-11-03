@@ -17,6 +17,24 @@ class UserSeeder extends Seeder
 
         
         $persona = new Persona([
+            'nombre1' => 'Juan',
+            'nombre2' => 'José',
+            'apellido1' => 'Orozco',
+            'apellido2' => 'Chilito',
+            'identificacion' => '1002877490',
+            'idTipoIdentificacion' => 1,
+            'sexo' => 'M',
+            'fechaNac' => '2001-01-21',
+            'rh' => 'A+',
+            'identificacion' => '1002877490',
+            'direccion' => 'CALLE 15# 18-54',
+            'email' => 'juanjoseorozco9@gmail.com',
+            'telefonoFijo' => '3232226544',
+            'celular' => '3232226544',
+            'padre' => 'jose orozco',
+            'ocupacionPadre' => 'ganadero',
+            'madre' => 'rubi chilito',
+            'ocupacionMadre' => 'ama de casa',
         ]);
 
         $persona->save();

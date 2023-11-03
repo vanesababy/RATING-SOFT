@@ -5,17 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Curso;
 use Illuminate\Http\Request;
 
-/**
- * Class EventoController
- * @package App\Http\Controllers
- */
+
 class CursoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $cursos = Curso::paginate();

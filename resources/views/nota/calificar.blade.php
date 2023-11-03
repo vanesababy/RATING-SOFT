@@ -14,11 +14,11 @@
             </div>
             <form method="POST" action="{{ route('calificar.store') }}"  role="form" enctype="multipart/form-data">
                 @csrf
-                <div class="form-group col-md-4">
+                {{-- <div class="form-group col-md-4">
                     {{ Form::label('Fecha calificacion') }}
                     {{ Form::date('fecha', $nota->fecha, ['class' => 'form-control' . ($errors->has('fecha') ? ' is-invalid' : '')]) }}
                     {!! $errors->first('fecha', '<div class="invalid-feedback">:message</div>') !!}
-                </div>
+                </div> --}}
                 <div class="col-md-4">
                     {{ Form::label('Nota') }}
                     {{ Form::text('valor', $nota->valor, ['class' => 'form-control' . ($errors->has('valor') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese Nota']) }}
@@ -39,6 +39,7 @@
                 </div>
                 <input type="hidden" name="idPersona" value="{{ Auth::user()->id }}">
                 <input type="hidden" name="idPeriodo" value="1">
+                <input type="hidden" name="fecha" value="0000-00-00">
             </form>
         </div>
     </div>
