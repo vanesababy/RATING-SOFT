@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Asignatura;
 use App\Models\Nota;
+use App\Models\Periodo;
+use App\Models\Persona;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class NotaController extends Controller
 {
@@ -24,7 +28,15 @@ class NotaController extends Controller
     public function store(Request $request)
     {
         request()->validate(Nota::$rules);
+
         $nota = Nota::create($request->all());
+        $fechaNota = $nota->fecha;
+        $periodo = Periodo::where('fechaInicio', '<=', $fechaNota)
+                        ->where('fechaFin', '>=', $fechaNota)
+                        ->first();
+
+        $nota->idPeriodo = $periodo->id;
+        $nota->save();
 
         return redirect()->route('calificar.create')
             ->with('success', 'Nota created successfully.');
@@ -52,5 +64,19 @@ class NotaController extends Controller
     public function destroy(Nota $nota)
     {
         //
+    }
+
+
+    public function notasPeriodo(){
+        $notas = Nota::all();
+        $estudiantes = User::role('alumno')->get();
+        $idEstudiante = Auth::user()->id;
+        $estudiante = Persona::find($idEstudiante);
+        return view('nota.notasPeriodos', compact('notas','estudiante','estudiantes'));
+    }
+
+    public function notaPeridoIndividual(){
+        $periodos = Periodo::pluck('periodo', 'id');
+        return view('nota.notasPorPeriodo', compact('periodos'));
     }
 }

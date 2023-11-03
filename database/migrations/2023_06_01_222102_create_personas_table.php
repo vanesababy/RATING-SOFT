@@ -1,5 +1,6 @@
 <?php
 
+use Facade\Ignition\Tabs\Tab;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -32,8 +33,9 @@ class CreatePersonasTable extends Migration
             $table->string('ocupacionPadre')->nullable();
             $table->string('madre')->nullable();
             $table->string('ocupacionMadre')->nullable();
- 
+            $table->unsignedInteger('idGrado')->nullable();
 
+            $table->foreign('idGrado')->references('id')->on('grado');
             $table->foreign('idTipoIdentificacion')->references('id')->on('tipoidentificacion');
         
             $table->timestamps();

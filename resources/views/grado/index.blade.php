@@ -30,6 +30,7 @@
             <th>Grado</th>
             <th>Curso</th>
             <th>Descripcion</th>
+            <th>Añadir</th>
             <th>Acciones</th>
          
         </tr>
@@ -43,6 +44,7 @@
                 <td>{{ $grado->grado }}</td>
                 <td>{{ $grado->curso->nombre }}</td>
                 <td>{{ $grado->descripcion }}</td>
+                <td><a class="btn btn-sm btn-outline-success" href="{{ route('agregarEstudiantes') }}"><i class="fa fa-fw fa-plus"></i> Agregar Estudiantes</a></td>
                 <td width="280px">
                     <form action="{{ route('grados.destroy',$grado->id) }}" method="POST">
 

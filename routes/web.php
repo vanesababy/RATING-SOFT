@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NotaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,11 +39,19 @@ Route::resource('personas', App\Http\Controllers\PersonaController::class)->name
 Route::resource('logros', App\Http\Controllers\LogroController::class)->names('logros');
 Route::resource('periodos', App\Http\Controllers\PeriodoController::class)->names('periodos');
 Route::resource('tipoPersonas', App\Http\Controllers\TipoPersonaController::class)->names('tipoPersonas');
+//rutas para el controller grado
 Route::resource('grados', App\Http\Controllers\GradoController::class)->names('grados');
+Route::post('/grados/agregarEstudiantes', [App\Http\Controllers\GradoController::class, 'agregarEstudianteAGrado'])->name('asignarEstudiantes');
+Route::get('agregarEstudiantes', [App\Http\Controllers\GradoController::class, 'viewAgregar'])->name('agregarEstudiantes');
+
+
 Route::resource('actualizarPerfil', App\Http\Controllers\PersonaController::class)->names('actualizarPerfil');
 Route::get('/editar/{id}', [App\Http\Controllers\PersonaController::class, 'edit'])->name('editarPerfil');
-Route::resource('calificar', App\Http\Controllers\NotaController::class)->names('calificar');
 
+//rutas para el controller notas
+Route::resource('calificar', App\Http\Controllers\NotaController::class)->names('calificar');
+Route::get('notasPeriodos',  [App\Http\Controllers\NotaController::class, 'notasPeriodo'])->name('notasPeriodos');
+Route::get('notasPeriodoIndividual',  [App\Http\Controllers\NotaController::class, 'notaPeridoIndividual'])->name('notasPeriodoIndividual');
 
 
 

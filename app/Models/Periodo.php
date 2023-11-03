@@ -22,4 +22,9 @@ class Periodo extends Model
         'fechaInicio' =>'required',
         'fechaFin' =>'required',
     ];
+
+    public function notas()
+    {
+        return $this->hasMany(Nota::class, 'idPeriodo');
+    }
 }

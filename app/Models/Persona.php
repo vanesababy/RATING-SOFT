@@ -28,6 +28,7 @@ class Persona extends Model
         "ocupacionPadre",
         "madre",
         "ocupacionMadre",
+        "idGrado"
     ];
     
     public function usuario(){
@@ -36,5 +37,9 @@ class Persona extends Model
 
     public function tipoIdentificacion(){
         return $this->belongsTo(tipoIdentificacion::class, 'idTipoIdentificacion');
+    }
+
+    public function grado(){
+        return $this->belongsTo(Grado::class, 'idGrado');
     }
 }

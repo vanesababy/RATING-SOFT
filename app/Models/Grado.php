@@ -27,4 +27,9 @@ class Grado extends Model
     public function curso(){
         return $this->belongsTo(Curso::class, 'idCurso');
     }
+
+    public function personas()
+    {
+        return $this->hasMany(Persona::class);
+    }
 }

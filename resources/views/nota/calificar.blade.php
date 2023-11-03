@@ -18,12 +18,12 @@
                 </div>
                 <div class="col-md-4">
                     {{ Form::label('Nota') }}
-                    {{ Form::number('valor', $nota->valor, ['class' => 'form-control' . ($errors->has('valor') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese Nota']) }}
+                    {{ Form::text('valor', $nota->valor, ['class' => 'form-control' . ($errors->has('valor') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese Nota']) }}
                     {!! $errors->first('valor', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
                 <div class="form-group">
                     {{ Form::label('Detalle') }}
-                    {{ Form::text('datalle', $nota->detalle, ['class' => 'form-control' . ($errors->has('detalle') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese el detalle']) }}
+                    {{ Form::text('detalle', $nota->detalle, ['class' => 'form-control' . ($errors->has('detalle') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese el detalle']) }}
                     {!! $errors->first('datalle', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
                 <div class="form-group">
@@ -34,6 +34,8 @@
                 <div class="box-footer mt20">
                     <button type="submit" class="btn btn-primary">Calificar</button>
                 </div>
+                <input type="hidden" name="idPersona" value="{{ Auth::user()->id }}">
+                <input type="hidden" name="idPeriodo" value="1">
             </form>
         </div>
     </div>

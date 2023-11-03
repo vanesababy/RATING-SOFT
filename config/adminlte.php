@@ -383,37 +383,38 @@ return [
             'icon'    => 'fas fa-fw fa-book',
             'can'=> 'gestionAsignaturas.index',
             'submenu' => [
-                [
-                    'text' => 'Tipo Asignatura',
-                    'route'  => 'tipoAsignaturas.index',
-                    'icon' => 'fas fa-fw fa-users',
-                    'can'=> 'tipoAsignaturas.index',
-                ],
-                [
-                    'text' => 'Grados',
-                    'route'  => 'grados.index',
-                    'icon' => 'fas fa-fw fa-users',
-                    'can'=> 'tipoAsignaturas.index',
-                ],
-                [
-                    'text' => 'Asignaturas',
-                    'route'  => 'asignaturas.index',
-                    'icon' => 'fas fa-fw fa-star',
-                    'can'=> 'asignaturas.index',
-                ],
-                [
-                    'text' => 'Logros',
-                    'route'  => 'logros.index',
-                    'icon' => 'fas fa-fw fa-star',
-                    'can'=> 'asignaturas.index',
-                ],
-                [
-                    'text' => 'Periodos',
-                    'route'  => 'periodos.index',
-                    'icon' => 'fas fa-fw fa-star',
-                    'can'=> 'asignaturas.index',
-                ]
+                
             ],
+        ],
+        [
+            'text' => 'Tipo Asignatura',
+            'route'  => 'tipoAsignaturas.index',
+            'icon' => 'fas fa-fw fa-users',
+            'can'=> 'tipoAsignaturas.index',
+        ],
+        [
+            'text' => 'Grados',
+            'route'  => 'grados.index',
+            'icon' => 'fas fa-fw fa-users',
+            'can'=> 'tipoAsignaturas.index',
+        ],
+        [
+            'text' => 'Asignaturas',
+            'route'  => 'asignaturas.index',
+            'icon' => 'fas fa-fw fa-star',
+            'can'=> 'asignaturas.index',
+        ],
+        // [
+        //     'text' => 'Logros',
+        //     'route'  => 'logros.index',
+        //     'icon' => 'fas fa-fw fa-star',
+        //     'can'=> 'asignaturas.index',
+        // ],
+        [
+            'text' => 'Periodos',
+            'route'  => 'periodos.index',
+            'icon' => 'fas fa-fw fa-star',
+            'can'=> 'asignaturas.index',
         ],
         [
             'text' => 'Mi Perfil',
@@ -421,12 +422,12 @@ return [
             'icon' => 'fas fa-fw fa-star',
             'can'=> 'asignaturas.index',
         ],
-        [
-            'text' => 'Calificar',
-            'route'  => 'calificar.create',
-            'icon' => 'fas fa-fw fa-star',
-            'can'=> 'asignaturas.index',
-        ],
+        // [
+        //     'text' => 'Calificar',
+        //     'route'  => 'calificar.create',
+        //     'icon' => 'fas fa-fw fa-star',
+        //     'can'=> 'asignaturas.index',
+        // ],
         [
             'text' => 'Notas',
             'route'  => 'calificar.index',
