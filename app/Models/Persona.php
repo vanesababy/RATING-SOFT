@@ -42,4 +42,8 @@ class Persona extends Model
     public function grado(){
         return $this->belongsTo(Grado::class, 'idGrado');
     }
+
+    public function notas() {
+        return $this->hasMany(Nota::class, 'idPersona', 'id');
+    }
 }

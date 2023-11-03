@@ -37,11 +37,11 @@
                         {{$estudiante->apellido1}}
                         {{$estudiante->apellido2}}
                     </td>
-                    <td></td>
-                    <td>asdasdasd</td>                        
-                    <td>asdasda</td>
-                    <td>asdadasd</td>
-                    <td>asdadasd</td>
+                    <td>{{$notaPeriodo}}</td>
+                    <td>{{$notaPeriodo}}</td>                        
+                    <td>{{$notaPeriodo}}</td>
+                    <td>{{$notaPeriodo}}</td>
+                    <td>{{($notaPeriodo+$notaPeriodo+$notaPeriodo+$notaPeriodo)/4}}</td>
                     <td>
                         <a href="{{ route('calificar.create') }}" class="btn btn-success">Calificar</a>
                         <a href="{{ route('notasPeriodoIndividual') }}" class="btn btn-primary">Ver</a>

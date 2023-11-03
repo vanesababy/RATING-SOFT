@@ -52,7 +52,7 @@ Route::get('/editar/{id}', [App\Http\Controllers\PersonaController::class, 'edit
 Route::resource('calificar', App\Http\Controllers\NotaController::class)->names('calificar');
 Route::get('notasPeriodos',  [App\Http\Controllers\NotaController::class, 'notasPeriodo'])->name('notasPeriodos');
 Route::get('notasPeriodoIndividual',  [App\Http\Controllers\NotaController::class, 'notaPeridoIndividual'])->name('notasPeriodoIndividual');
-
+Route::post('capturarPeriodo',  [App\Http\Controllers\NotaController::class, 'capturarIdPeriodo'])->name('capturarPeriodo');
 
 
 // perfil y foto de perfil 

@@ -15,29 +15,31 @@
 @section('content')
 <div class="card">
     <div class="card-body">
+        <div class="float-right">
+            <a class="btn btn-primary" href="{{ route('notasPeriodos') }}"> Volver</a>
+        </div>
         <table id="tuser" class="table table-striped">
             <thead class="bg bg-success">
-                <div class="col-md-3 mb-3">
-                    {{ Form::label('Perido Lectivo') }}
-                    {{ Form::select('periodo', $periodos,null, ['class' => 'form-select' . ($errors->has('periodo') ? ' is-invalid' : '')]) }}
-                    {!! $errors->first('periodo', '<div class="invalid-feedback">:message</div>') !!}
-                </div>
                 <tr>
                     <th>No</th>                             
-                    <th>Deatalle</th>
+                    <th>Detalle</th>
                     <th>Descripción</th>
                     <th>Fecha</th>
                     <th>Nota</th>
+                    <th>Periodo</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>asdasdasd</td>                        
-                    <td>asdasda</td>
-                    <td>asdadasd</td>
-                    <td>asdasdasd</td>                        
-                    <td>asdasda</td>
-                </tr>
+                @foreach ($notas as $nota)
+                    <tr>
+                        <td>{{$nota->id}}</td>                        
+                        <td>{{$nota->detalle}}</td>
+                        <td>{{$nota->descripcion}}</td>
+                        <td>{{$nota->fecha}}</td>                        
+                        <td>{{$nota->valor}}</td>
+                        <td>{{$nota->periodo->periodo}}</td>
+                    </tr>   
+                @endforeach
             </tbody>
         </table>
     </div>

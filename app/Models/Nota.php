@@ -29,7 +29,7 @@ class Nota extends Model
     ];
 
     public function persona(){
-        return $this->belongsTo(Persona::class, 'idPersona');
+        return $this->belongsTo(Persona::class, 'idPersona', 'id');
     }
     
     public function periodo(){

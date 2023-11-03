@@ -72,11 +72,44 @@ class NotaController extends Controller
         $estudiantes = User::role('alumno')->get();
         $idEstudiante = Auth::user()->id;
         $estudiante = Persona::find($idEstudiante);
-        return view('nota.notasPeriodos', compact('notas','estudiante','estudiantes'));
+
+        $resultados = $this->CalcularNotaPeriodo();
+        $notaPeriodo = $resultados['promedio_notas'];
+
+
+
+        return view('nota.notasPeriodos', compact('notas','estudiante','estudiantes','notaPeriodo'));
     }
 
     public function notaPeridoIndividual(){
         $periodos = Periodo::pluck('periodo', 'id');
-        return view('nota.notasPorPeriodo', compact('periodos'));
+        $estudiante = Persona::find(auth()->user()->id);
+        $notas = $estudiante->notas;
+        return view('nota.notasPorPeriodo', compact('periodos','notas'));
     }
+    
+    // public function capturarIdPeriodo(){
+    //     $periodoSeleccionado = request('periodo');
+    //     return $periodoSeleccionado;
+    // }
+    
+
+
+
+    public function CalcularNotaPeriodo(){
+        $periodo = Periodo::find(1);
+    
+        $notas = Nota::whereBetween('fecha', [$periodo->fechaInicio, $periodo->fechaFin])->get();
+            
+        $sumatoriaNotas = $notas->sum('valor');
+        $numeroDeNotas = $notas->count();
+        $promedioNotas = $numeroDeNotas > 0 ? $sumatoriaNotas / $numeroDeNotas : 0;
+    
+        return [
+                'sumatoria_notas' => $sumatoriaNotas,
+                'numero_de_notas' => $numeroDeNotas,
+                'promedio_notas' => $promedioNotas
+        ];
+    }
+    
 }
