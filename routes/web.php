@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\NotaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -61,7 +60,5 @@ Route::post('perfil', [App\Http\Controllers\UserAjustesController::class,'avatar
 Route::get('perfil', [App\Http\Controllers\UserAjustesController::class, 'perfil'])->name('perfil');
 Route::get('/Miperfil', [App\Http\Controllers\UserAjustesController::class, 'Miperfil'])->name('ActualizarPerfil')->middleware('auth');
 Route::post('Actualizarperfil', [App\Http\Controllers\UserAjustesController::class,'Actualizar'])->name('Actualizar');
-
-Route::get('form', [App\Http\Controllers\LugarController::class,'form'])->name('formulario');
 //  para los users
 Route::resource('usuarios', App\Http\Controllers\Usercontroller::class);

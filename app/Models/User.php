@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Models\Role;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
@@ -62,14 +63,14 @@ class User extends Authenticatable
         return asset('/Miperfil');
     }
     
-    
-    public function rols()
-    {
-        return $this->hasMany('App\Models\Rol');
-    }
+
+    // public function roles()
+    // {
+    //     return $this->hasMany(Role::class);
+    // }
+
 
     public function persona(){
         return $this->belongsTo(Persona::class, 'id');
     }
-
 }

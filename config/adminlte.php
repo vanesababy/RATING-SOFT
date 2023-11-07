@@ -308,9 +308,15 @@ return [
             'text' => 'search',
         ],
         [
+            'text' => 'Registrar Usuarios',
+            'route'  => 'register',
+            'icon' => 'fas fa-user-plus',
+            'can'=> 'asignaturas.index',
+        ],
+        [
             'text' => 'Gestion Usuarios',
             'route'  => 'usuarios.index',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-users',
             'can'  => 'admin.users.index'
         
         ],
@@ -417,23 +423,24 @@ return [
             'can'=> 'asignaturas.index',
         ],
         [
-            'text' => 'Mi Perfil',
-            'route'  => 'actualizarPerfil.index',
-            'icon' => 'fas fa-fw fa-star',
-            'can'=> 'asignaturas.index',
-        ],
-        // [
-        //     'text' => 'Calificar',
-        //     'route'  => 'calificar.create',
-        //     'icon' => 'fas fa-fw fa-star',
-        //     'can'=> 'asignaturas.index',
-        // ],
-        [
             'text' => 'Notas',
             'route'  => 'calificar.index',
             'icon' => 'fas fa-fw fa-star',
             'can'=> 'asignaturas.index',
-        ]
+        ],
+
+        ['header' => 'account_settings'],
+        [
+            'text' => 'Mi Perfil',
+            'route'  => 'actualizarPerfil.index',
+            'icon' => 'fas fa-fw fa-user',
+            'can'=> 'asignaturas.index',
+        ],
+        [
+            'text' => 'change_password',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
     ],
 
     /*
