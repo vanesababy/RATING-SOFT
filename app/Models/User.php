@@ -72,5 +72,5 @@ class User extends Authenticatable
 
     public function persona(){
         return $this->belongsTo(Persona::class, 'id');
-    }
+    }    
 }

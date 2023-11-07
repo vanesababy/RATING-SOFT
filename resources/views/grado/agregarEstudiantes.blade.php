@@ -36,7 +36,7 @@
                     @foreach ($estudiantes as $estudiante)
                         <tr>
                             
-                            <td>{{ $estudiante->persona->id}}</td>                        
+                            <td>{{ $estudiante->id}}</td>                        
                             <td>{{ $estudiante->persona->nombre1 }}</td>
                             <td>{{ $estudiante->persona->identificacion }}</td>
                             <td>{{ $estudiante->persona->sexo }}</td>
