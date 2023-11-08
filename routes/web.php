@@ -41,7 +41,8 @@ Route::resource('tipoPersonas', App\Http\Controllers\TipoPersonaController::clas
 //rutas para el controller grado
 Route::resource('grados', App\Http\Controllers\GradoController::class)->names('grados');
 Route::post('/grados/agregarEstudiantes', [App\Http\Controllers\GradoController::class, 'agregarEstudianteAGrado'])->name('asignarEstudiantes');
-Route::get('agregarEstudiantes', [App\Http\Controllers\GradoController::class, 'viewAgregar'])->name('agregarEstudiantes');
+Route::get('agregarEstudiantes/{id}', [App\Http\Controllers\GradoController::class, 'viewAgregar'])->name('agregarEstudiantes');
+Route::delete('/eliminarDelGrado/{id}', [App\Http\Controllers\GradoController::class, 'eliminarDelGrado'])->name('eliminarDelGrado');
 
 
 Route::resource('actualizarPerfil', App\Http\Controllers\PersonaController::class)->names('actualizarPerfil');

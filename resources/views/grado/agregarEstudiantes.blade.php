@@ -14,13 +14,7 @@
 <div class="card">
     <div class="card-body">
         <form action="{{ route('asignarEstudiantes') }}" method="POST">
-            @csrf
-            <div class="col-md-4 mb-3">
-                {{ Form::label('Grado') }}
-                {{ Form::select('idGrado', $grados, null, ['class' => 'form-select' . ($errors->has('grado') ? ' is-invalid' : '')]) }}
-                {!! $errors->first('grado', '<div class="invalid-feedback">:message</div>') !!}
-            </div>
-            
+            @csrf     
             <table id="tuser" class="table table-striped">
 
                 <thead class="bg bg-success">
@@ -37,18 +31,24 @@
                         <tr>
                             
                             <td>{{ $estudiante->id}}</td>                        
-                            <td>{{ $estudiante->persona->nombre1 }}</td>
+                            <td>
+                                {{ $estudiante->persona->nombre1 }}
+                                {{ $estudiante->persona->nombre2 }}
+                                {{ $estudiante->persona->apellido1 }}
+                                {{ $estudiante->persona->apellido2 }}
+                            </td>
                             <td>{{ $estudiante->persona->identificacion }}</td>
                             <td>{{ $estudiante->persona->sexo }}</td>
                             <td width="280px">
                                 <div class="form-check form-switch form-check-lg">
-                                    {!! Form::checkbox('idPersona', $estudiante->id, null, ['class' => 'form-check-input', 'id' => 'estudiante' . $estudiante->id]) !!}
-                                </div>
+                                    {!! Form::checkbox('seleccionados[]', $estudiante->id, null, ['class' => 'form-check-input', 'id' => 'estudiante' . $estudiante->id]) !!}
+                                </div>                                
                             </td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
+            <input type="hidden" name="idGrado" value="{{ $idGrado}}">
             <button type="submit" class="btn btn-primary mt-3">Agregar Estudiantes</button>
         </form>
         

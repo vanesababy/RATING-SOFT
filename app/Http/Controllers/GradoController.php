@@ -40,8 +40,14 @@ class GradoController extends Controller
     public function show($id)
     {
         $grado = Grado::find($id);
-        return view('grado.show', compact('grado'));
+
+        $estudiantes = Persona::whereHas('grado', function ($query) use ($id) {
+            $query->where('id', $id);
+        })->get();
+
+        return view('grado.show', compact('grado', 'estudiantes'));
     }
+
 
 
     public function edit($id)
@@ -65,21 +71,42 @@ class GradoController extends Controller
         return redirect()->route('grados.index')->with('success','Grado deleted succesfully');
     }
 
-    public function viewAgregar(){
-        $grados = Grado::pluck('grado','id');
+    public function viewAgregar($id){
+        $idGrado = $id;
         $estudiantes = User::role('alumno')->whereDoesntHave('persona.grado')->get();
-        return view('grado.agregarEstudiantes',compact('grados','estudiantes'));
+        return view('grado.agregarEstudiantes',compact('estudiantes','idGrado'));
     }
 
     public function agregarEstudianteAGrado(Request $request)
     {
+        // dd($request->all());
         $grado = request()->input('idgrado');
-        $idPersona = $request->input('idPersona');
-        $persona = Persona::find($idPersona);
-        $persona->update([
-            'idGrado' => $request->input('idGrado')
-        ]);
+        $idsPersonasSeleccionadas = $request->input('seleccionados');
 
-        return redirect()->route('agregarEstudiantes')->with('success', 'Estudiante agregado al grado correctamente.');
+        foreach ($idsPersonasSeleccionadas as $idPersona) {
+            $persona = Persona::find($idPersona);
+
+            if ($persona) {
+                $persona->update([
+                    'idGrado' => $request->input('idGrado')
+                ]);
+            }
+        }
+
+        return redirect()->route('agregarEstudiantes')->with('success', 'Estudiantes agregados al grado correctamente.');
     }
+
+
+    public function eliminarDelGrado($id){
+        $estudiante = Persona::find($id);
+    
+        if ($estudiante) {
+            $estudiante->idGrado = null;
+            $estudiante->save();
+            
+            return redirect()->back()->with('success', 'Estudiante eliminado del grado correctamente.');
+        } else {
+            return redirect()->back()->with('error', 'No se pudo encontrar al estudiante.');
+        }
+    }  
 }

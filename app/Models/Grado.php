@@ -30,6 +30,6 @@ class Grado extends Model
 
     public function personas()
     {
-        return $this->hasMany(Persona::class);
+        return $this->hasMany(Persona::class, 'idGrado');
     }
 }
