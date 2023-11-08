@@ -17,3 +17,6 @@ Route::resource('users', UserControllerApi::class)->names('users');
 Route::resource('cursos', CursoControllerApi::class)->names('traerCursos');
 
 
+Route::controller(LoginController::class)->group(function () {
+    Route::post('/login', 'login');
+});
