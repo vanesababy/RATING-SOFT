@@ -1,67 +1,49 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\UserAjustes;
-use App\Models\User;
-use App\Models\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\DB;
 
 class UserAjustesController extends Controller
 {
      public function Miperfil(){
-return view('ConfigurarPerfil');
+        
+        return view('persona.index');
     }
 
 
-public function Actualizar(Request $request){
+    public function actualizar(Request $request)
+{
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'Avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+    ]);
 
+    $user = Auth::user();
 
+    if ($request->hasFile('Avatar')) {
+        $nombreArchivo = "img_" . time() . "." . $request->file('Avatar')->guessExtension();
+        $request->file('Avatar')->storeAs('public/Avatar', $nombreArchivo);
+        $user->avatar = $nombreArchivo;
+    }
 
+    if ($user->name !== $request->input('name')) {
+        $user->name = $request->input('name');
+    }
 
-    $file=$request->file("Avatar");
-    $nombreArchivo = "img_".time().".".$file->guessExtension();
-    $request->file('Avatar')->storeAs('public/Avatar', $nombreArchivo );
-    $avatar['Avatar']= "$nombreArchivo";
+    if ($user->email !== $request->input('email')) {
+        $user->email = $request->input('email');
+    }
 
+    $user->save();
 
-$user = Auth::user();
-$user->avatar = $nombreArchivo;
-$user->save();
-
-$user = Auth::user();
-$name = $request->name;
-$email = $request->email;
-    $sqlBDUpdateName = DB::table('users')
-    ->where('id', $user->id)
-    ->update(['name'=>$name, 'email'=>$email]);
-   
-return redirect()->back()->with('name','El nombre fue cambiado correctamente.');;
-// return $name;
-
+    return redirect()->route('Administrador')->with('success', 'Perfil actualizado exitosamente');
 }
-
+    
 
 public function perfil(){
-    return view('configurarPerfil', array('user'=>Auth::user()) ); 
-}
-
-
-public function avatar(Request $request){
-
-    $file=$request->file("Avatar");
-    $nombreArchivo = "img_".time().".".$file->guessExtension();
-    $request->file('Avatar')->storeAs('public/Avatar', $nombreArchivo );
-    $avatar['Avatar']= "$nombreArchivo";
-
-
-$user = Auth::user();
-$user->avatar = $nombreArchivo;
-$user->save();
-
-return view('configurarPerfil', array('user'=>Auth::user()) );
+    return view('persona.edit', array('user'=>Auth::user()) ); 
 }
 
 }

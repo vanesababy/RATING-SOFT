@@ -89,8 +89,8 @@ return [
             'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
             'alt' => 'Auth Logo',
             'class' => '',
-            'width' => 50,
-            'height' => 50,
+            'width' => 70,
+            'height' => 70,
         ],
     ],
 
@@ -110,10 +110,10 @@ return [
         'enabled' => true,
         'img' => [
             'path' => 'vendor/adminlte/dist/img/fp.jpg',
-            'alt' => 'AdminLTE Preloader Image',
+            'alt' => null,
             'effect' => 'animation__shake',
-            'width' => 90,
-            'height' => 90,
+            'width' => 120,
+            'height' => 120,
         ],
     ],
 
@@ -134,7 +134,7 @@ return [
     'usermenu_header_class' => 'bg-info',
     'usermenu_image' => true,
     'usermenu_desc' => true,
-    'usermenu_profile_url' => false,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -253,13 +253,13 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'Administrador',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
-    'profile_url' => false,
+    'profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -297,6 +297,7 @@ return [
             'topnav_right' => true,
         ],
         [
+
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
@@ -306,156 +307,125 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
-     
         [
-            'text' => 'Usuarios',
+            'text' => 'Registrar Usuarios',
+            'route'  => 'register',
+            'icon' => 'fas fa-user-plus',
+            'can'=> 'asignaturas.index',
+        ],
+        [
+            'text' => 'Gestion Usuarios',
             'route'  => 'usuarios.index',
-            'icon' => 'fas fa-fw fa-user',
-            'can'  => 'admin'
+            'icon' => 'fas fa-fw fa-users',
+            'can'  => 'admin.users.index'
         
         ],
         [
-            'text' => 'lugares',
-            'route'  => 'lugars.index',
-            'icon' => 'fas fa-fw fa-city',
-            'can'=> 'admin',
+            'text' => 'Gestion Roles',
+            'route'  => 'admin.roles.index',
+            'icon' => 'fas fa-fw fa-user-cog',
+            'can'  => 'admin.roles.index'
+        
+        ],
+        
+        [
+            'text' => 'Gestion Cursos',
+            'route'  => 'cursos.index',
+            'icon' => 'fas fa-fw fa-font',
+            'can'=> 'curso.index',
         ],
         [
-            'text' => 'convenio',
-            'route'  => 'convenios.index',
+            'text'    => 'Gestion Documentos',
+            'icon'    => 'fas fa-doutone fa-folder',
+            'can'=> 'gestionPersonal.index',
+            'submenu' => [
+                [
+                    'text' => 'Documentos',
+                    'route'  => 'documentos.index',
+                    'icon' => 'fas fa-file',
+                    'can'=> 'directivo.index',
+                ],
+                [
+                    'text' => 'Tipo Documentos',
+                    'route'  => 'tipoDocumentos.index',
+                    'icon' => 'fas fa-regular fa-file',
+                    'can'=> 'profesor.index',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Gestion Personal',
+            'icon'    => 'fas fa-doutone fa-users',
+            'can'=> 'gestionPersonal.index',
+            'submenu' => [
+                [
+                    'text' => 'Tipo de Personal',
+                    'route'  => 'tipoPersonas.index',
+                    'icon' => 'fas fa-fw fa-chalkboard',
+                    'can'=> 'directivo.index',
+                ],
+                [
+                    'text' => 'Gestion Directivos',
+                    'route'  => 'directivos.index',
+                    'icon' => 'fas fa-fw fa-chalkboard',
+                    'can'=> 'directivo.index',
+                ],
+                [
+                    'text' => 'Gestion Profesor',
+                    'route'  => 'profesores.index',
+                    'icon' => 'fas fa-fw fa-chalkboard',
+                    'can'=> 'profesor.index',
+                ],
+                [
+                    'text' => 'Gestion Alumnos',
+                    'route'  => 'alumnos.index',
+                    'icon' => 'fas fa-doutone fa-users',
+                    'can'=> 'alumnos.index',
+                ]
+            ],
+        ],
+        [
+            'text' => 'Tipo Asignatura',
+            'route'  => 'tipoAsignaturas.index',
             'icon' => 'fas fa-fw fa-book',
-            'can'=> 'admin',
+            'can'=> 'tipoAsignaturas.index',
         ],
-
         [
-            'text' => 'Calificasiones',
-            'route'  => 'calificasiones.index',
-            'icon' => 'fas fa-fw fa-star',
-            'can'=> 'admin',
-        ],
-
-        [
-            'text' => 'evento',
-            'route'  => 'eventos.index',
+            'text' => 'Grados',
+            'route'  => 'grados.index',
             'icon' => 'fas fa-fw fa-users',
-            'can'=> 'admin',
+            'can'=> 'tipoAsignaturas.index',
         ],
         [
-            'text' => 'Mapa',
-            'route'  => 'mapas.index',
-            'icon' => 'fas fa-fw fa-map',
-            'can'=> 'admin',
+            'text' => 'Asignaturas',
+            'route'  => 'asignaturas.index',
+            'icon' => 'fas fa-fw fa-address-book',
+            'can'=> 'asignaturas.index',
         ],
         [
-            'text' => 'post',
-            'route'  => 'posts.index',
-            'icon' => 'fas fa-fw fa-pen',
-            'can'=> 'admin',
+            'text' => 'Periodos',
+            'route'  => 'periodos.index',
+            'icon' => 'fas fa-fw fa-calendar',
+            'can'=> 'asignaturas.index',
         ],
         [
-            'text' => 'ruta',
-            'route'  => 'rutas.index',
-            'icon' => 'fas fa-fw fa-map',
-            'can'=> 'admin',
+            'text' => 'Gestion Calificaciones',
+            'route'  => 'calificar.index',
+            'icon' => 'fas fa-fw fa-contract',
+            'can'=> 'asignaturas.index',
         ],
 
-        [
-            'text' => 'Servicio',
-            'route'  => 'servicios.index',
-            'icon' => 'fas fa-fw fa-hotel',
-            'can'=> 'admin',
-        ],
-        [
-            'text' => 'Tipo-convenio',
-            'route'  => 'tipconvenios.index',
-            'icon' => 'fas fa-fw fa-book',
-            'can'=> 'admin',
-        ],
-        [
-            'text' => 'Tipo-evento',
-            'route'  => 'tipoeventos.index',
-            'icon' => 'fas fa-fw fa-users',
-            'can'=> 'admin',
-        ],
-        [
-            'text' => 'Tipo-lugar',
-            'route'  => 'tipolugars.index',
-            'icon' => 'fas fa-fw fa-city',
-            'can'=> 'admin',
-
-        ],
-        [
-            'text' => 'Tipo-servicio',
-            'route'  => 'tiposervicios.index',
-            'icon' => 'fas fa-fw fa-hotel',
-            'can'=> 'admin',
-        ],
-       
-     
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Mi Perfil',
+            'route'  => 'actualizarPerfil.index',
             'icon' => 'fas fa-fw fa-user',
+            'can'=> 'asignaturas.index',
         ],
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
         ],
     ],
 

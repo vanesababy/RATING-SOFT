@@ -23,7 +23,7 @@
         
             <th>Incorporacion</th>
             
-            <th></th>
+            <th>Acciones</th>
          
         </tr>
     </thead>
@@ -70,9 +70,9 @@ autoWidth:false,
             "info": "Mostrando la pagina _PAGE_ de _PAGES_",
             "infoEmpty": "No records available",
             "infoFiltered": "(filtrado de _MAX_ total registros totales)",
-            "search": 'Buscar regstro',
+            "search": 'Buscar registro',
             "paginate": {
-                'next':'sigiente',
+                'next':'siguiente',
                 'previous':'Anterior'
             }
         }

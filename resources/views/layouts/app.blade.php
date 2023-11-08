@@ -17,6 +17,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
@@ -33,7 +34,7 @@
                 <img src="./img/descarga.png" alt="" width="50%" height="50%">
             </a>
 
-            <a class="navbar-brand text-info" href="{{ url('home') }}">
+            <a class="navbar-brand text-info" href="{{ url('') }}">
                 {{ config('app.name', 'RATINGSOFT') }}
             </a>
 
@@ -46,18 +47,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto menu">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('iglesias') }}">{{ __('Misión') }}</a>
+                        <a class="nav-link text-white" href="">{{ __('Misión') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('hoteles.index') }}">{{ __('Visión') }}</a>
+                        <a class="nav-link text-white" href="">{{ __('Visión') }}</a>
                     </li>
                     <li class="nav-item text-white">
                         <a class="nav-link text-white"
-                            href="{{ route('museos.index') }}">{{ __('Sobre Nosotros') }}</a>
+                            href="">{{ __('Sobre Nosotros') }}</a>
                     </li>
                     <li class="nav-item text-white">
                         <a class="nav-link text-white"
-                            href="{{ route('senderismo.index') }}">{{ __('Saber más!') }}</a>
+                            href="">{{ __('Saber más!') }}</a>
                     </li>
                 </ul>
 
@@ -69,16 +70,16 @@
                                     href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                             </button>
                         @endif
-                        @if (Route::has('register'))
+                        {{-- @if (Route::has('register'))
                             <button id="registro" type="submit" class="btn btn-outline-primary mb-4 button_color">
                                 <a class="nav-link text-white"
                                     href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                             </button>
-                        @endif
+                        @endif --}}
                     @else
                         <li class="nav-item dropdown">
                             <a role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <img src="{{ 'http://localhost/---/public/storage/Avatar/' . Auth::user()->Avatar }}"
+                                <img src="{{ asset('storage/Avatar/'). Auth::user()->Avatar }}"
                                     style="width: 40px; height:40px; float: left; border-radius:50px; margin-right:25px">
                             </a>
                             <p class="text-block" style="color:black"> {{ Auth::user()->name }}</p>
@@ -87,6 +88,11 @@
                                 <a class="dropdown-item" href="{{ route('ActualizarPerfil') }}">
                                     {{ __('Tu Perfil') }}
                                 </a>
+                                {{-- @can('admin.index') --}}
+                                    <a class="dropdown-item" href="{{route('Administrador')}}" class="block px-4 py-2 text-sm" >
+                                        {{ __('Administrador') }}
+                                    </a>
+                                {{-- @endcan --}}
                                 <a class="dropdown-item fas fa-fw fa-hotel" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -106,7 +112,7 @@
 
     @yield('content')
 
-    <footer class="text-center text-lg-start  text-muted color-fondo p-2">
+    <footer class="text-center text-lg-start text-muted color-fondo p-2">
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
             <div class="me-5 d-none d-lg-block">
                 <div>
@@ -151,10 +157,10 @@
 
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Nosotros
+                            Tecnologías
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Java-scrip</a>
+                            <a href="#!" class="text-reset">Java-script</a>
                         </p>
                         <p>
                             <a href="#!" class="text-reset">PHP</a>
@@ -172,7 +178,7 @@
                             Creadores
                         </h6>
                         <p>
-                            <a href="https://www.facebook.com/juanjose.orozco.961" class="text-reset">Juan Orozco</a>
+                            <a href="https://github.com/OrozcoDev" class="text-reset">Juan Orozco</a>
                         </p>
                         <p>
                             <a href="https://www.facebook.com/andresfelipe.suaza.7/" class="text-reset">Andres Suaza</a>
