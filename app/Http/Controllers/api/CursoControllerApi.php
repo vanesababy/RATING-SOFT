@@ -11,7 +11,7 @@ class CursoControllerApi extends Controller
     
     public function index()
     {
-        $cursos = Curso::paginate();
+        $cursos = Curso::all();
 
         return response()->json($cursos);
     }
