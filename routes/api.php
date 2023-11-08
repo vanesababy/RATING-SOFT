@@ -18,3 +18,6 @@ Route::resource('cursos', CursoControllerApi::class)->names('traerCursos');
 Route::resource('tipoAsignaturas',TipoAsignaturaControllerApi::class)->names('tipoAsignatura');
 
 
+Route::controller(LoginController::class)->group(function () {
+    Route::post('/login', 'login');
+});
