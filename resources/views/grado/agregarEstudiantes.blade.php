@@ -13,7 +13,10 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        <form action="{{ route('asignarEstudiantes') }}" method="POST">
+        <div class="float-right">
+            <a class="btn btn-primary" href="{{ route('grados.index') }}"> Volver</a>
+        </div>
+        <form action="{{ route('asignarEstudiantes',$idGrado) }}" method="POST">
             @csrf     
             <table id="tuser" class="table table-striped">
 
@@ -38,7 +41,7 @@
                                 {{ $estudiante->persona->apellido2 }}
                             </td>
                             <td>{{ $estudiante->persona->identificacion }}</td>
-                            <td>{{ $estudiante->persona->sexo }}</td>
+                            <td>{{ $idGrado }}</td>
                             <td width="280px">
                                 <div class="form-check form-switch form-check-lg">
                                     {!! Form::checkbox('seleccionados[]', $estudiante->id, null, ['class' => 'form-check-input', 'id' => 'estudiante' . $estudiante->id]) !!}
@@ -48,12 +51,22 @@
                     @endforeach
                 </tbody>
             </table>
-            <input type="hidden" name="idGrado" value="{{ $idGrado}}">
             <button type="submit" class="btn btn-primary mt-3">Agregar Estudiantes</button>
         </form>
         
     </div>
 </div>
+@if(session('success'))
+        <div class="alert alert-success mt-3">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if(session('error'))
+        <div class="alert alert-danger mt-3">
+            {{ session('error') }}
+        </div>
+    @endif
 
 @endsection
 
