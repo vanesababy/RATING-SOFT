@@ -14,19 +14,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-<<<<<<< HEAD
-        User::create([
-            'name'=>'Juan orozco',
-            'email'=>'juanjoseorozco9@gmail.com',
-            'password'=> bcrypt('1234567890')
-        ])->assignRole('admin');
-=======
 
         $persona = new Persona([
-            'nombre1' => 'Juan',
-            'nombre2' => 'José',
-            'apellido1' => 'Orozco',
-            'apellido2' => 'Chilito',
+            'nombre1' => 'Duban',
+            'nombre2' => 'Alexander',
+            'apellido1' => 'Gomez',
+            'apellido2' => 'Hoyos',
             'identificacion' => '1002877490',
             'idTipoIdentificacion' => 1,
             'sexo' => 'M',
@@ -34,20 +27,20 @@ class UserSeeder extends Seeder
             'rh' => 'A+',
             'identificacion' => '1002877490',
             'direccion' => 'CALLE 15# 18-54',
-            'email' => 'juanjoseorozco9@gmail.com',
-            'telefonoFijo' => '3232226544',
+            'email' => 'agpan007@gmail.com',
+            'telefonoFijo' => '123456885',
             'celular' => '3232226544',
-            'padre' => 'jose orozco',
-            'ocupacionPadre' => 'ganadero',
-            'madre' => 'rubi chilito',
+            'padre' => 'Gomez',
+            'ocupacionPadre' => 'Agricultor',
+            'madre' => 'mireya ',
             'ocupacionMadre' => 'ama de casa',
         ]);
 
         $persona->save();
 
         $user = User::create([
-            'name'=>'Juan Orozco',
-            'email'=>'juanjoseorozco9@gmail.com',
+            'name'=>'Akexabder Gomez',
+            'email'=>'agpan007@gmail.com',
             'password'=> bcrypt('1234567890'),
             'idPersona'=> $persona->id
         ])->assignRole('Admin');
@@ -83,6 +76,5 @@ class UserSeeder extends Seeder
         ])->assignRole('Alumno');
         return $user;
 
->>>>>>> eac98bcf0f64c8c6d28c6325e81d3c1bd78566ee
     }
 }
