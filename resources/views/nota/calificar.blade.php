@@ -39,7 +39,7 @@
                 </div>
                 <input type="hidden" name="idPersona" value="{{ Auth::user()->id }}">
                 <input type="hidden" name="idPeriodo" value="1">
-                <input type="hidden" name="fecha" value="0000-00-00">
+                <input type="hidden" name="fecha" value="2025-01-01">
             </form>
         </div>
     </div>

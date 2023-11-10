@@ -9,6 +9,7 @@ use App\Models\Persona;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Models\Role;
 
 class NotaController extends Controller
 {
@@ -69,47 +70,61 @@ class NotaController extends Controller
 
     public function notasPeriodo(){
         $notas = Nota::all();
-        $estudiantes = User::role('alumno')->get();
-        $idEstudiante = Auth::user()->id;
-        $estudiante = Persona::find($idEstudiante);
-
+        $user = Auth::user();
+    
+        if ($user->hasRole('Profesor')) {
+            $estudiantes = User::role('alumno')->get();
+            $estudiante = null;
+        } else if ($user->hasRole('alumno')) {
+            $estudiantes = [$user];
+            $estudiante = Persona::find($user->id);
+        }
+    
         $resultados = $this->CalcularNotaPeriodo();
         $notaPeriodo = $resultados['promedio_notas'];
-
-
-
-        return view('nota.notasPeriodos', compact('notas','estudiante','estudiantes','notaPeriodo'));
+    
+        return view('nota.notasPeriodos', compact('notas', 'estudiante', 'estudiantes', 'notaPeriodo'));
     }
+    
 
     public function notaPeridoIndividual(){
         $periodos = Periodo::pluck('periodo', 'id');
         $estudiante = Persona::find(auth()->user()->id);
-        $notas = $estudiante->notas;
-        return view('nota.notasPorPeriodo', compact('periodos','notas'));
+    
+        // Obtener las notas asociadas al estudiante en el período seleccionado
+        $idPeriodo = request()->input('periodo_id');
+        $notas = Nota::where('idPersona', $estudiante->id)
+                     ->where('idPeriodo', $idPeriodo)
+                     ->get();
+    
+        return view('nota.notasPorPeriodo', compact('periodos', 'notas'));
     }
     
-    // public function capturarIdPeriodo(){
-    //     $periodoSeleccionado = request('periodo');
-    //     return $periodoSeleccionado;
-    // }
     
+ 
+    public function CalcularNotaPeriodo()
+    {
+        $periodos = Periodo::all();
+        $totalSumatoriaNotas = 0;
+        $totalNumeroDeNotas = 0;
 
+        foreach ($periodos as $periodo) {
+            $notas = Nota::whereBetween('fecha', [$periodo->fechaInicio, $periodo->fechaFin])->get();
+            $sumatoriaNotas = $notas->sum('valor');
+            $numeroDeNotas = $notas->count();
 
+            $totalSumatoriaNotas += $sumatoriaNotas;
+            $totalNumeroDeNotas += $numeroDeNotas;
+        }
 
-    public function CalcularNotaPeriodo(){
-        $periodo = Periodo::find(1);
-    
-        $notas = Nota::whereBetween('fecha', [$periodo->fechaInicio, $periodo->fechaFin])->get();
-            
-        $sumatoriaNotas = $notas->sum('valor');
-        $numeroDeNotas = $notas->count();
-        $promedioNotas = $numeroDeNotas > 0 ? $sumatoriaNotas / $numeroDeNotas : 0;
-    
+        $promedioNotas = $totalNumeroDeNotas > 0 ? $totalSumatoriaNotas / $totalNumeroDeNotas : 0;
+
         return [
-                'sumatoria_notas' => $sumatoriaNotas,
-                'numero_de_notas' => $numeroDeNotas,
-                'promedio_notas' => $promedioNotas
+            'sumatoria_notas' => $totalSumatoriaNotas,
+            'numero_de_notas' => $totalNumeroDeNotas,
+            'promedio_notas' => $promedioNotas,
         ];
     }
+
     
 }

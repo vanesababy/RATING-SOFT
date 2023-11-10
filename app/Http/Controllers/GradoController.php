@@ -77,23 +77,25 @@ class GradoController extends Controller
         return view('grado.agregarEstudiantes',compact('estudiantes','idGrado'));
     }
 
-    public function agregarEstudianteAGrado(Request $request)
+    public function agregarEstudianteAGrado(Request $request, $id)
     {
-        // dd($request->all());
-        $grado = request()->input('idgrado');
         $idsPersonasSeleccionadas = $request->input('seleccionados');
 
-        foreach ($idsPersonasSeleccionadas as $idPersona) {
-            $persona = Persona::find($idPersona);
+        if (is_array($idsPersonasSeleccionadas)) {
+            foreach ($idsPersonasSeleccionadas as $idPersona) {
+                $persona = Persona::find($idPersona);
 
-            if ($persona) {
-                $persona->update([
-                    'idGrado' => $request->input('idGrado')
-                ]);
+                if ($persona) {
+                    $persona->update([
+                        'idGrado' => $id
+                    ]);
+                }
             }
-        }
 
-        return redirect()->route('agregarEstudiantes')->with('success', 'Estudiantes agregados al grado correctamente.');
+            return redirect()->route('agregarEstudiantes',$id)->with('success', 'Estudiantes agregados al grado correctamente.');
+        } else {
+            return redirect()->route('agregarEstudiantes',$id)->with('error', 'No se seleccionaron estudiantes para agregar.');
+        }
     }
 
 

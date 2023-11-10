@@ -15,8 +15,8 @@
     <div class="card">
         <div class="card-body">
             @can('tipoAsignaturas.create')
-                <a href="{{ route('grados.create') }}" class="btn btn-primary btn-sm " data-placement="left">
-                    {{ __('Nuevo') }}
+                <a href="{{ route('grados.create') }}" class="btn btn-primary mb-3" data-placement="left">
+                    {{ __('Crear Grado') }}
                 </a>
             @endcan
 
@@ -42,8 +42,9 @@
                             <td>{{ $grado->grado }}</td>
                             <td>{{ $grado->curso->nombre }}</td>
                             <td>{{ $grado->descripcion }}</td>
-                            <td><a class="btn btn-sm btn-outline-success" href="{{ route('agregarEstudiantes',$grado->id)}}"><i
-                                        class="fa fa-fw fa-plus"></i> Agregar Estudiantes</a></td>
+                            <td> <a class="btn btn-sm btn-outline-success" href="{{ route('agregarEstudiantes', ['id' => $grado->id]) }}">
+                                    <i class="fa fa-fw fa-plus"></i> Agregar Estudiantes
+                                </a>
                             <td width="280px">
                                 <form action="{{ route('grados.destroy', $grado->id) }}" method="POST">
 

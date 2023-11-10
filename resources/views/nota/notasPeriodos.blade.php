@@ -29,24 +29,26 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>{{$estudiante->id}}</td>                        
-                    <td>
-                        {{$estudiante->nombre1}}
-                        {{$estudiante->nombre2}}
-                        {{$estudiante->apellido1}}
-                        {{$estudiante->apellido2}}
-                    </td>
-                    <td>{{$notaPeriodo}}</td>
-                    <td>{{$notaPeriodo}}</td>                        
-                    <td>{{$notaPeriodo}}</td>
-                    <td>{{$notaPeriodo}}</td>
-                    <td>{{($notaPeriodo+$notaPeriodo+$notaPeriodo+$notaPeriodo)/4}}</td>
-                    <td>
-                        <a href="{{ route('calificar.create') }}" class="btn btn-success">Calificar</a>
-                        <a href="{{ route('notasPeriodoIndividual') }}" class="btn btn-primary">Ver</a>
-                    </td>
-                </tr>
+                @foreach ($estudiantes as $estudiante)
+                    <tr>
+                        <td>{{$estudiante->id}}</td>                        
+                        <td>
+                            {{$estudiante->persona->nombre1}}
+                            {{$estudiante->persona->nombre2}}
+                            {{$estudiante->persona->apellido1}}
+                            {{$estudiante->persona->apellido2}}
+                        </td>
+                        <td>{{$estudiante->persona->notas}}</td>
+                        <td></td>                        
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="{{ route('calificar.create') }}" class="btn btn-success">Calificar</a>
+                            <a href="{{ route('notasPeriodoIndividual') }}" class="btn btn-primary">Ver</a>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

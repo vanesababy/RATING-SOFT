@@ -411,7 +411,7 @@ return [
         [
             'text' => 'Gestion Calificaciones',
             'route'  => 'calificar.index',
-            'icon' => 'fas fa-fw fa-contract',
+            'icon' => 'fas fa-fw fa-paste',
             'can'=> 'asignaturas.index',
         ],
 
@@ -422,11 +422,11 @@ return [
             'icon' => 'fas fa-fw fa-user',
             'can'=> 'asignaturas.index',
         ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
+        // [
+        //     'text' => 'change_password',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'fas fa-fw fa-lock',
+        // ],
     ],
 
     /*
