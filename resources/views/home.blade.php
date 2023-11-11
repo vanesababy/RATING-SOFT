@@ -48,7 +48,6 @@
                             de los estudiantes de una forma digital; tanto el estudiante como acudiente puede visualizar el
                             rendimiento académico.</p>
                         <!--boton -->
-                        <a href="http://127.0.0.1:8000/senderismo" class="text-reset btn btn-info">Saber más!</a>
                     </div>
 
 
@@ -217,11 +216,6 @@
                 <!-- algun titulo de acuerdo a las imagnes o al tema   -->
                 <h2 class="d-none d-md-block text-uppercase">RATINGSOFT</h2>
                 <p class="d-none d-md-block">SISTEMATIZAMOS PARA AYUDARTE</p>
-                <button class="btn btn-light px4 text-capitalize d-none d-md-block mx-auto">
-
-                    <a href="{{ route('senderismo.index') }}">Saber más?</a>
-                </button>
-
             </div>
             <div class="carousel-inner">
                 <!-- carousel#1  -->

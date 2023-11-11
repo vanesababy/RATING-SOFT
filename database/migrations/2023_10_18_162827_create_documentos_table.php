@@ -17,10 +17,12 @@ class CreateDocumentosTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('enlace');
-            $table->string('idPersona');
             $table->unsignedInteger('idTipoDocumento');
+            $table->unsignedInteger('idPersona');
 
             $table->foreign('idTipoDocumento')->references('id')->on('tipoDocumento');
+            $table->foreign('idPersona')->references('id')->on('persona');
+
 
             $table->timestamps();
         });

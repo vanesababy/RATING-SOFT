@@ -67,7 +67,6 @@
         <section class="container">
 
             <div class="row justify-content-md-center">
-                <!-- en este pedaso se pone texto relacionado al tema de turismo -->
 
                 <div class="col-12 text-center">
                     <h2 class="text-danger text-uppercase">RATINGSOFT</h2>
@@ -201,11 +200,6 @@
                 <!-- algun titulo de acuerdo a las imagnes o al tema   -->
                 <h2 class="d-none d-md-block text-uppercase">RATINGSOFT</h2>
                 <p class="d-none d-md-block">SISTEMATIZAMOS PARA AYUDARTE</p>
-                <button class="btn btn-light px4 text-capitalize d-none d-md-block mx-auto">
-
-                    <a href="{{ route('senderismo.index') }}">Saber más?</a>
-                </button>
-
             </div>
             <div class="carousel-inner">
                 <!-- carousel#1  -->

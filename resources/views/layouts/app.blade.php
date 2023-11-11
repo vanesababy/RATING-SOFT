@@ -47,18 +47,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto menu">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('iglesias') }}">{{ __('Misión') }}</a>
+                        <a class="nav-link text-white" href="">{{ __('Misión') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('hoteles.index') }}">{{ __('Visión') }}</a>
+                        <a class="nav-link text-white" href="">{{ __('Visión') }}</a>
                     </li>
                     <li class="nav-item text-white">
                         <a class="nav-link text-white"
-                            href="{{ route('museos.index') }}">{{ __('Sobre Nosotros') }}</a>
+                            href="">{{ __('Sobre Nosotros') }}</a>
                     </li>
                     <li class="nav-item text-white">
                         <a class="nav-link text-white"
-                            href="{{ route('senderismo.index') }}">{{ __('Saber más!') }}</a>
+                            href="">{{ __('Saber más!') }}</a>
                     </li>
                 </ul>
 
@@ -70,12 +70,12 @@
                                     href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                             </button>
                         @endif
-                        @if (Route::has('register'))
+                        {{-- @if (Route::has('register'))
                             <button id="registro" type="submit" class="btn btn-outline-primary mb-4 button_color">
                                 <a class="nav-link text-white"
                                     href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                             </button>
-                        @endif
+                        @endif --}}
                     @else
                         <li class="nav-item dropdown">
                             <a role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

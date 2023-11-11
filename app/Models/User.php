@@ -13,15 +13,11 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable,HasRoles;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
         'name',
         'email',
         'password',
+        'idPersona'
     ];
 
     /**
@@ -61,11 +57,14 @@ class User extends Authenticatable
         return asset('/Miperfil');
     }
     
-    
-    public function rols()
-    {
-        return $this->hasMany('App\Models\Rol');
 
-    }
+    // public function roles()
+    // {
+    //     return $this->hasMany(Role::class);
+    // }
 
+
+    public function persona(){
+        return $this->belongsTo(Persona::class, 'id');
+    }    
 }

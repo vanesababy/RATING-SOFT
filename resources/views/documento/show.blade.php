@@ -25,16 +25,19 @@
                             {{ $documento->nombre }}
                         </div>
                         <div class="form-group">
-                            <strong>Ruta:</strong>
+                            <strong>Documento:</strong>
                             {{ $documento->enlace }}
                         </div>
                         <div class="form-group">
-                            <strong>idPersona:</strong>
-                            {{ $documento->idPersona }}
+                            <strong>Persona:</strong>
+                            {{ $documento->persona->nombre1 }}
+                            {{ $documento->persona->nombre2}}
+                            {{ $documento->persona->apellido1 }}
+                            {{ $documento->persona->apellido2}}
                         </div>
                         <div class="form-group">
                             <strong>Tipo Documento:</strong>
-                            {{ $documento->idTipoDocumento }}
+                            {{ $documento->tipoDocumento->nombre}}
                         </div>
 
                     </div>

@@ -28,7 +28,6 @@
         <tr>
             <th>No</th>                             
             <th>Nombre</th>
-            <th>Persona</th>
             <th>Tipo documento</th>
             <th>Acciones</th>
          
@@ -41,8 +40,7 @@
                 
                 <td>{{ $documento->id }}</td>                        
                 <td>{{ $documento->nombre }}</td>
-                <td>{{ $documento->idPersona }}</td>
-                <td>{{ $documento->idTipoDocumento }}</td>
+                <td>{{ $documento->tipoDocumento->nombre }}</td>
     
                 <td width="280px">
                     <form action="{{ route('documentos.destroy',$documento->id) }}" method="POST">

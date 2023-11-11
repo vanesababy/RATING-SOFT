@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Auth;
 class UserAjustesController extends Controller
 {
      public function Miperfil(){
-        return view('perfil.editarPerfil');
+        
+        return view('persona.index');
     }
 
 
@@ -42,7 +43,7 @@ class UserAjustesController extends Controller
     
 
 public function perfil(){
-    return view('perfil.editarPerfil', array('user'=>Auth::user()) ); 
+    return view('persona.edit', array('user'=>Auth::user()) ); 
 }
 
 }

@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Documento;
+use App\Models\Persona;
+use App\Models\TipoDocumento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DocumentoController extends Controller
 {
     public function index()
     {
-        $documentos = Documento::paginate();
+        $idPersona = Auth::user()->persona->id;
+
+        $documentos = Documento::where('idPersona', $idPersona)->paginate();
 
         return view('documento.index', compact('documentos'))
             ->with('i', (request()->input('page', 1) - 1) * $documentos->perPage());
@@ -18,7 +23,8 @@ class DocumentoController extends Controller
     public function create()
     {
         $documento = new Documento();
-        return view('documento.create', compact('documento'));
+        $tiposDocumento = TipoDocumento::pluck('nombre', 'id');
+        return view('documento.create', compact('documento', 'tiposDocumento'));
     }
 
 
@@ -29,11 +35,11 @@ class DocumentoController extends Controller
             'enlace' => 'required|mimes:pdf|max:10240',
         ]);
 
-
-
         $data = $request->all();
+
         $documento = new Documento($data);
-        
+        $idPersona = Auth::user()->persona->id;
+        $documento->idPersona = $idPersona;
         
         $nombreArchivo = "Doc_" . time() . "." . $request->file('enlace')->guessExtension();
         $request->file('enlace')->storeAs('public/Documentos', $nombreArchivo);

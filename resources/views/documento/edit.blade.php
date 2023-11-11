@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('template_title')
-    Actualizar Documento
+    Actualizar Perfil
 @endsection
 
 @section('content')
@@ -19,7 +19,6 @@
                         <form method="POST" action="{{ route('documentos.update', $documento->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
-
                             @include('documento.form')
 
                         </form>
