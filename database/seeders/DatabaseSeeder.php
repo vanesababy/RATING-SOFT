@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PeriodoSeeder::class);
         $this->call(CursoSeeder::class);
         $this->call(gradoSeeder::class);
-
+        $this->call(TipoDocumentoSeeder::class);
     }
 
 }

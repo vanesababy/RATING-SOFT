@@ -70,12 +70,12 @@
                                     href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                             </button>
                         @endif
-                        @if (Route::has('register'))
+                        {{-- @if (Route::has('register'))
                             <button id="registro" type="submit" class="btn btn-outline-primary mb-4 button_color">
                                 <a class="nav-link text-white"
                                     href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                             </button>
-                        @endif
+                        @endif --}}
                     @else
                         <li class="nav-item dropdown">
                             <a role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

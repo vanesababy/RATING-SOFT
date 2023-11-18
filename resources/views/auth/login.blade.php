@@ -1,167 +1,164 @@
-@extends('layouts.app')
-
-@section('content')
-
-<section class=" text-center text-lg-start">
-    <style>
-  .gradient-custom {
-    background: #6a11cb;
-/* fallback for old browsers */
-background-image:url("img/login.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-
-
-}
-
-.card-body {
-    border-radius: 5%;
-    background: hsla(0, 0%, 50%, 0.7); /* Gris al 50% de luminosidad con 70% de opacidad */
- /* HSLA con opacidad azul claro */
-    backdrop-filter: blur(10px); /* No es necesario 'solid(1)' aquí */
-}
-
-
-
-#boton1{
-color:rgb(255, 255, 255);
-letter-spacing: 4px;
-font-size: 18px;
-border:10px;
-border: 2px solid #feffff;
-width: 150px;
-height: 10%;
-
-transition: 0.5s;
-
-}
- #boton1:hover{
-background: #0d5178;
-box-shadow: 0 0 10px #2cb4de, 0 0 40px 
-#2cb4de, 0 0 80px #2cb4de;
-
- }
- #log{
-font-size: 45px;
-color: #fdfffe;
-
-
- }
-
- .btn-custom {
-    background-color: #2cb4de; /* Cambia este color a tu azul más claro deseado */
-    border-color: #2cb4de;
-    color: #fff; /* Esto establecerá el texto en blanco */
-}
-
-
-.btn-custom-light {
-    background-color: #2cb4de; /* Cambia este color a tu azul más claro deseado */
-    border-color: #2cb4de;
-    color: #fff; /* Esto establecerá el texto en blanco */
-}
-
-
-    </style>
- 
-<section class="vh-100 gradient-custom ">
-    <div class="container py-6 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-         
-            <div class="card-body p-5 text-center" style="color:black; font-size:20px">
-            <p  id="log">Iniciar Sesión</p>
-  
-                <form method="POST" action="{{ route('login') }}" class="allog">
-                    @csrf
-
-                    <div class="form-outline mb-4">
-                        <label for="email" class="col-md-4 col-form-label" style="font-size: 18px; color:white">{{ __('Correo Electrónico ') }}</label>
-
-                        <div class="form-outline mb-4">
-                            <input id="email" type="email" class="form-control @error('email') es incorrecto  @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-outline mb-4">
-                        <label for="password" class="col-md-4 col-form-label" style="font-size: 18px; color:white">{{ __('Contraseña') }}</label>
-
-                        <div class="form-outline mb-4">
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-outline mb-4">
-    <div class="col-md-6 offset-md-4">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-            <label class="form-check-label" for="remember" style="color: white;">
-                {{ __('Recordar contraseña') }}
-            </label>
+<div class="wrapper">
+    <form method="POST" action="{{ route('login') }}" class="form">
+        @csrf
+        <h1 class="title">Inicio</h1>
+        <div class="inp">
+            <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus class="input" placeholder="Correo Electronico">
+            <i class="fa-solid fa-user"></i>
         </div>
+        <div class="inp">
+            <input id="password" type="password" name="password" required autocomplete="current-password" class="input" placeholder="Contraseña">
+            <i class="fa-solid fa-lock"></i>
+        </div>
+        @if(session('error'))
+        <div class="custom-alert mt-3">
+            {{ session('error') }}
+        </div>
+        @endif
+
+        <button class="submit" id="boton1">Iniciar Sesión</button>
+        <p class="footer">¿No tienes cuenta?<a href="#" class="link">Por favor, Registrate</a></p>
+
+    </form>
+    
+
+    <div class="banner">
+        <h1 class="wel_text">RATINGSOFT<br/></h1>
+        <p class="para">Inspirados por la excelencia<br/></p>
     </div>
 </div>
 
-                  
-
-                    <br></br>
 
 
-                    
-                
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    color: #fff;
+}
+
+body {
+    height: 100vh;
+    background: #081b29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
-                    <button  class="btn btn-white"  type="submit" id="boton1"> 
-                        {{ __('Continuar') }}
-                    </button>
-                    <br><br>
-                    
+::-webkit-input-placeholder{
+    color: #eee
+}
+
+.wrapper{
+    position: relative;
+    width: 800px;
+    height: 65vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 50px 0 #00a6bc
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.title{
+    font-size: 35px;
+}
+
+.inp{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.input{
+    border: none;
+    outline: none;
+    background: none;
+    width:  260px;
+    margin-top:40px;
+    padding-rigt: 10px;
+    font-size: 17px;
+    color: #0ef
+}
+
+.submit{
+    border: none;
+    outline: none;
+    width: 288px;
+    margin-top: 25px;
+    padding: 10px 0;
+    font-size: 20px;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #0ef, #c800ff);
+}
+
+.footer{
+    margin-top: 30px;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+.link{
+   color: #0ef;
+   text-decoration:none; 
+}
+
+.banner{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 100%;
+    background: linear-gradient(to right, #0ef, #c800ff);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
+    padding-right: 70px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.wel_text{
+    font-size: 40px;
+    margin-top: -50px;
+    line-clamp: 50px;
+}
+
+.para{
+    margin-top: 10px;
+    font-size: 18;
+    line-height: 24px;
+    letter-spacing: 1px
+}
+
+.custom-alert {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    padding: .75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    margin-top: 1rem;
+}
 
 
-                    <hr class="my-1">
-
-                    @if (Route::has('password.request'))
-                    <div class="mb-3">
-    <a class="btn btn-custom" href="{{ route('password.request') }}">
-        {{ __('¿Olvidó su contraseña?') }}
-    </a>
-</div>
-
-
-@endif
-
-<div class="mb-3">
-    <a href="http://127.0.0.1:8000/" class="btn btn-custom-light">Atrás</a>
-</div>
-
-
-            
-        </div>
-    </div>
-</div>
-</div>
-@endsection
-@section('js')
-
-
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</style>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
        $("#boton1").click(function(){
 
-Swal.fire("eddd")
+    Swal.fire("eddd")
        });
-    </script>
-@endsection
+</script>
+

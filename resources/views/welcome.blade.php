@@ -67,7 +67,6 @@
         <section class="container">
 
             <div class="row justify-content-md-center">
-                <!-- en este pedaso se pone texto relacionado al tema de turismo -->
 
                 <div class="col-12 text-center">
                     <h2 class="text-danger text-uppercase">RATINGSOFT</h2>

@@ -67,7 +67,7 @@ class GradoController extends Controller
 
     public function viewAgregar(){
         $grados = Grado::pluck('grado','id');
-        $estudiantes = User::role('alumno')->get();
+        $estudiantes = User::role('alumno')->whereDoesntHave('persona.grado')->get();
         return view('grado.agregarEstudiantes',compact('grados','estudiantes'));
     }
 

@@ -308,9 +308,15 @@ return [
             'text' => 'search',
         ],
         [
+            'text' => 'Registrar Usuarios',
+            'route'  => 'register',
+            'icon' => 'fas fa-user-plus',
+            'can'=> 'asignaturas.index',
+        ],
+        [
             'text' => 'Gestion Usuarios',
             'route'  => 'usuarios.index',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-users',
             'can'  => 'admin.users.index'
         
         ],
@@ -325,7 +331,7 @@ return [
         [
             'text' => 'Gestion Cursos',
             'route'  => 'cursos.index',
-            'icon' => 'fas fa-fw fa-school',
+            'icon' => 'fas fa-fw fa-font',
             'can'=> 'curso.index',
         ],
         [
@@ -336,13 +342,13 @@ return [
                 [
                     'text' => 'Documentos',
                     'route'  => 'documentos.index',
-                    'icon' => 'fas fa-folder-open',
+                    'icon' => 'fas fa-file',
                     'can'=> 'directivo.index',
                 ],
                 [
                     'text' => 'Tipo Documentos',
                     'route'  => 'tipoDocumentos.index',
-                    'icon' => 'fas fa-folder-open',
+                    'icon' => 'fas fa-regular fa-file',
                     'can'=> 'profesor.index',
                 ],
             ],
@@ -379,17 +385,9 @@ return [
             ],
         ],
         [
-            'text'    => 'Gestion Asignaturas',
-            'icon'    => 'fas fa-fw fa-book',
-            'can'=> 'gestionAsignaturas.index',
-            'submenu' => [
-                
-            ],
-        ],
-        [
             'text' => 'Tipo Asignatura',
             'route'  => 'tipoAsignaturas.index',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-book',
             'can'=> 'tipoAsignaturas.index',
         ],
         [
@@ -401,39 +399,34 @@ return [
         [
             'text' => 'Asignaturas',
             'route'  => 'asignaturas.index',
-            'icon' => 'fas fa-fw fa-star',
+            'icon' => 'fas fa-fw fa-address-book',
             'can'=> 'asignaturas.index',
         ],
-        // [
-        //     'text' => 'Logros',
-        //     'route'  => 'logros.index',
-        //     'icon' => 'fas fa-fw fa-star',
-        //     'can'=> 'asignaturas.index',
-        // ],
         [
             'text' => 'Periodos',
             'route'  => 'periodos.index',
-            'icon' => 'fas fa-fw fa-star',
+            'icon' => 'fas fa-fw fa-calendar',
             'can'=> 'asignaturas.index',
         ],
+        [
+            'text' => 'Gestion Calificaciones',
+            'route'  => 'calificar.index',
+            'icon' => 'fas fa-fw fa-contract',
+            'can'=> 'asignaturas.index',
+        ],
+
+        ['header' => 'account_settings'],
         [
             'text' => 'Mi Perfil',
             'route'  => 'actualizarPerfil.index',
-            'icon' => 'fas fa-fw fa-star',
+            'icon' => 'fas fa-fw fa-user',
             'can'=> 'asignaturas.index',
         ],
-        // [
-        //     'text' => 'Calificar',
-        //     'route'  => 'calificar.create',
-        //     'icon' => 'fas fa-fw fa-star',
-        //     'can'=> 'asignaturas.index',
-        // ],
         [
-            'text' => 'Notas',
-            'route'  => 'calificar.index',
-            'icon' => 'fas fa-fw fa-star',
-            'can'=> 'asignaturas.index',
-        ]
+            'text' => 'change_password',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
     ],
 
     /*
