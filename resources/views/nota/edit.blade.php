@@ -1,9 +1,9 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Calificar') 
+@section('title', 'Editar calificacion') 
 @section('content_header')
-    <h1 style="text-align: center">Formulario calificar</h1>
+    <h1 style="text-align: center">Editar calificacion</h1>
 @stop
 
 @section('content')
@@ -12,7 +12,8 @@
             <div class="float-right">
                 <a class="btn btn-primary" href="{{ route('notasPeriodos') }}"> Volver</a>
             </div>
-            <form method="POST" action="{{ route('calificar.store') }}"  role="form" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('notas.update',$nota->id) }}"  role="form" enctype="multipart/form-data">
+                {{ method_field('PATCH')}}
                 @csrf
                 <div class="col-md-4">
                     {{ Form::label('Nota') }}

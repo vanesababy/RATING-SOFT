@@ -9,7 +9,6 @@ use App\Models\Persona;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Spatie\Permission\Models\Role;
 
 class NotaController extends Controller
 {
@@ -39,7 +38,7 @@ class NotaController extends Controller
         $nota->idPeriodo = $periodo->id;
         $nota->save();
 
-        return redirect()->route('calificar.create')
+        return redirect()->route('notasPeriodos')
             ->with('success', 'Nota created successfully.');
     }
 
@@ -50,21 +49,31 @@ class NotaController extends Controller
     }
 
 
-    public function edit(Nota $nota)
+    public function edit($id)
     {
-        //
+        $nota = Nota::find($id);
+        return view ('nota.edit',compact('nota'));
     }
 
  
     public function update(Request $request, Nota $nota)
     {
-        //
+        $request->validate(Nota::$rules);
+        $nota->update($request->all());
+
+        $notas = Nota::all();
+        return view('nota.notasPorPeriodo', compact('notas'))
+            ->with('success', 'Nota actualizada correctamente.');
     }
 
 
-    public function destroy(Nota $nota)
+
+    public function destroy($id)
     {
-        //
+        Nota::find($id)->delete();
+        $notas = Nota::all();
+        return view('nota.notasPorPeriodo',compact('notas'))
+        ->with('success', 'Nota delete successfully.');
     }
 
 
@@ -87,17 +96,10 @@ class NotaController extends Controller
     }
     
 
-    public function notaPeridoIndividual(){
-        $periodos = Periodo::pluck('periodo', 'id');
-        $estudiante = Persona::find(auth()->user()->id);
-    
-        // Obtener las notas asociadas al estudiante en el período seleccionado
-        $idPeriodo = request()->input('periodo_id');
-        $notas = Nota::where('idPersona', $estudiante->id)
-                     ->where('idPeriodo', $idPeriodo)
-                     ->get();
-    
-        return view('nota.notasPorPeriodo', compact('periodos', 'notas'));
+    public function notaPeriodoIndividual(){
+        $notas = Nota::all();
+        $periodos = Periodo::all();
+        return view('nota.notasPorPeriodo', compact('notas','periodos'));
     }
     
     

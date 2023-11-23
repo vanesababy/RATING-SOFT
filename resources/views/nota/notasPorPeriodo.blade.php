@@ -1,9 +1,8 @@
-
 @extends('adminlte::page')
 
 @section('title', 'NOTAS-PERIODO') 
 @section('content_header')
-    <h1>NOTAS DEL PERIODO</h1>
+    <h1 class="float">NOTAS PERIODOS</h1>
 @stop
 
 @section('css')
@@ -15,9 +14,23 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        <div class="float-right">
+        <div class="float-center">
             <a class="btn btn-primary mb-3" href="{{ route('notasPeriodos') }}"> Volver</a>
         </div>
+        <!-- Formulario de filtro por periodo -->
+        <form id="filtroForm">
+            @csrf
+            <label for="periodo">Seleccionar Periodo:</label>
+            <select name="periodo" id="periodo" class="form-select">
+                <option value="">Todos</option>
+                @foreach ($periodos as $periodo)
+                    <option value="{{ $periodo->id }}">{{ $periodo->periodo }}</option>
+                @endforeach
+            </select>
+            <button type="button" class="btn btn-primary" onclick="filtrarPorPeriodo()">Filtrar</button>
+        </form>
+
+
         <table id="tuser" class="table table-striped">
             <thead class="bg bg-success">
                 <tr>
@@ -27,6 +40,7 @@
                     <th>Fecha</th>
                     <th>Nota</th>
                     <th>Periodo</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +52,14 @@
                         <td>{{$nota->fecha}}</td>                        
                         <td>{{$nota->valor}}</td>
                         <td>{{$nota->periodo->periodo}}</td>
+                        <td>
+                            <form action="{{ route('notas.destroy',$nota->id) }}" method="POST">
+                                @method('DELETE')
+                                @csrf
+                                <a href="{{ route('calificar.edit',$nota->id) }}" class="btn btn-success">Editar</a>
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form>
+                        </td>
                     </tr>   
                 @endforeach
             </tbody>
@@ -47,6 +69,7 @@
 @endsection
 @section('js')
 
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap5.min.js"></script>
@@ -65,7 +88,12 @@ autoWidth:false,
                 'previous':'Anterior'
             }
         }
+
+        window.filtrarPorPeriodo = function() {
+            dataTable.ajax.reload(null, false);
+        };
 }); 
+
 </script>
 @endsection
 

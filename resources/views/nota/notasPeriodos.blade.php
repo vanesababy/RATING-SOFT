@@ -13,6 +13,11 @@
 @endsection
 
 @section('content')
+@if (session('info'))
+<div class="alert alert-success">
+    {{session('info')}}
+</div>
+@endif
 <div class="card">
     <div class="card-body">
         <table id="tuser" class="table table-striped">
@@ -38,14 +43,14 @@
                             {{$estudiante->persona->apellido1}}
                             {{$estudiante->persona->apellido2}}
                         </td>
-                        <td>{{$estudiante->persona->notas}}</td>
+                        <td>{{$notaPeriodo}}</td>
                         <td></td>                        
                         <td></td>
                         <td></td>
                         <td></td>
                         <td>
                             <a href="{{ route('calificar.create') }}" class="btn btn-success">Calificar</a>
-                            <a href="{{ route('notasPeriodoIndividual') }}" class="btn btn-primary">Ver</a>
+                            <a href="{{ route('notasPeriodoIndividual') }}" class="btn btn-primary">Ver notas</a>
                         </td>
                     </tr>
                 @endforeach
