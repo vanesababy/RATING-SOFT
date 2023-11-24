@@ -17,20 +17,22 @@
         <div class="float-center">
             <a class="btn btn-primary mb-3" href="{{ route('notasPeriodos') }}"> Volver</a>
         </div>
-        <!-- Formulario de filtro por periodo -->
-        <form id="filtroForm">
-            @csrf
-            <label for="periodo">Seleccionar Periodo:</label>
-            <select name="periodo" id="periodo" class="form-select">
-                <option value="">Todos</option>
-                @foreach ($periodos as $periodo)
-                    <option value="{{ $periodo->id }}">{{ $periodo->periodo }}</option>
-                @endforeach
-            </select>
-            <button type="button" class="btn btn-primary" onclick="filtrarPorPeriodo()">Filtrar</button>
-        </form>
 
-
+        <label for="periodo" class="me-2">Seleccionar Periodo:</label>
+        <div class="row d-flex align-items-end mb-3">
+            <form id="filtroForm" class="d-flex align-items-end">
+                @csrf
+                <select name="periodo" id="periodo" class="form-select me-2">
+                    <option value="">Todos</option>
+                    @foreach ($periodos as $periodo)
+                        <option value="{{ $periodo->id }}">{{ $periodo->periodo }}</option>
+                    @endforeach
+                </select>
+                <button type="button" class="btn btn-primary" onclick="filtrarPorPeriodo()">Filtrar</button>
+            </form>
+        </div>
+        
+    
         <table id="tuser" class="table table-striped">
             <thead class="bg bg-success">
                 <tr>
@@ -73,27 +75,28 @@
 <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap5.min.js"></script>
-<script>  $('#tuser').DataTable({
-responsive: true,
-autoWidth:false,
-"language": {
-            "lengthMenu": "Mostrar _MENU_ registros por pagina",
-            "zeroRecords": "Nada encontrado - disculpa",
-            "info": "Mostrando la pagina _PAGE_ de _PAGES_",
-            "infoEmpty": "No records available",
-            "infoFiltered": "(filtrado de _MAX_ total registros totales)",
-            "search": 'Buscar registro',
-            "paginate": {
-                'next':'siguiente',
-                'previous':'Anterior'
-            }
+<script>  
+var dataTable = $('#tuser').DataTable({
+    responsive: true,
+    autoWidth: false,
+    "language": {
+        "lengthMenu": "Mostrar _MENU_ registros por página",
+        "zeroRecords": "Nada encontrado - disculpa",
+        "info": "Mostrando la página _PAGE_ de _PAGES_",
+        "infoEmpty": "No hay registros disponibles",
+        "infoFiltered": "(filtrado de _MAX_ registros totales)",
+        "search": 'Buscar registro',
+        "paginate": {
+            'next': 'Siguiente',
+            'previous': 'Anterior'
         }
+    }
+});
 
-        window.filtrarPorPeriodo = function() {
-            dataTable.ajax.reload(null, false);
-        };
-}); 
-
+function filtrarPorPeriodo() {
+    var periodoSeleccionado = $('#periodo').val();
+    window.location.href = "{{ route('notasPeriodoIndividual')}}" + "?periodo=" + periodoSeleccionado;
+}
 </script>
 @endsection
 

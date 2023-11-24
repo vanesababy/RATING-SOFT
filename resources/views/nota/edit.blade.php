@@ -21,6 +21,11 @@
                     {!! $errors->first('valor', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
                 <div class="form-group">
+                    {{ Form::label('fecha') }}
+                    {{ Form::date('fecha', $nota->fecha, ['class' => 'form-control' . ($errors->has('fecha') ? ' is-invalid' : '')]) }}
+                    {!! $errors->first('fecha', '<div class="invalid-feedback">:message</div>') !!}
+                </div>
+                <div class="form-group">
                     {{ Form::label('Detalle') }}
                     {{ Form::text('detalle', $nota->detalle, ['class' => 'form-control' . ($errors->has('detalle') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese el detalle']) }}
                     {!! $errors->first('datalle', '<div class="invalid-feedback">:message</div>') !!}
@@ -35,7 +40,6 @@
                 </div>
                 <input type="hidden" name="idPersona" value="{{ Auth::user()->id }}">
                 <input type="hidden" name="idPeriodo" value="1">
-                <input type="hidden" name="fecha" value="2025-01-01">
             </form>
         </div>
     </div>

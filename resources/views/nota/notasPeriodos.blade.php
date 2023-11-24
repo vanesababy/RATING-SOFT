@@ -25,10 +25,9 @@
                 <tr>
                     <th>No</th>                             
                     <th>Estudiante</th>
-                    <th>Periodo 1</th>
-                    <th>Periodo 2</th>
-                    <th>Periodo 3</th>
-                    <th>Periodo 4</th>
+                    @foreach ($periodos as $periodo)
+                        <th>Periodo {{ $periodo->id }}</th>
+                    @endforeach
                     <th>Final</th>
                     <th>Acciones</th>
                 </tr>
@@ -43,11 +42,15 @@
                             {{$estudiante->persona->apellido1}}
                             {{$estudiante->persona->apellido2}}
                         </td>
-                        <td>{{$notaPeriodo}}</td>
-                        <td></td>                        
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        @foreach ($resultados as $periodoId => $promedioNotas)
+                            <td>{{ $promedioNotas }}</td>
+                        @endforeach
+                        @php
+                            $cantidadPeriodos = count($resultados);
+                            $notaFinal = $cantidadPeriodos > 0 ? array_sum($resultados) / $cantidadPeriodos : 0;
+                        @endphp
+
+                        <td>{{ $notaFinal }}</td>
                         <td>
                             <a href="{{ route('calificar.create') }}" class="btn btn-success">Calificar</a>
                             <a href="{{ route('notasPeriodoIndividual') }}" class="btn btn-primary">Ver notas</a>
