@@ -1,43 +1,39 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
-use App\Models\Asignatura;
+use App\Http\Controllers\Controller;
 use App\Models\Nota;
 use App\Models\Periodo;
-use App\Models\Persona;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
-class NotaController extends Controller
+class NotaControllerApi extends Controller
 {
     public function index()
     {
-        $materias = Asignatura::paginate();
-        return view('nota.index', compact('materias'));
-    }
-
-    public function create()
-    {
-        $nota = new Nota();
-        return view('nota.calificar', compact('nota'));
+        $materias = Nota::all();
+        return response()->json($materias, 200);
     }
 
 
     public function store(Request $request)
     {
-        request()->validate(Nota::$rules);
+        $validator = Validator::make($request->all(), Nota::$rules);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 422);
+        }
 
         $fechaNota = now()->format('Y-m-d H:i:s');
-        
+
         $periodo = Periodo::where('fechaInicio', '<=', $fechaNota)
-                        ->where('fechaFin', '>=', $fechaNota)
-                        ->first();
+            ->where('fechaFin', '>=', $fechaNota)
+            ->first();
 
         if (!$periodo) {
-            return redirect()->route('notasPeriodos')
-                ->with('error', 'La fecha de la nota no está dentro de ningún periodo existente.');
+            return response()->json(['error' => 'La fecha de la nota no está dentro de ningún periodo existente.'], 422);
         }
 
         $nota = Nota::create($request->all());
@@ -45,41 +41,47 @@ class NotaController extends Controller
         $nota->idPeriodo = $periodo->id;
         $nota->save();
 
-        return redirect()->route('notasPeriodos')
-            ->with('success', 'Nota creada exitosamente.');
+        return response()->json(['message' => 'Nota creada exitosamente.'], 201);
     }
 
 
-    public function edit($id)
+    public function update(Request $request, $id)
     {
         $nota = Nota::find($id);
-        return view ('nota.edit',compact('nota'));
-    }
 
- 
-    public function update(Request $request, Nota $nota)
-    {
-        $request->validate(Nota::$rules);
+        if (!$nota) {
+            return response()->json(['error' => 'Nota no encontrada'], 404);
+        }
+
+        $validator = Validator::make($request->all(), Nota::$rules);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 422);
+        }
+
         $nota->update($request->all());
+
         $periodos = Periodo::all();
-
         $notas = Nota::all();
-        return view('nota.notasPorPeriodo', compact('notas','periodos'))
-            ->with('success', 'Nota actualizada correctamente.');
+
+        return response()->json(['notas' => $notas, 'periodos' => $periodos, 'message' => 'Nota actualizada correctamente.'], 200);
     }
-
-
 
     public function destroy($id)
     {
-        Nota::find($id)->delete();
+        $nota = Nota::find($id);
+
+        if (!$nota) {
+            return response()->json(['error' => 'Nota no encontrada'], 404);
+        }
+
+        $nota->delete();
+
         $notas = Nota::all();
         $periodos = Periodo::all();
-        
-        return view('nota.notasPorPeriodo',compact('notas','periodos'))
-        ->with('success', 'Nota delete successfully.');
-    }
 
+        return response()->json(['notas' => $notas, 'periodos' => $periodos, 'message' => 'Nota eliminada exitosamente.'], 200);
+    }
 
     public function notasPeriodo()
     {
@@ -98,13 +100,17 @@ class NotaController extends Controller
             }
 
             $resultados = $this->CalcularNotaFinalPorPeriodo();
-            return view('nota.notasPeriodos', compact('estudiantes','periodos', 'estudiante', 'resultados'));
+            return response()->json([
+                'estudiantes' => $estudiantes,
+                'periodos' => $periodos,
+                'estudiante' => $estudiante,
+                'resultados' => $resultados,
+            ], 200);
         } else {
             // El usuario no está autenticado, redirige a la página de inicio de sesión
-            return redirect()->route('login');
+            return response()->json(['error' => 'Usuario no autenticado'], 401);
         }
     }
-    
 
     public function notaPeriodoIndividual(Request $request)
     {
@@ -119,12 +125,10 @@ class NotaController extends Controller
             $notas = Nota::all();
         }
 
-        return view('nota.notasPorPeriodo', compact('notas', 'periodos'));
+        return response()->json(['notas' => $notas, 'periodos' => $periodos], 200);
     }
-    
-    
- 
-   public function CalcularNotaFinalPorPeriodo()
+
+    public function CalcularNotaFinalPorPeriodo()
     {
         $periodos = Periodo::all();
         $notasFinalesPorPeriodo = [];
@@ -144,4 +148,14 @@ class NotaController extends Controller
     }
 
     
+    public function notasPorEstudiante($idEstudiante)
+    {
+        $notas = Nota::where('idPersona', $idEstudiante)->get();
+
+        if ($notas->isEmpty()) {
+            return response()->json(['message' => 'No se encontraron notas para el estudiante.'], 404);
+        }
+
+        return response()->json(['notas' => $notas], 200);
+    }
 }
