@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\api\CursoControllerApi;
+use App\Http\Controllers\api\loginControllerApi;
 use App\Http\Controllers\api\RegistroControllerApi;
 use App\Http\Controllers\api\TipoAsignaturaControllerApi;
 use App\Http\Controllers\api\UserControllerApi;
@@ -18,6 +19,4 @@ Route::resource('cursos', CursoControllerApi::class)->names('traerCursos');
 Route::resource('tipoAsignaturas',TipoAsignaturaControllerApi::class)->names('tipoAsignatura');
 
 
-Route::controller(LoginController::class)->group(function () {
-    Route::post('/login', 'login');
-});
+Route::post('/login', [loginControllerApi::class, 'login']);

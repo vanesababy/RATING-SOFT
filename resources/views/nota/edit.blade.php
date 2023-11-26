@@ -1,9 +1,9 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Calificar') 
+@section('title', 'Editar calificacion') 
 @section('content_header')
-    <h1 style="text-align: center">Formulario calificar</h1>
+    <h1 style="text-align: center">Editar calificacion</h1>
 @stop
 
 @section('content')
@@ -12,12 +12,18 @@
             <div class="float-right">
                 <a class="btn btn-primary" href="{{ route('notasPeriodos') }}"> Volver</a>
             </div>
-            <form method="POST" action="{{ route('calificar.store') }}"  role="form" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('notas.update',$nota->id) }}"  role="form" enctype="multipart/form-data">
+                {{ method_field('PATCH')}}
                 @csrf
                 <div class="col-md-4">
                     {{ Form::label('Nota') }}
                     {{ Form::text('valor', $nota->valor, ['class' => 'form-control' . ($errors->has('valor') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese Nota']) }}
                     {!! $errors->first('valor', '<div class="invalid-feedback">:message</div>') !!}
+                </div>
+                <div class="form-group">
+                    {{ Form::label('fecha') }}
+                    {{ Form::date('fecha', $nota->fecha, ['class' => 'form-control' . ($errors->has('fecha') ? ' is-invalid' : '')]) }}
+                    {!! $errors->first('fecha', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
                 <div class="form-group">
                     {{ Form::label('Detalle') }}
@@ -34,7 +40,6 @@
                 </div>
                 <input type="hidden" name="idPersona" value="{{ Auth::user()->id }}">
                 <input type="hidden" name="idPeriodo" value="1">
-                <input type="hidden" name="fecha" value="2025-01-01">
             </form>
         </div>
     </div>
