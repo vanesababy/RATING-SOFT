@@ -20,6 +20,9 @@
 @endif
 <div class="card">
     <div class="card-body">
+        <div class="float-right">
+            <a class="btn btn-primary" href="{{ route('calificar.index') }}"> Volver</a>
+        </div>
         <table id="tuser" class="table table-striped">
             <thead class="bg bg-success">
                 <tr>
@@ -52,8 +55,8 @@
 
                         <td>{{ $notaFinal }}</td>
                         <td>
-                            <a href="{{ route('calificar.create') }}" class="btn btn-success">Calificar</a>
-                            <a href="{{ route('notasPeriodoIndividual') }}" class="btn btn-primary">Ver notas</a>
+                            <a href="{{ route('califique',$idAsignatura) }}" class="btn btn-success">Calificar</a>
+                            <a href="{{ route('notasPeriodoIndividual',$idAsignatura) }}" class="btn btn-primary">Ver notas</a>
                         </td>
                     </tr>
                 @endforeach

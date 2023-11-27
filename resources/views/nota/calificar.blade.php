@@ -10,10 +10,11 @@
     <div class="card" style="width: 60%; margin-left:20%">
         <div class="card-body">
             <div class="float-right">
-                <a class="btn btn-primary" href="{{ route('notasPeriodos') }}"> Volver</a>
+                <a class="btn btn-primary" href="{{ route('notasPeriodos',$idAsignatura) }}"> Volver</a>
             </div>
             <form method="POST" action="{{ route('calificar.store') }}"  role="form" enctype="multipart/form-data">
                 @csrf
+                <p>{{$idAsignatura}}</p>
                 <div class="col-md-4">
                     {{ Form::label('Nota') }}
                     {{ Form::text('valor', $nota->valor, ['class' => 'form-control' . ($errors->has('valor') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese Nota']) }}
@@ -34,6 +35,7 @@
                 </div>
                 <input type="hidden" name="idPersona" value="{{ Auth::user()->id }}">
                 <input type="hidden" name="idPeriodo" value="1">
+                <input type="hidden" name="idAsignatura" value="{{$idAsignatura}}">
                 <input type="hidden" name="fecha" value="2025-01-01">
             </form>
         </div>

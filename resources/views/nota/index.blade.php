@@ -16,7 +16,7 @@
                 <div class="card-body">
                     <p class="card-text">Codigo: {{$materia->codigo}}</p>
                     <p class="card-text">Descripción: {{$materia->descripcion}}</p>
-                    <a href="{{ route('notasPeriodos') }}" class="btn btn-primary">Ver</a>
+                    <a href="{{ route('notasPeriodos',$materia->id) }}" class="btn btn-primary">Ver</a>
                 </div>
             </div>
             

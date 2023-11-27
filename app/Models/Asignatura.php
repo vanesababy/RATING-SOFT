@@ -30,4 +30,9 @@ class Asignatura extends Model
         return $this->belongsTo(TipoAsignatura::class, 'idTipoAsignatura');
     }
 
+    public function notas()
+    {
+        return $this->hasMany(Nota::class);
+    }
+
 }

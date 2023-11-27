@@ -15,7 +15,7 @@
 <div class="card">
     <div class="card-body">
         <div class="float-center">
-            <a class="btn btn-primary mb-3" href="{{ route('notasPeriodos') }}"> Volver</a>
+            <a class="btn btn-primary mb-3" href="{{ route('notasPeriodos',$idAsignatura) }}"> Volver</a>
         </div>
 
         <label for="periodo" class="me-2">Seleccionar Periodo:</label>
@@ -94,8 +94,8 @@ var dataTable = $('#tuser').DataTable({
 });
 
 function filtrarPorPeriodo() {
-    var periodoSeleccionado = $('#periodo').val();
-    window.location.href = "{{ route('notasPeriodoIndividual')}}" + "?periodo=" + periodoSeleccionado;
+    var periodoSeleccionado = $('#periodo').val()
+    window.location.href = "{{ route('notasPeriodoIndividual',$idAsignatura)}}" + "?periodo=" + periodoSeleccionado;
 }
 </script>
 @endsection
