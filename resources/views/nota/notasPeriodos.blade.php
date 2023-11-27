@@ -55,7 +55,7 @@
 
                         <td>{{ $notaFinal }}</td>
                         <td>
-                            <a href="{{ route('califique', $idAsignatura,$estudiante->id) }}" class="btn btn-success">Calificar</a>
+                            <a href="{{ route('califique', ['id' => $idAsignatura, 'idEstudiante' => $estudiante->id]) }}" class="btn btn-success">Calificar</a>
                             <a href="{{ route('notasPeriodoIndividual', $idAsignatura) }}" class="btn btn-primary">Ver notas</a>
                         </td>
                     </tr>

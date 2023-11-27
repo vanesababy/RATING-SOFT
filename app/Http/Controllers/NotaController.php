@@ -18,13 +18,12 @@ class NotaController extends Controller
         return view('nota.index', compact('materias'));
     }
 
-    public function create($id,$idEstudiante)
+    public function create($idAsignatura,$idEstudiante)
     {
-
-        $idAsignatura = $id;
+        $idAsignatura = $idAsignatura;
+        $idEstudiante = $idEstudiante;
         $nota = new Nota();
-        $nota->idPersona = $idEstudiante;
-        return view('nota.calificar', compact('nota','idAsignatura'));
+        return view('nota.calificar', compact('nota','idAsignatura','idEstudiante'));
     }
 
 
