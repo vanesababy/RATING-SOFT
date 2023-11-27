@@ -18,10 +18,12 @@ class NotaController extends Controller
         return view('nota.index', compact('materias'));
     }
 
-    public function create($id)
+    public function create($id,$idEstudiante)
     {
+
         $idAsignatura = $id;
         $nota = new Nota();
+        $nota->idPersona = $idEstudiante;
         return view('nota.calificar', compact('nota','idAsignatura'));
     }
 
@@ -99,8 +101,9 @@ class NotaController extends Controller
                 $estudiante = Persona::find($user->id);
             }
 
-            $resultados = $this->CalcularNotaFinalPorPeriodo($idAsignatura);
-            return view('nota.notasPeriodos', compact('estudiantes','periodos', 'estudiante', 'resultados','idAsignatura'));
+            $resultados = $this->CalcularNotaFinalPorPeriodo($idAsignatura, $estudiantes->pluck('id')->toArray());
+
+            return view('nota.notasPeriodos', compact('estudiantes', 'periodos', 'resultados', 'idAsignatura'));
         } else {
             return redirect()->route('login');
         }
@@ -128,25 +131,32 @@ class NotaController extends Controller
     
     
  
-    public function CalcularNotaFinalPorPeriodo($idAsignatura)
+    public function CalcularNotaFinalPorPeriodo($idAsignatura, $estudiantesIds)
     {
         $periodos = Periodo::all();
-        $notasFinalesPorPeriodo = [];
-    
-        foreach ($periodos as $periodo) {
-            $notas = Nota::whereBetween('fecha', [$periodo->fechaInicio, $periodo->fechaFin])
-                ->where('idAsignatura', $idAsignatura)
-                ->get();
-    
-            $sumatoriaNotas = $notas->sum('valor');
-            $numeroDeNotas = $notas->count();
-    
-            $promedioNotas = $numeroDeNotas > 0 ? $sumatoriaNotas / $numeroDeNotas : 0;
-    
-            $notasFinalesPorPeriodo[$periodo->id] = $promedioNotas;
+        $notasFinalesPorEstudiante = [];
+
+        foreach ($estudiantesIds as $estudianteId) {
+            $notasFinalesPorPeriodo = [];
+
+            foreach ($periodos as $periodo) {
+                $notas = Nota::whereBetween('fecha', [$periodo->fechaInicio, $periodo->fechaFin])
+                    ->where('idAsignatura', $idAsignatura)
+                    ->where('idPersona', $estudianteId)
+                    ->get();
+
+                $sumatoriaNotas = $notas->sum('valor');
+                $numeroDeNotas = $notas->count();
+
+                $promedioNotas = $numeroDeNotas > 0 ? $sumatoriaNotas / $numeroDeNotas : 0;
+
+                $notasFinalesPorPeriodo[$periodo->id] = $promedioNotas;
+            }
+
+            $notasFinalesPorEstudiante[$estudianteId] = $notasFinalesPorPeriodo;
         }
-    
-        return $notasFinalesPorPeriodo;
+
+        return $notasFinalesPorEstudiante;
     }
 
     

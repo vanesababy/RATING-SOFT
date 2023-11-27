@@ -38,25 +38,25 @@
             <tbody>
                 @foreach ($estudiantes as $estudiante)
                     <tr>
-                        <td>{{$estudiante->id}}</td>                        
+                        <td>{{$estudiante->id}}</td>
                         <td>
                             {{$estudiante->persona->nombre1}}
                             {{$estudiante->persona->nombre2}}
                             {{$estudiante->persona->apellido1}}
                             {{$estudiante->persona->apellido2}}
                         </td>
-                        @foreach ($resultados as $periodoId => $promedioNotas)
+                        @foreach ($resultados[$estudiante->id] as $promedioNotas)
                             <td>{{ $promedioNotas }}</td>
                         @endforeach
                         @php
-                            $cantidadPeriodos = count($resultados);
-                            $notaFinal = $cantidadPeriodos > 0 ? array_sum($resultados) / $cantidadPeriodos : 0;
+                            $cantidadPeriodos = count($resultados[$estudiante->id]);
+                            $notaFinal = $cantidadPeriodos > 0 ? array_sum($resultados[$estudiante->id]) / $cantidadPeriodos : 0;
                         @endphp
 
                         <td>{{ $notaFinal }}</td>
                         <td>
-                            <a href="{{ route('califique',$idAsignatura) }}" class="btn btn-success">Calificar</a>
-                            <a href="{{ route('notasPeriodoIndividual',$idAsignatura) }}" class="btn btn-primary">Ver notas</a>
+                            <a href="{{ route('califique', $idAsignatura,$estudiante->id) }}" class="btn btn-success">Calificar</a>
+                            <a href="{{ route('notasPeriodoIndividual', $idAsignatura) }}" class="btn btn-primary">Ver notas</a>
                         </td>
                     </tr>
                 @endforeach
