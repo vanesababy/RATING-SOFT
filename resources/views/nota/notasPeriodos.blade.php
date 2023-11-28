@@ -20,6 +20,9 @@
 @endif
 <div class="card">
     <div class="card-body">
+        <div class="float-right">
+            <a class="btn btn-primary" href="{{ route('calificar.index') }}"> Volver</a>
+        </div>
         <table id="tuser" class="table table-striped">
             <thead class="bg bg-success">
                 <tr>
@@ -35,25 +38,25 @@
             <tbody>
                 @foreach ($estudiantes as $estudiante)
                     <tr>
-                        <td>{{$estudiante->id}}</td>                        
+                        <td>{{$estudiante->id}}</td>
                         <td>
                             {{$estudiante->persona->nombre1}}
                             {{$estudiante->persona->nombre2}}
                             {{$estudiante->persona->apellido1}}
                             {{$estudiante->persona->apellido2}}
                         </td>
-                        @foreach ($resultados as $periodoId => $promedioNotas)
+                        @foreach ($resultados[$estudiante->id] as $promedioNotas)
                             <td>{{ $promedioNotas }}</td>
                         @endforeach
                         @php
-                            $cantidadPeriodos = count($resultados);
-                            $notaFinal = $cantidadPeriodos > 0 ? array_sum($resultados) / $cantidadPeriodos : 0;
+                            $cantidadPeriodos = count($resultados[$estudiante->id]);
+                            $notaFinal = $cantidadPeriodos > 0 ? array_sum($resultados[$estudiante->id]) / $cantidadPeriodos : 0;
                         @endphp
 
                         <td>{{ $notaFinal }}</td>
                         <td>
-                            <a href="{{ route('calificar.create') }}" class="btn btn-success">Calificar</a>
-                            <a href="{{ route('notasPeriodoIndividual') }}" class="btn btn-primary">Ver notas</a>
+                            <a href="{{ route('califique', ['id' => $idAsignatura, 'idEstudiante' => $estudiante->id]) }}" class="btn btn-success">Calificar</a>
+                            <a href="{{ route('notasPeriodoIndividual', $idAsignatura) }}" class="btn btn-primary">Ver notas</a>
                         </td>
                     </tr>
                 @endforeach

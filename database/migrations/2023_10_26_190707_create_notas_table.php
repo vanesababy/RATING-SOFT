@@ -21,7 +21,9 @@ class CreateNotasTable extends Migration
             $table->float('valor');
             $table->unsignedInteger('idPersona');
             $table->unsignedInteger('idPeriodo');
+            $table->unsignedInteger('idAsignatura');
 
+            $table->foreign('idAsignatura')->references('id')->on('asignaturas');
             $table->foreign('idPeriodo')->references('id')->on('periodo');
             $table->foreign('idPersona')->references('id')->on('persona');
             $table->timestamps();

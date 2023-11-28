@@ -16,7 +16,8 @@ class Nota extends Model
         'descripcion',
         'valor',
         'idPersona',
-        'idPeriodo'
+        'idPeriodo',
+        'idAsignatura'
     ];
 
     static $rules = [
@@ -26,6 +27,8 @@ class Nota extends Model
         'valor' =>'required',
         'idPersona' =>'required',
         'idPeriodo' => 'required',
+        'idAsignatura' => 'required',
+        
     ];
 
     public function persona(){
@@ -34,5 +37,9 @@ class Nota extends Model
     
     public function periodo(){
         return $this->belongsTo(Periodo::class, 'idPeriodo');
+    }
+
+    public function asignatura(){
+        return $this->belongsTo(Asignatura::class, 'idAsignatura');
     }
 }

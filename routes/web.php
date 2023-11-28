@@ -50,8 +50,9 @@ Route::get('/editar/{id}', [App\Http\Controllers\PersonaController::class, 'edit
 
 //rutas para el controller notas
 Route::resource('calificar', App\Http\Controllers\NotaController::class)->names('calificar');
-Route::get('notasPeriodos',  [App\Http\Controllers\NotaController::class, 'notasPeriodo'])->name('notasPeriodos');
-Route::get('notasPeriodoIndividual',  [App\Http\Controllers\NotaController::class, 'notaPeriodoIndividual'])->name('notasPeriodoIndividual');
+Route::get('califique/{id}/{idEstudiante}',  [App\Http\Controllers\NotaController::class,'create'])->name('califique');
+Route::get('notasPeriodos/{id}',  [App\Http\Controllers\NotaController::class, 'notasPeriodo'])->name('notasPeriodos');
+Route::get('notasPeriodoIndividual/{id}',  [App\Http\Controllers\NotaController::class, 'notaPeriodoIndividual'])->name('notasPeriodoIndividual');
 Route::post('capturarPeriodo',  [App\Http\Controllers\NotaController::class, 'capturarIdPeriodo'])->name('capturarPeriodo');
 Route::resource('notas', App\Http\Controllers\NotaController::class)->names('notas');
 

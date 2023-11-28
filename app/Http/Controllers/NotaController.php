@@ -18,10 +18,12 @@ class NotaController extends Controller
         return view('nota.index', compact('materias'));
     }
 
-    public function create()
+    public function create($idAsignatura,$idEstudiante)
     {
+        $idAsignatura = $idAsignatura;
+        $idEstudiante = $idEstudiante;
         $nota = new Nota();
-        return view('nota.calificar', compact('nota'));
+        return view('nota.calificar', compact('nota','idAsignatura','idEstudiante'));
     }
 
 
@@ -45,7 +47,8 @@ class NotaController extends Controller
         $nota->idPeriodo = $periodo->id;
         $nota->save();
 
-        return redirect()->route('notasPeriodos')
+        $idAsignatura = $request->idAsignatura;
+        return redirect()->route('notasPeriodos',$idAsignatura)
             ->with('success', 'Nota creada exitosamente.');
     }
 
@@ -81,15 +84,15 @@ class NotaController extends Controller
     }
 
 
-    public function notasPeriodo()
+    public function notasPeriodo($id)
     {
-        // Verifica si el usuario está autenticado
         if (Auth::check()) {
+            $idAsignatura = $id;
             $user = Auth::user();
             $periodos = Periodo::all();
 
             // Verifica los roles del usuario
-            if ($user->hasRole('Profesor')) {
+            if ($user->hasRole('Profesor') || $user->hasRole('Admin') || $user->hasRole('Directivo')) {
                 $estudiantes = User::role('alumno')->get();
                 $estudiante = null;
             } elseif ($user->hasRole('alumno')) {
@@ -97,50 +100,62 @@ class NotaController extends Controller
                 $estudiante = Persona::find($user->id);
             }
 
-            $resultados = $this->CalcularNotaFinalPorPeriodo();
-            return view('nota.notasPeriodos', compact('estudiantes','periodos', 'estudiante', 'resultados'));
+            $resultados = $this->CalcularNotaFinalPorPeriodo($idAsignatura, $estudiantes->pluck('id')->toArray());
+
+            return view('nota.notasPeriodos', compact('estudiantes', 'periodos', 'resultados', 'idAsignatura'));
         } else {
-            // El usuario no está autenticado, redirige a la página de inicio de sesión
             return redirect()->route('login');
         }
-    }
-    
+    } 
+        
 
-    public function notaPeriodoIndividual(Request $request)
+    public function notaPeriodoIndividual(Request $request, $id)
     {
+        $idAsignatura = $id;
         $periodos = Periodo::all();
         $periodoSeleccionado = $request->input('periodo');
 
         if ($periodoSeleccionado) {
             $notas = Nota::whereHas('periodo', function ($query) use ($periodoSeleccionado) {
-                $query->where('id', $periodoSeleccionado);
-            })->get();
+                    $query->where('id', $periodoSeleccionado);
+                })
+                ->where('idAsignatura', $idAsignatura)
+                ->get();
         } else {
-            $notas = Nota::all();
+            $notas = Nota::where('idAsignatura', $idAsignatura)->get();
         }
 
-        return view('nota.notasPorPeriodo', compact('notas', 'periodos'));
+        return view('nota.notasPorPeriodo', compact('notas', 'periodos', 'idAsignatura'));
     }
     
     
  
-   public function CalcularNotaFinalPorPeriodo()
+    public function CalcularNotaFinalPorPeriodo($idAsignatura, $estudiantesIds)
     {
         $periodos = Periodo::all();
-        $notasFinalesPorPeriodo = [];
+        $notasFinalesPorEstudiante = [];
 
-        foreach ($periodos as $periodo) {
-            $notas = Nota::whereBetween('fecha', [$periodo->fechaInicio, $periodo->fechaFin])->get();
+        foreach ($estudiantesIds as $estudianteId) {
+            $notasFinalesPorPeriodo = [];
 
-            $sumatoriaNotas = $notas->sum('valor');
-            $numeroDeNotas = $notas->count();
+            foreach ($periodos as $periodo) {
+                $notas = Nota::whereBetween('fecha', [$periodo->fechaInicio, $periodo->fechaFin])
+                    ->where('idAsignatura', $idAsignatura)
+                    ->where('idPersona', $estudianteId)
+                    ->get();
 
-            $promedioNotas = $numeroDeNotas > 0 ? $sumatoriaNotas / $numeroDeNotas : 0;
+                $sumatoriaNotas = $notas->sum('valor');
+                $numeroDeNotas = $notas->count();
 
-            $notasFinalesPorPeriodo[$periodo->id] = $promedioNotas;
+                $promedioNotas = $numeroDeNotas > 0 ? $sumatoriaNotas / $numeroDeNotas : 0;
+
+                $notasFinalesPorPeriodo[$periodo->id] = $promedioNotas;
+            }
+
+            $notasFinalesPorEstudiante[$estudianteId] = $notasFinalesPorPeriodo;
         }
 
-        return $notasFinalesPorPeriodo;
+        return $notasFinalesPorEstudiante;
     }
 
     
