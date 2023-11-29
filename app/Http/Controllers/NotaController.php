@@ -90,6 +90,7 @@ class NotaController extends Controller
             $idAsignatura = $id;
             $user = Auth::user();
             $periodos = Periodo::all();
+            
 
             // Verifica los roles del usuario
             if ($user->hasRole('Profesor') || $user->hasRole('Admin') || $user->hasRole('Directivo')) {
@@ -99,6 +100,7 @@ class NotaController extends Controller
                 $estudiantes = [$user];
                 $estudiante = Persona::find($user->id);
             }
+            
 
             $resultados = $this->CalcularNotaFinalPorPeriodo($idAsignatura, $estudiantes->pluck('id')->toArray());
 
