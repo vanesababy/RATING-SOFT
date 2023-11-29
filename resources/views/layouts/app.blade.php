@@ -47,18 +47,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto menu">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="">{{ __('Misión') }}</a>
+                        <a class="nav-link text-white" href="">{{ __('') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="">{{ __('Visión') }}</a>
+                        <a class="nav-link text-white" href="">{{ __('') }}</a>
                     </li>
                     <li class="nav-item text-white">
                         <a class="nav-link text-white"
-                            href="">{{ __('Sobre Nosotros') }}</a>
+                            href="">{{ __('') }}</a>
                     </li>
                     <li class="nav-item text-white">
                         <a class="nav-link text-white"
-                            href="">{{ __('Saber más!') }}</a>
+                            href="">{{ __('') }}</a>
                     </li>
                 </ul>
 
