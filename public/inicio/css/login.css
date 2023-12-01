@@ -36,7 +36,7 @@ body {
     justify-content: center;
     align-items: center;
    
-    margin: 20px; /* Añadimos márgenes al formulario */
+    margin: 10px; /* Añadimos márgenes al formulario */
 }
 
 .title {
@@ -98,7 +98,7 @@ body {
     width: 450px;
     height: 100%;
     background: linear-gradient(to right, rgb(224, 230, 231), rgba(31, 204, 204, 0.719));
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%);
     padding-right: 70px;
     text-align: right;
     display: flex;
@@ -123,11 +123,12 @@ body {
 }
 
 .para {
-    margin-top: 10px;
+    margin-top: 10%;
     font-size: 18px; 
     line-height: 24px;
     letter-spacing: 1px;
     color: black;
+    margin-left: 60px;
 }
 
 .custom-alert {
