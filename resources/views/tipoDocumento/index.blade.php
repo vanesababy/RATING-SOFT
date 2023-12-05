@@ -15,7 +15,7 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        @can('tipoAsignaturas.create')
+        @can('tipoDocumento.create')
             <a href="{{ route('tipoDocumentos.create') }}" class="btn btn-primary btn-sm "
                 data-placement="left">
                 {{ __('Nuevo') }}
@@ -46,17 +46,17 @@
                 <td width="280px">
                     <form action="{{ route('tipoDocumentos.destroy',$tipoDocumento->id) }}" method="POST">
 
-                        @can('tipoAsignaturas.show')
+                        @can('tipoDocumento.show')
                             <a class="btn btn-sm btn-primary " href="{{ route('tipoDocumentos.show',$tipoDocumento->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
                         @endcan
-                        @can('tipoAsignaturas.edit')
+                        @can('tipoDocumento.edit')
                             <a class="btn btn-sm btn-success" href="{{ route('tipoDocumentos.edit',$tipoDocumento->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                         @endcan
                         
                         @csrf
                         @method('DELETE')
 
-                        @can('tipoAsignaturas.destroy')
+                        @can('tipoDocumento.destroy')
                             <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                         @endcan
                         

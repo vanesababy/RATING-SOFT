@@ -38,7 +38,7 @@
                             <td >{{ $role->id }}</td>
                             <td>{{ $role->name }}</td>
 
-                            <td>
+                            <td class="float-right">
                                 <form action="{{route('admin.roles.destroy',$role->id) }}" method="POST">
                                     <a class="btn btn-sm btn-success" style="margin-left: 40rem !important;" href="{{ route('admin.roles.edit', $role) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
 
@@ -49,22 +49,6 @@
                             </td>
                         </tr>
                         @endforeach
-                        {{-- @foreach ($roles as $role)
-                            <tr>
-                                <td>{{$role->id}}</td>
-                                <td>{{$role->name}}</td>
-                                <td>
-                                    <a href="{{route('admin.roles.edit',$role)}}" class="btn btn-sm btn-primary">Editar</a>
-                                </td>
-                                <td>
-                                    <form action="{{route('admin.roles.destroy',$role)}}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach --}}
                     </tbody>
                 </table>
          </div>

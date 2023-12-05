@@ -3,64 +3,35 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Support\Facades\Auth;
+
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
 
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
     protected $redirectTo = 'Administrador';
 
-    
-    // public function redirectPath(){
-    
-    //     if (Auth::user()->rol) {
-    //         return route('admin');
-            
-    //     }
-    
-    // }
-    
-    /**
-     * Create a new controller instance.
-     * 
-     * 
-     *
-     * @return void
-     */
+
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
 
     }
 
-
-//     protected function redirectTo()
-// {
-//     if(\Auth::user()->hasRole('Admin')){
-//         $this->redirectTo = 'admin';
-//         return $this->redirectTo;
-//     }       
-// }
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        return redirect()->route('login')->with('error', 'El correo electrónico o la contraseña son incorrectos.');
+    }
 
 
-    
+    protected function isApiRequest($request)
+    {
+        return strpos($request->getRequestUri(), '/api/') !== false;
+    }
+
+
 }

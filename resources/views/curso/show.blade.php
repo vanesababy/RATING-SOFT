@@ -21,35 +21,11 @@
                     <div class="card-body">
                         <div class="form-group">
                             <strong>Nombre Curso:</strong>
-                            {{ $curso->nombreCurso }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Id Curso:</strong>
-                            {{ $curso->idCurso }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Grado:</strong>
-                            {{ $curso->grado }}
+                            {{ $curso->nombre }}
                         </div>
                         <div class="form-group">
                             <strong>Descripcion:</strong>
                             {{ $curso->descripcion }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Profesor Encagado:</strong>
-                            {{ $curso->profesorEncargado }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Cupo:</strong>
-                            {{ $curso->cupo }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Fecha De Inicio:</strong>
-                            {{ $curso->fechaInicio }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Fecha Fin:</strong>
-                            {{ $curso->fechaFin }}
                         </div>
                     </div>
                 </div>

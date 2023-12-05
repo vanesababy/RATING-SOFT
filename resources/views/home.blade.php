@@ -48,12 +48,10 @@
                             de los estudiantes de una forma digital; tanto el estudiante como acudiente puede visualizar el
                             rendimiento académico.</p>
                         <!--boton -->
-                        <a href="http://127.0.0.1:8000/senderismo" class="text-reset btn btn-info">Saber más!</a>
                     </div>
 
 
                 </div>
-                {{-- <h2 class="text-center"> Hola {{ Auth::user()->name }}, Empieza tu avenetura en </h2>  --}}
 
             </div>
             <!-- separador  con imagen -->
@@ -67,7 +65,6 @@
         <section class="container">
 
             <div class="row justify-content-md-center">
-                <!-- en este pedaso se pone texto relacionado al tema de turismo -->
 
                 <div class="col-12 text-center">
                     <h2 class="text-danger text-uppercase">RATINGSOFT</h2>
@@ -211,17 +208,13 @@
                 </div>
         </section>
 
+        <p>holaaaaa</p>
+
         <!-- carousel  -->
         <section class="carousel slide" id="carousel-weston">
             <div class="carousel-caption carousel-weston-middle">
-                <!-- algun titulo de acuerdo a las imagnes o al tema   -->
                 <h2 class="d-none d-md-block text-uppercase">RATINGSOFT</h2>
                 <p class="d-none d-md-block">SISTEMATIZAMOS PARA AYUDARTE</p>
-                <button class="btn btn-light px4 text-capitalize d-none d-md-block mx-auto">
-
-                    <a href="{{ route('senderismo.index') }}">Saber más?</a>
-                </button>
-
             </div>
             <div class="carousel-inner">
                 <!-- carousel#1  -->
@@ -276,3 +269,18 @@
 
     </html>
 @endsection
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Agrega desplazamiento suave al hacer clic en enlaces de la barra de navegación
+        $('a[href^="#"]').on('click', function (event) {
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+        });
+    });
+</script>
