@@ -18,7 +18,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('Tipo Asignatura') }}
-            {{ Form::select('idTipoAsignatura', $tiposAsignatura, $asignatura->tipoAsignatura, ['class' => 'form-control' . ($errors->has('idTipoAsignatura') ? ' is-invalid' : '')]) }}
+            {{ Form::select('idTipoAsignatura', $asignatura, $asignatura->tipoAsignatura, ['class' => 'form-control' . ($errors->has('idTipoAsignatura') ? ' is-invalid' : '')]) }}
             {!! $errors->first('idTipoAsignatura', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
