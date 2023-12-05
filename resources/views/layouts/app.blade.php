@@ -47,19 +47,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto menu">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="">{{ __('Misión') }}</a>
+                        <a class="nav-link text-white" href="#mision">{{ __('Misión') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="">{{ __('Visión') }}</a>
+                        <a class="nav-link text-white" href="#vision">{{ __('Visión') }}</a>
                     </li>
-                    <li class="nav-item text-white">
-                        <a class="nav-link text-white"
-                            href="">{{ __('Sobre Nosotros') }}</a>
-                    </li>
-                    <li class="nav-item text-white">
-                        <a class="nav-link text-white"
-                            href="">{{ __('Saber más!') }}</a>
-                    </li>
+                </ul>
                 </ul>
 
                 <ul class="navbar-nav ms-auto">
@@ -70,12 +63,6 @@
                                     href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                             </button>
                         @endif
-                        {{-- @if (Route::has('register'))
-                            <button id="registro" type="submit" class="btn btn-outline-primary mb-4 button_color">
-                                <a class="nav-link text-white"
-                                    href="{{ route('register') }}">{{ __('Registrarse') }}</a>
-                            </button>
-                        @endif --}}
                     @else
                         <li class="nav-item dropdown">
                             <a role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -216,5 +203,19 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     @yield('js')
 </body>
-
 </html>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Agrega desplazamiento suave al hacer clic en enlaces de la barra de navegación
+        $('a[href^="#"]').on('click', function (event) {
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+        });
+    });
+</script>

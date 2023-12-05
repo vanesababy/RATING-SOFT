@@ -311,7 +311,7 @@ return [
             'text' => 'Registrar Usuarios',
             'route'  => 'register',
             'icon' => 'fas fa-user-plus',
-            'can'=> 'asignaturas.index',
+            'can'=> 'resgistarUsuario',
         ],
         [
             'text' => 'Gestion Usuarios',
@@ -343,13 +343,13 @@ return [
                     'text' => 'Documentos',
                     'route'  => 'documentos.index',
                     'icon' => 'fas fa-file',
-                    'can'=> 'directivo.index',
+                    'can'=> 'documentos.index',
                 ],
                 [
                     'text' => 'Tipo Documentos',
                     'route'  => 'tipoDocumentos.index',
                     'icon' => 'fas fa-regular fa-file',
-                    'can'=> 'profesor.index',
+                    'can'=> 'tipoDocumentos.index',
                 ],
             ],
         ],
@@ -358,12 +358,6 @@ return [
             'icon'    => 'fas fa-doutone fa-users',
             'can'=> 'gestionPersonal.index',
             'submenu' => [
-                [
-                    'text' => 'Tipo de Personal',
-                    'route'  => 'tipoPersonas.index',
-                    'icon' => 'fas fa-fw fa-chalkboard',
-                    'can'=> 'directivo.index',
-                ],
                 [
                     'text' => 'Gestion Directivos',
                     'route'  => 'directivos.index',
@@ -394,7 +388,7 @@ return [
             'text' => 'Grados',
             'route'  => 'grados.index',
             'icon' => 'fas fa-fw fa-users',
-            'can'=> 'tipoAsignaturas.index',
+            'can'=> 'grados.index',
         ],
         [
             'text' => 'Asignaturas',
@@ -406,13 +400,13 @@ return [
             'text' => 'Periodos',
             'route'  => 'periodos.index',
             'icon' => 'fas fa-fw fa-calendar',
-            'can'=> 'asignaturas.index',
+            'can'=> 'periodos.index',
         ],
         [
             'text' => 'Gestion Calificaciones',
             'route'  => 'calificar.index',
             'icon' => 'fas fa-fw fa-paste',
-            'can'=> 'asignaturas.index',
+            'can'=> 'notas.asignaturas',
         ],
 
         ['header' => 'account_settings'],
@@ -420,13 +414,8 @@ return [
             'text' => 'Mi Perfil',
             'route'  => 'actualizarPerfil.index',
             'icon' => 'fas fa-fw fa-user',
-            'can'=> 'asignaturas.index',
+            'can'=> 'perfil.edit',
         ],
-        // [
-        //     'text' => 'change_password',
-        //     'url'  => 'admin/settings',
-        //     'icon' => 'fas fa-fw fa-lock',
-        // ],
     ],
 
     /*

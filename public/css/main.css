@@ -412,10 +412,9 @@ margin-right: 15px;
         transition-duration: 0.1s;
     }
 
-
-    /* modal para los efectos de la galeria  fin  */
-
-
-
-    
-     /* Texto museos */
+    .with-background {
+        background-image: url('/public/img/fondo2.jpeg');
+        background-size: cover; 
+        background-position: center;
+        color: black;
+    }

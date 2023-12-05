@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -41,11 +42,9 @@ class RegisterController extends Controller
         $persona = new Persona([
         ]);
 
-        
-
         // Guarda la persona y obtén su ID
         $persona->save();
-    
+
         // Crea un nuevo usuario y asigna el idPersona
         $user = User::create([
             'name' => $data['name'],
@@ -57,7 +56,20 @@ class RegisterController extends Controller
         return $user;
     }
 
+    public function showRegistrationForm()
+    {
+        return view('auth.register');
+    }
 
+    public function register(Request $request)
+    {
+        // Aquí puedes agregar la lógica de redirección o manejar el registro de manera personalizada
+        $this->validator($request->all())->validate();
 
-   
+        $user = $this->create($request->all());
+
+        return $this->registered($request, $user)
+            ?: redirect()->route('usuarios.index');
+    }
+
 }

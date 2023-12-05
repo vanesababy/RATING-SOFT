@@ -58,8 +58,12 @@
                             <form action="{{ route('notas.destroy',$nota->id) }}" method="POST">
                                 @method('DELETE')
                                 @csrf
-                                <a href="{{ route('calificar.edit',$nota->id) }}" class="btn btn-success">Editar</a>
+                                @can('notas.edit')
+                                    <a href="{{ route('calificar.edit',$nota->id) }}" class="btn btn-success">Editar</a>
+                                @endcan
+                                @can('notas.destroy')
                                 <button type="submit" class="btn btn-danger">Eliminar</button>
+                                @endcan
                             </form>
                         </td>
                     </tr>   

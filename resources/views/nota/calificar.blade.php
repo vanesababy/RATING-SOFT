@@ -14,7 +14,6 @@
             </div>
             <form method="POST" action="{{ route('calificar.store') }}"  role="form" enctype="multipart/form-data">
                 @csrf
-                <p>{{$idAsignatura}}</p>
                 <div class="col-md-4">
                     {{ Form::label('Nota') }}
                     {{ Form::text('valor', $nota->valor, ['class' => 'form-control' . ($errors->has('valor') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese Nota']) }}

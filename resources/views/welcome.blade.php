@@ -50,11 +50,7 @@
                         <!--boton -->
                         <a href="http://127.0.0.1:8000/login" class="text-reset btn btn-info">Acceder</a>
                     </div>
-
-
                 </div>
-                {{-- <h2 class="text-center"> Hola {{ Auth::user()->name }}, Empieza tu avenetura en </h2>  --}}
-
             </div>
             <!-- separador  con imagen -->
             <img src="./img/cuts/cut-header.svg" alt="">
@@ -224,6 +220,25 @@
             </a>
         </section>
 
+        <section id="mision" class="my-section with-background mt-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 text-center">
+                    <h3 class="h3">Misión</h3>
+                    <p class="h5">RATINGSOFT es un software que facilita la sistematización de información de administrativos, alumnos y profesores. Esto te permite registrar, editar y eliminar información dependiendo del usuario al que pertenezca. Este proyecto surge debido a la manera en que los profesores llevan a cabo el manejo de calificaciones. Este sistema de información va dirigido especialmente para el ámbito educativo, exactamente para una institución de educación media.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección Visión -->
+        <section id="vision" class="my-section with-background mt-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 text-center">
+                    <h3 class="h3">Visión</h3>
+                    <p class="h5">RATINGSOFT será un sistema de información muy reconocido en el ámbito educativo por su eficiencia, calidad, seguridad y responsabilidad en cuanto al manejo de información y calificaciones. Iremos innovando poco a poco, tanto así que para el año 2027 lograremos implementar este sistema de información para instituciones de educación superior, como lo son colegios.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- features  -->
         <section class="section container p-5">
 
@@ -238,12 +253,6 @@
 
         </section>
 
-
-        <!-- PIE de paginaaaa  "footer"-->
-
-
-
-
         <!-- Jquery -->
         <script src="./js/jquery-3.5.0.min.js"></script>
         <!-- Popper -->
@@ -254,3 +263,19 @@
 
     </html>
 @endsection
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Agrega desplazamiento suave al hacer clic en enlaces de la barra de navegación
+        $('a[href^="#"]').on('click', function (event) {
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+        });
+    });
+</script>

@@ -41,7 +41,7 @@
                                 {{ $estudiante->persona->apellido2 }}
                             </td>
                             <td>{{ $estudiante->persona->identificacion }}</td>
-                            <td>{{ $idGrado }}</td>
+                            <td>{{ $estudiante->persona->sexo }}</td>
                             <td width="280px">
                                 <div class="form-check form-switch form-check-lg">
                                     {!! Form::checkbox('seleccionados[]', $estudiante->id, null, ['class' => 'form-check-input', 'id' => 'estudiante' . $estudiante->id]) !!}

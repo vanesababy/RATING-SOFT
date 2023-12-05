@@ -15,7 +15,7 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        @can('tipoAsignaturas.create')
+        @can('periodos.create')
             <a href="{{ route('periodos.create') }}" class="btn btn-primary btn-sm "
                 data-placement="left">
                 {{ __('Nuevo') }}
@@ -47,17 +47,17 @@
                 <td width="280px">
                     <form action="{{ route('periodos.destroy',$periodo->id) }}" method="POST">
 
-                        @can('tipoAsignaturas.show')
+                        @can('periodos.show')
                             <a class="btn btn-sm btn-primary " href="{{ route('periodos.show',$periodo->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
                         @endcan
-                        @can('tipoAsignaturas.edit')
+                        @can('periodos.edit')
                             <a class="btn btn-sm btn-success" href="{{ route('periodos.edit',$periodo->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                         @endcan
                         
                         @csrf
                         @method('DELETE')
 
-                        @can('tipoAsignaturas.destroy')
+                        @can('periodos.destroy')
                             <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                         @endcan
                         

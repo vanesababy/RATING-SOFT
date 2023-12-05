@@ -92,11 +92,11 @@ class NotaController extends Controller
             $periodos = Periodo::all();
 
             // Verifica los roles del usuario
-            if ($user->hasRole('Profesor') || $user->hasRole('Admin') || $user->hasRole('Directivo')) {
+            if ($user->hasAnyRole(['Profesor', 'Admin', 'Directivo'])) {
                 $estudiantes = User::role('alumno')->get();
                 $estudiante = null;
             } elseif ($user->hasRole('alumno')) {
-                $estudiantes = [$user];
+                $estudiantes = collect([$user]); // Convertir a colección
                 $estudiante = Persona::find($user->id);
             }
 
@@ -153,6 +153,12 @@ class NotaController extends Controller
             }
 
             $notasFinalesPorEstudiante[$estudianteId] = $notasFinalesPorPeriodo;
+        }
+
+        // Si el usuario tiene el rol de alumno y solo hay un estudiante (él mismo), agregar sus propias notas.
+        if (Auth::user()->hasRole('alumno') && count($estudiantesIds) === 1) {
+            $usuarioActualId = Auth::user()->id;
+            $notasFinalesPorEstudiante[$usuarioActualId] = $notasFinalesPorEstudiante[$usuarioActualId] ?? [];
         }
 
         return $notasFinalesPorEstudiante;

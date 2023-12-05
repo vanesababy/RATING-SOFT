@@ -16,10 +16,11 @@
                 <div class="card-body">
                     <p class="card-text">Codigo: {{$materia->codigo}}</p>
                     <p class="card-text">Descripción: {{$materia->descripcion}}</p>
+                    @can('notas.asignaturas')
                     <a href="{{ route('notasPeriodos',$materia->id) }}" class="btn btn-primary">Ver</a>
+                    @endcan
                 </div>
             </div>
-            
             @endforeach
         </div>
     </div>

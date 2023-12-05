@@ -39,13 +39,12 @@ class UserSeeder extends Seeder
         $persona->save();
 
         $user = User::create([
-            'name'=>'Juan Orozco',
-            'email'=>'juanjoseorozco9@gmail.com',
-            'password'=> bcrypt('1234567890'),
-            'idPersona'=> $persona->id
+            'name' => 'Juan Orozco',
+            'email' => 'juanjoseorozco9@gmail.com',
+            'password' => bcrypt('1234567890'),
+            'idPersona' => $persona->id,
         ])->assignRole('Admin');
 
-        
         $persona = new Persona([
             'nombre1' => 'andres',
             'nombre2' => 'jesus',
@@ -54,10 +53,10 @@ class UserSeeder extends Seeder
             'identificacion' => '1002855480',
             'idTipoIdentificacion' => 1,
             'sexo' => 'M',
-            'fechaNac' => '2008-01-21',
+            'fechaNac' => '1984-01-21',
             'rh' => 'A+',
             'direccion' => 'CALLE 15# 18-54',
-            'email' => 'andres9@gmail.com',
+            'email' => 'directivo@gmail.com',
             'telefonoFijo' => '3232226544',
             'celular' => '3232226544',
             'padre' => 'jesus gomez',
@@ -69,12 +68,70 @@ class UserSeeder extends Seeder
         $persona->save();
 
         $user = User::create([
-            'name'=>'Andres',
-            'email'=>'andres9@gmail.com',
-            'password'=> bcrypt('1234567890'),
-            'idPersona'=> $persona->id
-        ])->assignRole('Alumno');
-        return $user;
+            'name' => 'Andres',
+            'email' => 'directivo@gmail.com',
+            'password' => bcrypt('1234567890'),
+            'idPersona' => $persona->id,
+        ])->assignRole('Directivo');
+
+
+        $persona = new Persona([
+            'nombre1' => 'estiven',
+            'nombre2' => 'daniel',
+            'apellido1' => 'rodriguez',
+            'apellido2' => 'suarez',
+            'identificacion' => '1002548725',
+            'idTipoIdentificacion' => 1,
+            'sexo' => 'M',
+            'fechaNac' => '1990-01-21',
+            'rh' => 'A+',
+            'direccion' => 'CALLE 15# 18-54',
+            'email' => 'profesor@gmail.com',
+            'telefonoFijo' => '3232226544',
+            'celular' => '3232226544',
+            'padre' => 'daniel rodriguez',
+            'ocupacionPadre' => 'ingeniero',
+            'madre' => 'cristina suarez',
+            'ocupacionMadre' => 'periodista',
+        ]);
+
+        $persona->save();
+
+        $user = User::create([
+            'name' => 'estiven',
+            'email' => 'profesor@gmail.com',
+            'password' => bcrypt('1234567890'),
+            'idPersona' => $persona->id,
+        ])->assignRole('Profesor');
+
+        $persona = new Persona([
+            'nombre1' => 'brayan',
+            'nombre2' => 'jose',
+            'apellido1' => 'lopez',
+            'apellido2' => 'cruz',
+            'identificacion' => '100265415',
+            'idTipoIdentificacion' => 1,
+            'sexo' => 'M',
+            'fechaNac' => '2007-01-21',
+            'rh' => 'A+',
+            'direccion' => 'CALLE 15# 18-54',
+            'email' => 'alumno@gmail.com',
+            'telefonoFijo' => '3232226544',
+            'celular' => '3232226544',
+            'padre' => 'daniel rodriguez',
+            'ocupacionPadre' => 'ingeniero',
+            'madre' => 'cristina suarez',
+            'ocupacionMadre' => 'periodista',
+        ]);
+
+        $persona->save();
+
+        $user = User::create([
+            'name' => 'brayan',
+            'email' => 'alumno@gmail.com',
+            'password' => bcrypt('1234567890'),
+            'idPersona' => $persona->id,
+        ])->assignRole('alumno');
 
     }
 }

@@ -14,7 +14,7 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            @can('tipoAsignaturas.create')
+            @can('grados.create')
                 <a href="{{ route('grados.create') }}" class="btn btn-primary mb-3" data-placement="left">
                     {{ __('Crear Grado') }}
                 </a>
@@ -28,7 +28,6 @@
                         <th>Grado</th>
                         <th>Curso</th>
                         <th>Descripcion</th>
-                        <th>Añadir</th>
                         <th>Acciones</th>
 
                     </tr>
@@ -42,17 +41,13 @@
                             <td>{{ $grado->grado }}</td>
                             <td>{{ $grado->curso->nombre }}</td>
                             <td>{{ $grado->descripcion }}</td>
-                            <td> <a class="btn btn-sm btn-outline-success" href="{{ route('agregarEstudiantes', ['id' => $grado->id]) }}">
-                                    <i class="fa fa-fw fa-plus"></i> Agregar Estudiantes
-                                </a>
                             <td width="280px">
                                 <form action="{{ route('grados.destroy', $grado->id) }}" method="POST">
-
-                                    @can('tipoAsignaturas.show')
+                                    @can('grados.show')
                                         <a class="btn btn-sm btn-primary " href="{{ route('grados.show', $grado->id) }}"><i
                                                 class="fa fa-fw fa-eye"></i> Ver</a>
                                     @endcan
-                                    @can('tipoAsignaturas.edit')
+                                    @can('grados.edit')
                                         <a class="btn btn-sm btn-success" href="{{ route('grados.edit', $grado->id) }}"><i
                                                 class="fa fa-fw fa-edit"></i> Editar</a>
                                     @endcan
@@ -63,6 +58,10 @@
                                     @can('tipoAsignaturas.destroy')
                                         <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i>
                                             Eliminar</button>
+                                    @endcan
+                                    @can('agregarEstudiante')
+                                        <a class="btn btn-sm btn-outline-success mt-2" href="{{ route('agregarEstudiantes', ['id' => $grado->id]) }}">
+                                            <i class="fa fa-fw fa-plus"></i> Agregar Estudiantes</a> 
                                     @endcan
 
                                 </form>
